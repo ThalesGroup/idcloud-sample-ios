@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D352DEF21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEA21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf */; };
+		6D352DF021C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEB21C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf */; };
+		6D352DF121C8F01300465802 /* FacesCreateTemplateMediumLite.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEC21C8F01300465802 /* FacesCreateTemplateMediumLite.ndf */; };
+		6D352DF221C8F01300465802 /* FacesCreateTemplateSmall.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DED21C8F01300465802 /* FacesCreateTemplateSmall.ndf */; };
+		6D352DF321C8F01300465802 /* FacesDetectSegmentsOrientation.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEE21C8F01300465802 /* FacesDetectSegmentsOrientation.ndf */; };
+		6D352E1321C8F0FF00465802 /* EMFaceBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352DFC21C8F0FF00465802 /* EMFaceBaseManager.m */; };
+		6D352E1421C8F0FF00465802 /* EMCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0121C8F0FF00465802 /* EMCircularProgressView.m */; };
+		6D352E1521C8F0FF00465802 /* EMVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0321C8F0FF00465802 /* EMVerifyViewController.m */; };
+		6D352E1621C8F0FF00465802 /* EMFaceEnrollManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0421C8F0FF00465802 /* EMFaceEnrollManager.m */; };
+		6D352E1721C8F0FF00465802 /* EMFaceVerifyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0621C8F0FF00465802 /* EMFaceVerifyManager.m */; };
+		6D352E1821C8F0FF00465802 /* EMEnrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0721C8F0FF00465802 /* EMEnrollViewController.m */; };
+		6D352E1921C8F0FF00465802 /* EMFaceSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0821C8F0FF00465802 /* EMFaceSettings.m */; };
+		6D352E1A21C8F0FF00465802 /* EMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0921C8F0FF00465802 /* EMBaseViewController.m */; };
+		6D352E1B21C8F0FF00465802 /* EMFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0A21C8F0FF00465802 /* EMFaceView.m */; };
+		6D352E1C21C8F0FF00465802 /* EMFaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0C21C8F0FF00465802 /* EMFaceManager.m */; };
+		6D352E1D21C8F0FF00465802 /* EMFaceConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0E21C8F0FF00465802 /* EMFaceConstant.m */; };
+		6D352E1E21C8F0FF00465802 /* EMFaceMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0F21C8F0FF00465802 /* EMFaceMessageHelper.m */; };
+		6D352E2421C8F5BF00465802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D352E2221C8F5BE00465802 /* Assets.xcassets */; };
+		6D352E2521C8F5BF00465802 /* FaceUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D352E2321C8F5BE00465802 /* FaceUI.storyboard */; };
+		6D40D9442109DB47003E6F48 /* TokenDetail_AuthenticationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D9432109DB47003E6F48 /* TokenDetail_AuthenticationVC.m */; };
+		6D40D9472109DBAC003E6F48 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D9462109DBAC003E6F48 /* MainViewController.m */; };
+		6D40D94D2109DE81003E6F48 /* TokenDetail_SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D94C2109DE81003E6F48 /* TokenDetail_SettingsVC.m */; };
+		6D40D9502109F350003E6F48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D40D9522109F350003E6F48 /* Localizable.strings */; };
+		6D40D979210B2FFB003E6F48 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D978210B2FFB003E6F48 /* Accelerate.framework */; };
+		6D40D97C210B4483003E6F48 /* GemaltoFaceIdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D97B210B4483003E6F48 /* GemaltoFaceIdVC.m */; };
+		6D40D98C210B5142003E6F48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98B210B5142003E6F48 /* Foundation.framework */; };
+		6D40D98E210B514C003E6F48 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */; };
+		6D40D990210B5151003E6F48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98F210B5151003E6F48 /* UIKit.framework */; };
+		6D40D992210B5157003E6F48 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D991210B5157003E6F48 /* LocalAuthentication.framework */; };
+		6D40D994210B515B003E6F48 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D993210B515B003E6F48 /* Security.framework */; };
+		6D40D996210B5161003E6F48 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D995210B5160003E6F48 /* AVFoundation.framework */; };
+		6D40D998210B5165003E6F48 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D997210B5165003E6F48 /* CoreMedia.framework */; };
+		6D40D99A210B5173003E6F48 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D999210B5173003E6F48 /* libc++.tbd */; };
+		6D40D99C210B517A003E6F48 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */; };
+		6D5312C122132D06002463D2 /* StandardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5312C022132D06002463D2 /* StandardButton.m */; };
+		6D9FF91921F73A8D00C4C0F0 /* KeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FF91821F73A8D00C4C0F0 /* KeyValue.m */; };
+		6DA0F4B921C7E183008282F5 /* EzioMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE0DA7420EB640C005A045F /* EzioMobile.framework */; };
+		6DA5760920F383E500CCF413 /* TokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5760820F383E500CCF413 /* TokenManager.m */; };
+		6DA5760E20F3AC1200CCF413 /* TokenDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5760D20F3AC1200CCF413 /* TokenDevice.m */; };
+		6DB6B2A321412779004F27FA /* TokenDetail_TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B2A221412779004F27FA /* TokenDetail_TransactionVC.m */; };
+		6DB6B2A521412787004F27FA /* QRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B2A421412787004F27FA /* QRCodeManager.m */; };
+		6DB6B2A72141279E004F27FA /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B2A62141279E004F27FA /* Configuration.m */; };
+		6DB6B2B0214157B5004F27FA /* StoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B2AF214157B5004F27FA /* StoryItem.m */; };
+		6DC2587D21C7A52400DD531E /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2587C21C7A52400DD531E /* HttpManager.m */; };
+		6DE0DA5820EB61E8005A045F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA5720EB61E8005A045F /* AppDelegate.m */; };
+		6DE0DA6120EB61E8005A045F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA5F20EB61E8005A045F /* Main.storyboard */; };
+		6DE0DA6320EB61EA005A045F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA6220EB61EA005A045F /* Assets.xcassets */; };
+		6DE0DA6620EB61EA005A045F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA6420EB61EA005A045F /* LaunchScreen.storyboard */; };
+		6DE0DA6920EB61EA005A045F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA6820EB61EA005A045F /* main.m */; };
+		6DE0DA7C20EB66B0005A045F /* ProvisionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA7A20EB66B0005A045F /* ProvisionVC.m */; };
+		6DE0DA8F20EB86EB005A045F /* QRCodeReaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA8E20EB86EB005A045F /* QRCodeReaderVC.m */; };
+		6DE0DA9A20EBC579005A045F /* LoadingIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA9820EBC579005A045F /* LoadingIndicatorView.xib */; };
+		6DE0DA9D20ECD234005A045F /* LoadingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA9C20ECD234005A045F /* LoadingIndicatorView.m */; };
+		6DE0DAC220F213F0005A045F /* UIViewController+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DAB420F213F0005A045F /* UIViewController+Error.m */; };
+		6DE0DAC620F213F0005A045F /* NSData+Ezio.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DABD20F213F0005A045F /* NSData+Ezio.m */; };
+		6DE0DAC720F213F0005A045F /* NSString+Ezio.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DABE20F213F0005A045F /* NSString+Ezio.m */; };
+		6DE0DACA20F21523005A045F /* CMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DAC920F21523005A045F /* CMain.m */; };
+		6DE0DAD020F22261005A045F /* SecureStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DACE20F22261005A045F /* SecureStorage.m */; };
+		6DE0DAD420F22274005A045F /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DAD220F22274005A045F /* UserDefaults.m */; };
+		6DE0DAD820F23B52005A045F /* PushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DAD720F23B52005A045F /* PushManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6D352DEA21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsLiveness.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesDetectSegmentsLiveness.ndf; sourceTree = "<group>"; };
+		6D352DEB21C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsFeaturePointsTrack.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesDetectSegmentsFeaturePointsTrack.ndf; sourceTree = "<group>"; };
+		6D352DEC21C8F01300465802 /* FacesCreateTemplateMediumLite.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesCreateTemplateMediumLite.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesCreateTemplateMediumLite.ndf; sourceTree = "<group>"; };
+		6D352DED21C8F01300465802 /* FacesCreateTemplateSmall.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesCreateTemplateSmall.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesCreateTemplateSmall.ndf; sourceTree = "<group>"; };
+		6D352DEE21C8F01300465802 /* FacesDetectSegmentsOrientation.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsOrientation.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesDetectSegmentsOrientation.ndf; sourceTree = "<group>"; };
+		6D352DF521C8F0FF00465802 /* EMFaceSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceSettings.h; sourceTree = "<group>"; };
+		6D352DFA21C8F0FF00465802 /* EMEnrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMEnrollViewController.h; sourceTree = "<group>"; };
+		6D352DFB21C8F0FF00465802 /* EMFaceVerifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceVerifyManager.h; sourceTree = "<group>"; };
+		6D352DFC21C8F0FF00465802 /* EMFaceBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceBaseManager.m; sourceTree = "<group>"; };
+		6D352DFD21C8F0FF00465802 /* EMFaceEnrollManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceEnrollManager.h; sourceTree = "<group>"; };
+		6D352DFE21C8F0FF00465802 /* EMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBaseViewController.h; sourceTree = "<group>"; };
+		6D352DFF21C8F0FF00465802 /* EMFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceView.h; sourceTree = "<group>"; };
+		6D352E0021C8F0FF00465802 /* EMFaceMessageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceMessageHelper.h; sourceTree = "<group>"; };
+		6D352E0121C8F0FF00465802 /* EMCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCircularProgressView.m; sourceTree = "<group>"; };
+		6D352E0221C8F0FF00465802 /* EMFaceConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceConstant.h; sourceTree = "<group>"; };
+		6D352E0321C8F0FF00465802 /* EMVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMVerifyViewController.m; sourceTree = "<group>"; };
+		6D352E0421C8F0FF00465802 /* EMFaceEnrollManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceEnrollManager.m; sourceTree = "<group>"; };
+		6D352E0521C8F0FF00465802 /* EMFaceBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceBaseManager.h; sourceTree = "<group>"; };
+		6D352E0621C8F0FF00465802 /* EMFaceVerifyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceVerifyManager.m; sourceTree = "<group>"; };
+		6D352E0721C8F0FF00465802 /* EMEnrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMEnrollViewController.m; sourceTree = "<group>"; };
+		6D352E0821C8F0FF00465802 /* EMFaceSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceSettings.m; sourceTree = "<group>"; };
+		6D352E0921C8F0FF00465802 /* EMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBaseViewController.m; sourceTree = "<group>"; };
+		6D352E0A21C8F0FF00465802 /* EMFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceView.m; sourceTree = "<group>"; };
+		6D352E0B21C8F0FF00465802 /* EMVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMVerifyViewController.h; sourceTree = "<group>"; };
+		6D352E0C21C8F0FF00465802 /* EMFaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceManager.m; sourceTree = "<group>"; };
+		6D352E0D21C8F0FF00465802 /* EMCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCircularProgressView.h; sourceTree = "<group>"; };
+		6D352E0E21C8F0FF00465802 /* EMFaceConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceConstant.m; sourceTree = "<group>"; };
+		6D352E0F21C8F0FF00465802 /* EMFaceMessageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceMessageHelper.m; sourceTree = "<group>"; };
+		6D352E1021C8F0FF00465802 /* EMFaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceManager.h; sourceTree = "<group>"; };
+		6D352E2221C8F5BE00465802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D352E2321C8F5BE00465802 /* FaceUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FaceUI.storyboard; sourceTree = "<group>"; };
+		6D40D9422109DB47003E6F48 /* TokenDetail_AuthenticationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenDetail_AuthenticationVC.h; sourceTree = "<group>"; };
+		6D40D9432109DB47003E6F48 /* TokenDetail_AuthenticationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenDetail_AuthenticationVC.m; sourceTree = "<group>"; };
+		6D40D9452109DBAC003E6F48 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6D40D9462109DBAC003E6F48 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6D40D94B2109DE81003E6F48 /* TokenDetail_SettingsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenDetail_SettingsVC.h; sourceTree = "<group>"; };
+		6D40D94C2109DE81003E6F48 /* TokenDetail_SettingsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenDetail_SettingsVC.m; sourceTree = "<group>"; };
+		6D40D9542109F433003E6F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6D40D978210B2FFB003E6F48 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		6D40D97A210B4483003E6F48 /* GemaltoFaceIdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GemaltoFaceIdVC.h; sourceTree = "<group>"; };
+		6D40D97B210B4483003E6F48 /* GemaltoFaceIdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GemaltoFaceIdVC.m; sourceTree = "<group>"; };
+		6D40D98B210B5142003E6F48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6D40D98F210B5151003E6F48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6D40D991210B5157003E6F48 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		6D40D993210B515B003E6F48 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6D40D995210B5160003E6F48 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6D40D997210B5165003E6F48 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		6D40D999210B5173003E6F48 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		6D5312BF22132D06002463D2 /* StandardButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StandardButton.h; sourceTree = "<group>"; };
+		6D5312C022132D06002463D2 /* StandardButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StandardButton.m; sourceTree = "<group>"; };
+		6D9FF91721F73A8D00C4C0F0 /* KeyValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyValue.h; sourceTree = "<group>"; };
+		6D9FF91821F73A8D00C4C0F0 /* KeyValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyValue.m; sourceTree = "<group>"; };
+		6DA5760720F383E500CCF413 /* TokenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenManager.h; sourceTree = "<group>"; };
+		6DA5760820F383E500CCF413 /* TokenManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenManager.m; sourceTree = "<group>"; };
+		6DA5760C20F3AC1200CCF413 /* TokenDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenDevice.h; sourceTree = "<group>"; };
+		6DA5760D20F3AC1200CCF413 /* TokenDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenDevice.m; sourceTree = "<group>"; };
+		6DA5760F20F4ACC100CCF413 /* QRCodeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeManager.h; sourceTree = "<group>"; };
+		6DB6B2A121412779004F27FA /* TokenDetail_TransactionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TokenDetail_TransactionVC.h; path = EzioMobileSampleApp/GUI/TokenDetail_TransactionVC.h; sourceTree = SOURCE_ROOT; };
+		6DB6B2A221412779004F27FA /* TokenDetail_TransactionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TokenDetail_TransactionVC.m; path = EzioMobileSampleApp/GUI/TokenDetail_TransactionVC.m; sourceTree = SOURCE_ROOT; };
+		6DB6B2A421412787004F27FA /* QRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QRCodeManager.m; path = EzioMobileSampleApp/Helpers/Ezio/QRCodeManager.m; sourceTree = SOURCE_ROOT; };
+		6DB6B2A62141279E004F27FA /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Configuration.m; path = EzioMobileSampleApp/Helpers/Configuration.m; sourceTree = SOURCE_ROOT; };
+		6DB6B2AA214127AB004F27FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = EzioMobileSampleApp/Info.plist; sourceTree = SOURCE_ROOT; };
+		6DB6B2AE214157B5004F27FA /* StoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryItem.h; path = EzioMobileSampleApp/Helpers/StoryItem.h; sourceTree = SOURCE_ROOT; };
+		6DB6B2AF214157B5004F27FA /* StoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryItem.m; path = EzioMobileSampleApp/Helpers/StoryItem.m; sourceTree = SOURCE_ROOT; };
+		6DC2587B21C7A52400DD531E /* HttpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
+		6DC2587C21C7A52400DD531E /* HttpManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
+		6DE0DA5320EB61E8005A045F /* EzioMobileSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EzioMobileSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE0DA5620EB61E8005A045F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6DE0DA5720EB61E8005A045F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6DE0DA6020EB61E8005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6DE0DA6220EB61EA005A045F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6DE0DA6520EB61EA005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6DE0DA6820EB61EA005A045F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DE0DA6F20EB629D005A045F /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		6DE0DA7420EB640C005A045F /* EzioMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EzioMobile.framework; path = Frameworks/Debug/EzioMobile.framework; sourceTree = "<group>"; };
+		6DE0DA7820EB66B0005A045F /* ProvisionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvisionVC.h; sourceTree = "<group>"; };
+		6DE0DA7A20EB66B0005A045F /* ProvisionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvisionVC.m; sourceTree = "<group>"; };
+		6DE0DA8D20EB86EB005A045F /* QRCodeReaderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderVC.h; sourceTree = "<group>"; };
+		6DE0DA8E20EB86EB005A045F /* QRCodeReaderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderVC.m; sourceTree = "<group>"; };
+		6DE0DA9920EBC579005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoadingIndicatorView.xib; sourceTree = "<group>"; };
+		6DE0DA9B20ECD234005A045F /* LoadingIndicatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingIndicatorView.h; sourceTree = "<group>"; };
+		6DE0DA9C20ECD234005A045F /* LoadingIndicatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingIndicatorView.m; sourceTree = "<group>"; };
+		6DE0DAB320F213F0005A045F /* UIViewController+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Error.h"; sourceTree = "<group>"; };
+		6DE0DAB420F213F0005A045F /* UIViewController+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Error.m"; sourceTree = "<group>"; };
+		6DE0DABD20F213F0005A045F /* NSData+Ezio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Ezio.m"; sourceTree = "<group>"; };
+		6DE0DABE20F213F0005A045F /* NSString+Ezio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ezio.m"; sourceTree = "<group>"; };
+		6DE0DABF20F213F0005A045F /* NSData+Ezio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Ezio.h"; sourceTree = "<group>"; };
+		6DE0DAC020F213F0005A045F /* NSString+Ezio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Ezio.h"; sourceTree = "<group>"; };
+		6DE0DAC820F21523005A045F /* CMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMain.h; sourceTree = "<group>"; };
+		6DE0DAC920F21523005A045F /* CMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMain.m; sourceTree = "<group>"; };
+		6DE0DACC20F2168E005A045F /* Configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		6DE0DACE20F22261005A045F /* SecureStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureStorage.m; sourceTree = "<group>"; };
+		6DE0DACF20F22261005A045F /* SecureStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureStorage.h; sourceTree = "<group>"; };
+		6DE0DAD220F22274005A045F /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
+		6DE0DAD320F22274005A045F /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
+		6DE0DAD520F222A1005A045F /* Protocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
+		6DE0DAD620F23B52005A045F /* PushManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushManager.h; sourceTree = "<group>"; };
+		6DE0DAD720F23B52005A045F /* PushManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushManager.m; sourceTree = "<group>"; };
+		6DE0DADC20F246C4005A045F /* EzioMobileSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EzioMobileSampleApp.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DE0DA5020EB61E8005A045F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D40D99C210B517A003E6F48 /* libsqlite3.0.tbd in Frameworks */,
+				6D40D99A210B5173003E6F48 /* libc++.tbd in Frameworks */,
+				6D40D979210B2FFB003E6F48 /* Accelerate.framework in Frameworks */,
+				6D40D998210B5165003E6F48 /* CoreMedia.framework in Frameworks */,
+				6D40D996210B5161003E6F48 /* AVFoundation.framework in Frameworks */,
+				6D40D994210B515B003E6F48 /* Security.framework in Frameworks */,
+				6D40D992210B5157003E6F48 /* LocalAuthentication.framework in Frameworks */,
+				6DA0F4B921C7E183008282F5 /* EzioMobile.framework in Frameworks */,
+				6D40D990210B5151003E6F48 /* UIKit.framework in Frameworks */,
+				6D40D98E210B514C003E6F48 /* SystemConfiguration.framework in Frameworks */,
+				6D40D98C210B5142003E6F48 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D352DF421C8F0FF00465802 /* FaceUI */ = {
+			isa = PBXGroup;
+			children = (
+				6D352E2121C8F5BE00465802 /* BundleAssets */,
+				6D352DF921C8F0FF00465802 /* internal */,
+				6D352DF521C8F0FF00465802 /* EMFaceSettings.h */,
+				6D352E1021C8F0FF00465802 /* EMFaceManager.h */,
+			);
+			path = FaceUI;
+			sourceTree = "<group>";
+		};
+		6D352DF921C8F0FF00465802 /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				6D352DFA21C8F0FF00465802 /* EMEnrollViewController.h */,
+				6D352DFB21C8F0FF00465802 /* EMFaceVerifyManager.h */,
+				6D352DFC21C8F0FF00465802 /* EMFaceBaseManager.m */,
+				6D352DFD21C8F0FF00465802 /* EMFaceEnrollManager.h */,
+				6D352DFE21C8F0FF00465802 /* EMBaseViewController.h */,
+				6D352DFF21C8F0FF00465802 /* EMFaceView.h */,
+				6D352E0021C8F0FF00465802 /* EMFaceMessageHelper.h */,
+				6D352E0121C8F0FF00465802 /* EMCircularProgressView.m */,
+				6D352E0221C8F0FF00465802 /* EMFaceConstant.h */,
+				6D352E0321C8F0FF00465802 /* EMVerifyViewController.m */,
+				6D352E0421C8F0FF00465802 /* EMFaceEnrollManager.m */,
+				6D352E0521C8F0FF00465802 /* EMFaceBaseManager.h */,
+				6D352E0621C8F0FF00465802 /* EMFaceVerifyManager.m */,
+				6D352E0721C8F0FF00465802 /* EMEnrollViewController.m */,
+				6D352E0821C8F0FF00465802 /* EMFaceSettings.m */,
+				6D352E0921C8F0FF00465802 /* EMBaseViewController.m */,
+				6D352E0A21C8F0FF00465802 /* EMFaceView.m */,
+				6D352E0B21C8F0FF00465802 /* EMVerifyViewController.h */,
+				6D352E0C21C8F0FF00465802 /* EMFaceManager.m */,
+				6D352E0D21C8F0FF00465802 /* EMCircularProgressView.h */,
+				6D352E0E21C8F0FF00465802 /* EMFaceConstant.m */,
+				6D352E0F21C8F0FF00465802 /* EMFaceMessageHelper.m */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		6D352E2121C8F5BE00465802 /* BundleAssets */ = {
+			isa = PBXGroup;
+			children = (
+				6D352E2221C8F5BE00465802 /* Assets.xcassets */,
+				6D352E2321C8F5BE00465802 /* FaceUI.storyboard */,
+			);
+			path = BundleAssets;
+			sourceTree = "<group>";
+		};
+		6DE0DA4A20EB61E8005A045F = {
+			isa = PBXGroup;
+			children = (
+				6D352DF421C8F0FF00465802 /* FaceUI */,
+				6DE0DA5520EB61E8005A045F /* EzioMobileSampleApp */,
+				6DE0DA5420EB61E8005A045F /* Products */,
+				6DE0DA7320EB640B005A045F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6DE0DA5420EB61E8005A045F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DA5320EB61E8005A045F /* EzioMobileSampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DE0DA5520EB61E8005A045F /* EzioMobileSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DA7720EB66B0005A045F /* GUI */,
+				6DE0DAAE20F213F0005A045F /* Helpers */,
+				6DE0DADC20F246C4005A045F /* EzioMobileSampleApp.entitlements */,
+				6DE0DA5620EB61E8005A045F /* AppDelegate.h */,
+				6DE0DA5720EB61E8005A045F /* AppDelegate.m */,
+				6DE0DA5F20EB61E8005A045F /* Main.storyboard */,
+				6DE0DA9820EBC579005A045F /* LoadingIndicatorView.xib */,
+				6DE0DA6220EB61EA005A045F /* Assets.xcassets */,
+				6DE0DA6420EB61EA005A045F /* LaunchScreen.storyboard */,
+				6D40D9522109F350003E6F48 /* Localizable.strings */,
+				6DB6B2AA214127AB004F27FA /* Info.plist */,
+				6DE0DA6820EB61EA005A045F /* main.m */,
+				6DE0DA6F20EB629D005A045F /* stdafx.h */,
+			);
+			path = EzioMobileSampleApp;
+			sourceTree = "<group>";
+		};
+		6DE0DA7320EB640B005A045F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D352DEC21C8F01300465802 /* FacesCreateTemplateMediumLite.ndf */,
+				6D352DED21C8F01300465802 /* FacesCreateTemplateSmall.ndf */,
+				6D352DEB21C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf */,
+				6D352DEA21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf */,
+				6D352DEE21C8F01300465802 /* FacesDetectSegmentsOrientation.ndf */,
+				6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */,
+				6D40D999210B5173003E6F48 /* libc++.tbd */,
+				6D40D997210B5165003E6F48 /* CoreMedia.framework */,
+				6D40D995210B5160003E6F48 /* AVFoundation.framework */,
+				6D40D993210B515B003E6F48 /* Security.framework */,
+				6D40D991210B5157003E6F48 /* LocalAuthentication.framework */,
+				6D40D98F210B5151003E6F48 /* UIKit.framework */,
+				6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */,
+				6D40D98B210B5142003E6F48 /* Foundation.framework */,
+				6D40D978210B2FFB003E6F48 /* Accelerate.framework */,
+				6DE0DA7420EB640C005A045F /* EzioMobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DE0DA7720EB66B0005A045F /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DA7820EB66B0005A045F /* ProvisionVC.h */,
+				6DE0DA7A20EB66B0005A045F /* ProvisionVC.m */,
+				6D40D9452109DBAC003E6F48 /* MainViewController.h */,
+				6D40D9462109DBAC003E6F48 /* MainViewController.m */,
+				6D40D9422109DB47003E6F48 /* TokenDetail_AuthenticationVC.h */,
+				6D40D9432109DB47003E6F48 /* TokenDetail_AuthenticationVC.m */,
+				6D40D94B2109DE81003E6F48 /* TokenDetail_SettingsVC.h */,
+				6D40D94C2109DE81003E6F48 /* TokenDetail_SettingsVC.m */,
+				6DB6B2A121412779004F27FA /* TokenDetail_TransactionVC.h */,
+				6DB6B2A221412779004F27FA /* TokenDetail_TransactionVC.m */,
+				6D40D97A210B4483003E6F48 /* GemaltoFaceIdVC.h */,
+				6D40D97B210B4483003E6F48 /* GemaltoFaceIdVC.m */,
+				6DE0DA8D20EB86EB005A045F /* QRCodeReaderVC.h */,
+				6DE0DA8E20EB86EB005A045F /* QRCodeReaderVC.m */,
+				6DE0DA9B20ECD234005A045F /* LoadingIndicatorView.h */,
+				6DE0DA9C20ECD234005A045F /* LoadingIndicatorView.m */,
+				6D5312BF22132D06002463D2 /* StandardButton.h */,
+				6D5312C022132D06002463D2 /* StandardButton.m */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		6DE0DAAE20F213F0005A045F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DAAF20F213F0005A045F /* App */,
+				6DE0DAB520F213F0005A045F /* Ezio */,
+				6DE0DAC820F21523005A045F /* CMain.h */,
+				6DE0DAC920F21523005A045F /* CMain.m */,
+				6DE0DACC20F2168E005A045F /* Configuration.h */,
+				6DB6B2A62141279E004F27FA /* Configuration.m */,
+				6DE0DAD520F222A1005A045F /* Protocols.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6DE0DAAF20F213F0005A045F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DAB220F213F0005A045F /* Categories */,
+				6DE0DAD120F22274005A045F /* Storage */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6DE0DAB220F213F0005A045F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DAB320F213F0005A045F /* UIViewController+Error.h */,
+				6DE0DAB420F213F0005A045F /* UIViewController+Error.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		6DE0DAB520F213F0005A045F /* Ezio */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DABC20F213F0005A045F /* Categories */,
+				6DE0DACD20F22261005A045F /* Storage */,
+				6DC2587B21C7A52400DD531E /* HttpManager.h */,
+				6DC2587C21C7A52400DD531E /* HttpManager.m */,
+				6DE0DAD620F23B52005A045F /* PushManager.h */,
+				6DE0DAD720F23B52005A045F /* PushManager.m */,
+				6DA5760720F383E500CCF413 /* TokenManager.h */,
+				6DA5760820F383E500CCF413 /* TokenManager.m */,
+				6DA5760F20F4ACC100CCF413 /* QRCodeManager.h */,
+				6DB6B2A421412787004F27FA /* QRCodeManager.m */,
+				6DA5760C20F3AC1200CCF413 /* TokenDevice.h */,
+				6DA5760D20F3AC1200CCF413 /* TokenDevice.m */,
+				6DB6B2AE214157B5004F27FA /* StoryItem.h */,
+				6DB6B2AF214157B5004F27FA /* StoryItem.m */,
+				6D9FF91721F73A8D00C4C0F0 /* KeyValue.h */,
+				6D9FF91821F73A8D00C4C0F0 /* KeyValue.m */,
+			);
+			path = Ezio;
+			sourceTree = "<group>";
+		};
+		6DE0DABC20F213F0005A045F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DABF20F213F0005A045F /* NSData+Ezio.h */,
+				6DE0DABD20F213F0005A045F /* NSData+Ezio.m */,
+				6DE0DAC020F213F0005A045F /* NSString+Ezio.h */,
+				6DE0DABE20F213F0005A045F /* NSString+Ezio.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		6DE0DACD20F22261005A045F /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DACF20F22261005A045F /* SecureStorage.h */,
+				6DE0DACE20F22261005A045F /* SecureStorage.m */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		6DE0DAD120F22274005A045F /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DAD320F22274005A045F /* UserDefaults.h */,
+				6DE0DAD220F22274005A045F /* UserDefaults.m */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DE0DA5220EB61E8005A045F /* EzioMobileSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DE0DA6C20EB61EA005A045F /* Build configuration list for PBXNativeTarget "EzioMobileSampleApp" */;
+			buildPhases = (
+				6DE0DA4F20EB61E8005A045F /* Sources */,
+				6DE0DA5020EB61E8005A045F /* Frameworks */,
+				6DE0DA5120EB61E8005A045F /* Resources */,
+				6D53E6A42146AC4F0052465D /* Mark interesting parts of code */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EzioMobileSampleApp;
+			productName = EzioMobileSampleApp;
+			productReference = 6DE0DA5320EB61E8005A045F /* EzioMobileSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DE0DA4B20EB61E8005A045F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Gemalto;
+				TargetAttributes = {
+					6DE0DA5220EB61E8005A045F = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 6DE0DA4E20EB61E8005A045F /* Build configuration list for PBXProject "EzioMobileSampleApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6DE0DA4A20EB61E8005A045F;
+			productRefGroup = 6DE0DA5420EB61E8005A045F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DE0DA5220EB61E8005A045F /* EzioMobileSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DE0DA5120EB61E8005A045F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D352DF221C8F01300465802 /* FacesCreateTemplateSmall.ndf in Resources */,
+				6D352DF121C8F01300465802 /* FacesCreateTemplateMediumLite.ndf in Resources */,
+				6D352E2421C8F5BF00465802 /* Assets.xcassets in Resources */,
+				6D40D9502109F350003E6F48 /* Localizable.strings in Resources */,
+				6D352DEF21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf in Resources */,
+				6D352E2521C8F5BF00465802 /* FaceUI.storyboard in Resources */,
+				6DE0DA6620EB61EA005A045F /* LaunchScreen.storyboard in Resources */,
+				6DE0DA6320EB61EA005A045F /* Assets.xcassets in Resources */,
+				6DE0DA6120EB61E8005A045F /* Main.storyboard in Resources */,
+				6D352DF021C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf in Resources */,
+				6DE0DA9A20EBC579005A045F /* LoadingIndicatorView.xib in Resources */,
+				6D352DF321C8F01300465802 /* FacesDetectSegmentsOrientation.ndf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D53E6A42146AC4F0052465D /* Mark interesting parts of code */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Mark interesting parts of code";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"SAMPLE:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.m\" -o -name \"*.h\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DE0DA4F20EB61E8005A045F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D40D94D2109DE81003E6F48 /* TokenDetail_SettingsVC.m in Sources */,
+				6DA5760920F383E500CCF413 /* TokenManager.m in Sources */,
+				6D352E1A21C8F0FF00465802 /* EMBaseViewController.m in Sources */,
+				6D9FF91921F73A8D00C4C0F0 /* KeyValue.m in Sources */,
+				6D352E1B21C8F0FF00465802 /* EMFaceView.m in Sources */,
+				6D5312C122132D06002463D2 /* StandardButton.m in Sources */,
+				6D352E1421C8F0FF00465802 /* EMCircularProgressView.m in Sources */,
+				6D352E1921C8F0FF00465802 /* EMFaceSettings.m in Sources */,
+				6D352E1521C8F0FF00465802 /* EMVerifyViewController.m in Sources */,
+				6DE0DAC620F213F0005A045F /* NSData+Ezio.m in Sources */,
+				6DE0DA9D20ECD234005A045F /* LoadingIndicatorView.m in Sources */,
+				6DB6B2B0214157B5004F27FA /* StoryItem.m in Sources */,
+				6D352E1321C8F0FF00465802 /* EMFaceBaseManager.m in Sources */,
+				6DA5760E20F3AC1200CCF413 /* TokenDevice.m in Sources */,
+				6DE0DAD020F22261005A045F /* SecureStorage.m in Sources */,
+				6DE0DA5820EB61E8005A045F /* AppDelegate.m in Sources */,
+				6DE0DAD420F22274005A045F /* UserDefaults.m in Sources */,
+				6D40D9442109DB47003E6F48 /* TokenDetail_AuthenticationVC.m in Sources */,
+				6D352E1621C8F0FF00465802 /* EMFaceEnrollManager.m in Sources */,
+				6D352E1821C8F0FF00465802 /* EMEnrollViewController.m in Sources */,
+				6DE0DAD820F23B52005A045F /* PushManager.m in Sources */,
+				6DE0DA7C20EB66B0005A045F /* ProvisionVC.m in Sources */,
+				6D352E1C21C8F0FF00465802 /* EMFaceManager.m in Sources */,
+				6DE0DA6920EB61EA005A045F /* main.m in Sources */,
+				6D352E1721C8F0FF00465802 /* EMFaceVerifyManager.m in Sources */,
+				6D40D9472109DBAC003E6F48 /* MainViewController.m in Sources */,
+				6D352E1D21C8F0FF00465802 /* EMFaceConstant.m in Sources */,
+				6D352E1E21C8F0FF00465802 /* EMFaceMessageHelper.m in Sources */,
+				6DE0DAC220F213F0005A045F /* UIViewController+Error.m in Sources */,
+				6DE0DAC720F213F0005A045F /* NSString+Ezio.m in Sources */,
+				6DC2587D21C7A52400DD531E /* HttpManager.m in Sources */,
+				6DE0DA8F20EB86EB005A045F /* QRCodeReaderVC.m in Sources */,
+				6DB6B2A321412779004F27FA /* TokenDetail_TransactionVC.m in Sources */,
+				6D40D97C210B4483003E6F48 /* GemaltoFaceIdVC.m in Sources */,
+				6DB6B2A521412787004F27FA /* QRCodeManager.m in Sources */,
+				6DE0DACA20F21523005A045F /* CMain.m in Sources */,
+				6DB6B2A72141279E004F27FA /* Configuration.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6D40D9522109F350003E6F48 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D40D9542109F433003E6F48 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6DE0DA5F20EB61E8005A045F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DE0DA6020EB61E8005A045F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6DE0DA6420EB61EA005A045F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DE0DA6520EB61EA005A045F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6DE0DA9820EBC579005A045F /* LoadingIndicatorView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DE0DA9920EBC579005A045F /* Base */,
+			);
+			name = LoadingIndicatorView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6DE0DA6A20EB61EA005A045F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EzioMobileSampleApp/stdafx.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fstack-protector-all",
+					"-finline-functions",
+				);
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6DE0DA6B20EB61EA005A045F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EzioMobileSampleApp/stdafx.h";
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"-fstack-protector-all",
+					"-finline-functions",
+				);
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6DE0DA6D20EB61EA005A045F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EzioMobileSampleApp/EzioMobileSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/Debug",
+				);
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				INFOPLIST_FILE = EzioMobileSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gemalto.EzioMobileSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6DE0DA6E20EB61EA005A045F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EzioMobileSampleApp/EzioMobileSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/Release",
+					"$(PROJECT_DIR)/Frameworks/Debug",
+				);
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				INFOPLIST_FILE = EzioMobileSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gemalto.EzioMobileSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DE0DA4E20EB61E8005A045F /* Build configuration list for PBXProject "EzioMobileSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DE0DA6A20EB61EA005A045F /* Debug */,
+				6DE0DA6B20EB61EA005A045F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DE0DA6C20EB61EA005A045F /* Build configuration list for PBXNativeTarget "EzioMobileSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DE0DA6D20EB61EA005A045F /* Debug */,
+				6DE0DA6E20EB61EA005A045F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DE0DA4B20EB61E8005A045F /* Project object */;
+}

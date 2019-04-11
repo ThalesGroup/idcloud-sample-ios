@@ -1,0 +1,93 @@
+//  MIT License
+//
+//  Copyright (c) 2019 Thales DIS
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+
+// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+
+// Secure key pad + pin related stuff
+
+"SECURE_KEY_PAD_OLD_PIN"        = "Old pin";
+"SECURE_KEY_PAD_NEW_PIN"        = "New pin";
+"PIN_CHANGE_CAPTION"            = "Change pin";
+"PIN_CHANGE_DESCRIPTION"        = "Pin was changed succesfully.";
+"FACE_ID_DESCRIPTION"           = "FaceIdMessage";
+"TOUCH_ID_DESCRIPTION"          = "TouchIdMessage";
+
+// Push
+
+"PUSH_APPROVE_QUESTION"         = "Incoming message";
+"PUSH_APPROVE_QUESTION_APPROVE" = "Approve";
+"PUSH_APPROVE_QUESTION_DENY"    = "Deny";
+"PUSH_SENT"                     = "Request was successfully sent.";
+"PUSH_STATUS_REGISTERED"        = "Ready to receive notification:";
+"PUSH_STATUS_PENDING"           = "Registration in progress:";
+
+
+// Common messages
+
+"COMMON_MESSAGE_OK"             = "Ok";
+"COMMON_MESSAGE_SUCCESS"        = "Success";
+"COMMON_MESSAGE_ERROR_CAPTION"  = "Something went wrong.";
+"COMMON_MSG_NO_CLIENT_ID"       = "No client id is registered.";
+"COMMON_MSG_MISSING_CLIENT_ID"  = "Missing Client Id.";
+"COMMON_MSG_NO_PUSH_TOKEN"      = "Missing push token.";
+"COMMON_MSG_UNSUPORTED_FRAME"   = "Unsupported frame type.";
+"COMMON_MSG_WRONG_COMPONENTS"   = "Unexpected components count.";
+
+// Auth mode options
+
+"AUTH_MODE_TOUCH_ID_ENABLE"     = "Enable TouchID";
+"AUTH_MODE_TOUCH_ID_DISABLE"    = "Disable TouchID";
+"AUTH_MODE_FACE_ID_ENABLE"      = "Enable FaceID";
+"AUTH_MODE_FACE_ID_DISABLE"     = "Disable FaceID";
+"AUTH_MODE_GEM_FACE_ID_ENABLE"  = "Enable Gemalto FaceID";
+"AUTH_MODE_GEM_FACE_ID_DISABLE" = "Disable Gemalto FaceID";
+
+// Gemalto Face Id
+
+"GEMALTO_FACE_ID_STATE_UNDEFINED"       = "Undefined";
+"GEMALTO_FACE_ID_STATE_NOT_SUPPORTED"   = "Not supported";
+"GEMALTO_FACE_ID_STATE_LICENSED"        = "Licensed";
+"GEMALTO_FACE_ID_STATE_UNLICENSED"      = "Not licensed";
+"GEMALTO_FACE_ID_STATE_INITED"          = "Initialised";
+"GEMALTO_FACE_ID_STATE_INIT_FAILED"     = "Failed to init";
+"GEMALTO_FACE_ID_STATE_READY"           = "Ready to use";
+"GEMALTO_FACE_ID_ENROLL"                = "Enroll FaceID";
+"GEMALTO_FACE_ID_UNENROLL"              = "Unenroll FaceID";
+
+// Loading bar indicator
+
+"LOADING_MESSAGE_SENDING"               = "Sending...";
+"LOADING_MESSAGE_SCANNING"              = "Scanning";
+"LOADING_MESSAGE_INCOMING_MESSAGE"      = "Incoming msg.";
+"LOADING_MESSAGE_ENROLLING"             = "Enrolling";
+"LOADING_MESSAGE_REMOVING"              = "Removing";
+"LOADING_MESSAGE_PROCESSING"            = "Processing";
+
+// OTP
+
+"OTP_VALUE_CAPTION"                     = "OTP";
+"OTP_VALUE_DESCRIPTION_VALID"           = "\n%@\n\nOTP is valid for next %lds.";
+
+// Server Messages
+
+"message_subject_authentication"        = "Please authenticate to login to the tutorial site.";
+"message_subject_transaction"           = "Please approve the transaction of $%amount to %beneficiary";

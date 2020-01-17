@@ -38,8 +38,7 @@
 
 - (id)init
 {
-    if (self = [super init])
-    {
+    if (self = [super init]) {
         self.manager = [[EMSecureStorageModule secureStorageModule] secureStorageManager];
     }
     
@@ -53,8 +52,7 @@
     BOOL                    retValue    = NO;
     NSError                 *error      = nil;
     id<EMPropertyStorage>   storage     = [self getAndOpenStorage:&error];
-    if (storage)
-    {
+    if (storage) {
         retValue = [storage setProperty:[value secureString]
                                  forKey:[key dataUsingEncoding:NSUTF8StringEncoding]
                               wipeValue:YES
@@ -69,8 +67,7 @@
     BOOL                    retValue        = NO;
     NSError                 *internalError  = nil;
     id<EMPropertyStorage>   storage         = [self getAndOpenStorage:&internalError];
-    if (storage)
-    {
+    if (storage) {
         NSData *convertedValue = [NSData dataWithBytes:&value length:sizeof(NSInteger)];
         retValue = [storage setProperty:[convertedValue secureByteArray:YES]
                                  forKey:[key dataUsingEncoding:NSUTF8StringEncoding]
@@ -88,14 +85,12 @@
     id<EMSecureByteArray>   value           = nil;
     NSError                 *internalError  = nil;
     id<EMPropertyStorage>   storage         = [self getAndOpenStorage:&internalError];
-    if (storage)
-    {
+    if (storage) {
         value = [storage propertyForKey:[key dataUsingEncoding:NSUTF8StringEncoding] error:&internalError];
         [storage close:&internalError];
         
         // We want secure string instead of data.
-        if (value)
-        {
+        if (value) {
             retValue = [[NSString alloc] initWithData:value.dataValue encoding:NSUTF8StringEncoding];
             [value wipe];
         }
@@ -110,14 +105,12 @@
     id<EMSecureByteArray>   value           = nil;
     NSError                 *internalError  = nil;
     id<EMPropertyStorage>   storage         = [self getAndOpenStorage:&internalError];
-    if (storage)
-    {
+    if (storage) {
         value = [storage propertyForKey:[key dataUsingEncoding:NSUTF8StringEncoding] error:&internalError];
         [storage close:&internalError];
         
         // We want secure string instead of data.
-        if (value)
-        {
+        if (value) {
             [value.dataValue getBytes:&retValue length:sizeof(NSInteger)];
             [value wipe];
         }
@@ -131,8 +124,7 @@
     BOOL                    retValue        = NO;
     NSError                 *internalError  = nil;
     id<EMPropertyStorage>   storage         = [self getAndOpenStorage:&internalError];
-    if (storage)
-    {
+    if (storage) {
         retValue = [storage removePropertyForKey:[key dataUsingEncoding:NSUTF8StringEncoding] error:&internalError];
         [storage close:&internalError];
     }
@@ -149,12 +141,14 @@
     id<EMPropertyStorage>   retValue        = [_manager propertyStorageWithIdentifier:kSampleStorage error:&internalError];
 
     // Try to open given storage.
-    if (retValue && !internalError)
+    if (retValue && !internalError) {
         [retValue open:&internalError];
+    }
 
     // Transfer possible error.
-    if (error)
+    if (error) {
         *error = internalError;
+    }
     
     return retValue;
 }

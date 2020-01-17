@@ -56,8 +56,9 @@
     
     // Display navigation bar if it was hidden.
     _navBarHidden = self.navigationController.isNavigationBarHidden;
-    if (_navBarHidden)
+    if (_navBarHidden) {
         [self.navigationController setNavigationBarHidden:NO animated:NO];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -65,8 +66,9 @@
     [super viewWillDisappear:animated];
     
     // Hide navigation bar if it was hidden.
-    if (_navBarHidden)
+    if (_navBarHidden) {
         [self.navigationController setNavigationBarHidden:YES animated:NO];
+    }
 }
     
 - (void)viewDidDisappear:(BOOL)animated
@@ -107,10 +109,9 @@
     AVCaptureDevice         *captureDevice  = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     AVCaptureDeviceInput    *input          = [AVCaptureDeviceInput deviceInputWithDevice:captureDevice error:&error];
     
-    if (error)
+    if (error) {
         [self showNSErrorIfExists:error];
-    else
-    {
+    } else {
         // Setup capture session. Output must be added before setting metadata types.
         AVCaptureMetadataOutput *captureMetadataOutput = [[AVCaptureMetadataOutput alloc] init];
         self.captureSession = [[AVCaptureSession alloc] init];
@@ -150,16 +151,18 @@
 - (void)captureUpdateBounds
 {
     // In case that something went wrong during init.
-    if (!_capturePreview)
+    if (!_capturePreview) {
         return;
+    }
     
     // Fill up full view frame
     _capturePreview.frame       = self.view.layer.bounds;
     _capturePreview.position    = CGPointMake(CGRectGetMidX(_capturePreview.frame), CGRectGetMidY(_capturePreview.frame));
     
     // Update orientation
-    if ([_capturePreview.connection isVideoOrientationSupported])
+    if ([_capturePreview.connection isVideoOrientationSupported]) {
         _capturePreview.connection.videoOrientation = [self videoOrientation];
+    }
 }
 
 // Return proper orientation for preview. Enum is different than status bar one.
@@ -185,13 +188,15 @@
 - (void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
     // Continue only if there is just one item detected and nothing was processed yet.
-    if (!metadataObjects || [metadataObjects count] != 1 || _wasProcessed)
+    if (!metadataObjects || [metadataObjects count] != 1 || _wasProcessed) {
         return;
+    }
     
     // We are interested in QR only.
     AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects firstObject];
-    if (![[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode])
+    if (![[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
         return;
+    }
     
     // Mark as processed so we will not trigger handler multiple times.
     _wasProcessed = YES;
@@ -204,8 +209,9 @@
     [self.navigationController popViewControllerAnimated:YES];
     
     // Notify listener
-    if (_wasProcessed && _delegate)
+    if (_wasProcessed && _delegate) {
         [_delegate onQRCodeProvided:self qrCode:qrCodeData];
+    }
     
     // Wipe encrypted data.
     [qrCodeData wipe];

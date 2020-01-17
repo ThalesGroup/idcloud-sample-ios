@@ -44,8 +44,7 @@
     [oathSettings setOcraSuite:C_CFG_OTP_OCRA_SUITE()];
     id<EMOathDevice> deviceOath = [factory createSoftOathDeviceWithToken:(id<EMSoftOathToken>)token settings:oathSettings error:&error];
     
-    if (deviceOath &&  (self = [super init]))
-    {
+    if (deviceOath &&  (self = [super init])) {
         _token      = token;
         _device     = deviceOath;
     }
@@ -83,36 +82,39 @@
         completionHandler:(OTPCompletion)completionHandler
 {
     // Detect jailbreak status.
-    if (EMJailbreakDetectorGetJailbreakStatus() == EMJailbreakStatusJailbroken)
+    if (EMJailbreakDetectorGetJailbreakStatus() == EMJailbreakStatusJailbroken) {
         return;
+    }
     
     // Calculate OTP and display message box in case of success.
     NSError             *error  = nil;
     id<EMSecureString>  otp     = nil;
     
-    if (serverChallenge)
-    {
+    if (serverChallenge) {
         // Ocra does require multiauth enabled.
         // Checking EMPinAuthInput protocol is redundant, because if multiauth is not enabled it must be pin anyway.
         BOOL isMultiauth = [_token isMultiAuthModeEnabled];
-        if (!isMultiauth && [authInput conformsToProtocol:@protocol(EMPinAuthInput)])
+        if (!isMultiauth && [authInput conformsToProtocol:@protocol(EMPinAuthInput)]) {
             isMultiauth = [_token upgradeToMultiAuthMode:(id<EMPinAuthInput>)authInput error:&error];
+        }
         
         // Compute OTP only when activation was successful.
-        if (isMultiauth)
+        if (isMultiauth) {
             otp = [_device ocraOtpWithAuthInput:authInput
                         serverChallengeQuestion:serverChallenge
                         clientChallengeQuestion:nil
                                    passwordHash:nil
                                         session:nil
                                           error:&error];
-    }
-    else
+        }
+    } else {
         otp = [_device totpWithAuthInput:authInput error:&error];
+    }
     
     // Notify listener
-    if (completionHandler)
+    if (completionHandler) {
         completionHandler(otp, authInput, serverChallenge, error);
+    }
     
     // Wipe for security reasons.
     [otp wipe];
@@ -128,18 +130,18 @@
     [container authenticateUser:_token
                     withMessage:NSLocalizedString(@"FACE_ID_DESCRIPTION", nil)
                   fallbackTitle:nil
-              completionHandler:^(id<EMSystemFaceAuthInput> faceAuthInput, NSData *evaluatedPolicyDomainState, NSError *error)
-     {
+              completionHandler:^(id<EMSystemFaceAuthInput> faceAuthInput, NSData *evaluatedPolicyDomainState, NSError *error) {
          // Call in UI thread.
          dispatch_async(dispatch_get_main_queue(), ^{
-             if (faceAuthInput)
+             if (faceAuthInput) {
                  [self totpWithAuthInput:faceAuthInput
                      withServerChallenge:serverChallenge
                        completionHandler:completionHandler];
-             else if (completionHandler && [error code] == EM_STATUS_AUTHENTICATION_CANCELED_USER_FALLBACK)
+             } else if (completionHandler && [error code] == EM_STATUS_AUTHENTICATION_CANCELED_USER_FALLBACK) {
                  completionHandler(nil, nil, serverChallenge, nil); // Pin enter fallback.
-             else if (completionHandler)
+             } else if (completionHandler) {
                  completionHandler(nil, nil, nil, error);
+             }
          });
      }];
 }
@@ -154,19 +156,22 @@
         // Call in UI thread. New sdk is already doing that, but we want to support all versions.
         dispatch_async(dispatch_get_main_queue(), ^{
             // Successfully get auth input. We can continue with OTP calculation.
-            if (authInput)
+            if (authInput) {
                 [self totpWithAuthInput:authInput
                     withServerChallenge:serverChallenge
                       completionHandler:completionHandler];
+            }
 
             // Adjust FaceUI string error to rest of the sample app handling.
             NSError *error = nil;
-            if (code == EMFaceManagerProcessStatusFail)
+            if (code == EMFaceManagerProcessStatusFail) {
                 error = [NSError errorWithDomain:@"FaceUI" code:-1 userInfo:@{ NSLocalizedDescriptionKey: [[EMFaceManager sharedInstance] faceStatusError] }];
+            }
 
             // Notify handler.
-            if (completionHandler)
+            if (completionHandler) {
                 completionHandler(nil, nil, nil, error);
+            }
         });
     }];
 }
@@ -181,16 +186,16 @@
     [container authenticateUser:_token
                     withMessage:NSLocalizedString(@"TOUCH_ID_DESCRIPTION", nil)
                   fallbackTitle:nil
-              completionHandler:^(id<EMSystemBioFingerprintAuthInput> bioFpAuthInput, NSData *evaluatedPolicyDomainState, NSError *error)
-     {
+              completionHandler:^(id<EMSystemBioFingerprintAuthInput> bioFpAuthInput, NSData *evaluatedPolicyDomainState, NSError *error) {
          // Call in UI thread.
          dispatch_async(dispatch_get_main_queue(), ^{
-             if (bioFpAuthInput)
+             if (bioFpAuthInput) {
                  [self totpWithAuthInput:bioFpAuthInput withServerChallenge:serverChallenge completionHandler:completionHandler];
-             else if (completionHandler && [error code] == EM_STATUS_AUTHENTICATION_CANCELED_USER_FALLBACK)
+             } else if (completionHandler && [error code] == EM_STATUS_AUTHENTICATION_CANCELED_USER_FALLBACK) {
                  completionHandler(nil, nil, serverChallenge, nil); // Pin enter fallback.
-             else if (completionHandler)
+             } else if (completionHandler) {
                  completionHandler(nil, nil, nil, error);
+             }
          });
      }];
 }

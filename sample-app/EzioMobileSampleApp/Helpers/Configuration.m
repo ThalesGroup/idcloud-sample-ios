@@ -26,6 +26,12 @@
 
 // MARK: - Common SDK
 
+NSData * C_CUSTOM_FINGERPRINT_DATA()
+{
+    static const NSString* customFingerPrintData = @"CUSTOM_FINGERPRINT_DATA";
+    return [customFingerPrintData dataUsingEncoding:NSUTF8StringEncoding];
+}
+
 /**
  Activation code is used to enable OOB features.
  It should be provided by application.
@@ -57,8 +63,7 @@ NSData * C_CFG_SDK_ACTIVATION_CODE()
  */
 EMDeviceFingerprintSource *C_CFG_SDK_DEVICE_FINGERPRINT_SOURCE()
 {
-    NSData *customFP = [@"com.gemalto.ezio.mobile.EzioMobileSdkExample" dataUsingEncoding:NSUTF8StringEncoding];
-    return [[EMDeviceFingerprintSource alloc] initWithCustomData:customFP
+    return [[EMDeviceFingerprintSource alloc] initWithCustomData:C_CUSTOM_FINGERPRINT_DATA()
                                            deviceFingerprintType:[NSSet setWithObject:@(EMDeviceFingerprintTypeSoft)]];
 }
 
@@ -74,6 +79,16 @@ EMTlsConfiguration *C_CFG_SDK_TLS_CONFIGURATION()
                                                    selfSignedCertAllowed:NO
                                                  hostnameMismatchAllowed:NO];
 }
+
+/**
+ Gets the domain.
+ 
+ @return Domain.
+ */
+NSString * C_DOMAIN() {
+    return @"";
+}
+
 
 // MARK: - OTP
 

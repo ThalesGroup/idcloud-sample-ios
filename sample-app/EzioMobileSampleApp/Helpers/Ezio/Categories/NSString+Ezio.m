@@ -46,8 +46,9 @@
     CC_MD5(pointer, (CC_LONG)strlen(pointer), md5Buffer);
     
     NSMutableString *retValue = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    for (NSUInteger index = 0; index < CC_MD5_DIGEST_LENGTH; index++)
+    for (NSUInteger index = 0; index < CC_MD5_DIGEST_LENGTH; index++) {
         [retValue appendFormat:@"%02x", md5Buffer[index]];
+    }
     
     return retValue;
 }

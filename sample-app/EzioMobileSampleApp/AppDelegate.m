@@ -40,13 +40,11 @@
     
     // SAMPLE: PUSH Notification - Register
     // Register for notifications
-    if (@available(iOS 10.0, *))
-    {
+    if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter *notifyCenter = [UNUserNotificationCenter currentNotificationCenter];
         notifyCenter.delegate = self;
         [notifyCenter requestAuthorizationWithOptions: UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound completionHandler:^(BOOL granted, NSError * _Nullable error) {
-            if (granted)
-            {
+            if (granted) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [application registerForRemoteNotifications];
                 });
@@ -148,15 +146,16 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
     [allItems addObject:[StoryItem itemAuthentication]];
 
     // Add custom items from configuration
-    for (StoryItem *loopItem in C_CFG_APP_TABS())
-    {
-        if (loopItem != [StoryItem itemAuthentication] && loopItem != [StoryItem itemProvision])
+    for (StoryItem *loopItem in C_CFG_APP_TABS()) {
+        if (loopItem != [StoryItem itemAuthentication] && loopItem != [StoryItem itemProvision]) {
             [allItems addObject:loopItem];
+        }
     }
     
     // Get related VC's from tab configs.
-    for (StoryItem *loopItem in allItems)
+    for (StoryItem *loopItem in allItems) {
         [viewControllers addObject:[main getViewController:loopItem]];
+    }
     
     // Add valid configuration to bar.
     tabController.viewControllers = viewControllers;

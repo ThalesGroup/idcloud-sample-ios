@@ -44,13 +44,14 @@
     // Helper to keep methods cleaner.
     __weak __typeof(self) weakSelf = self;
     _sendTransactionRequest = ^(id<EMSecureString> otp, id<EMAuthInput> input, id<EMSecureString> serverChallenge, NSError *error) {
-        if (weakSelf)
+        if (weakSelf) {
             [[CMain sharedInstance].managerHttp sendSignRequest:otp
                                                       authInput:input
                                                 serverChallenge:serverChallenge
                                                           error:error
                                                          amount:weakSelf.textAmount.text
                                                     beneficiary:weakSelf.textBeneficiary.text];
+        }
     };
     
     // Add return button functionality for both textfields.
@@ -64,8 +65,7 @@
 {
     [super reloadGUI];
     
-    if (!self.loadingIndicator.isPresent)
-    {
+    if (!self.loadingIndicator.isPresent) {
         [_textAmount        setEnabled:YES];
         [_textBeneficiary   setEnabled:YES];
     }

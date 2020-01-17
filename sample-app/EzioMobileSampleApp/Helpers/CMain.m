@@ -34,8 +34,9 @@ static CMain *sInstance = nil;
 
 + (instancetype)sharedInstance
 {
-    if (!sInstance)
+    if (!sInstance) {
         sInstance = [[CMain alloc] init];
+    }
     
     return sInstance;
 }
@@ -50,8 +51,7 @@ static CMain *sInstance = nil;
 - (void)configureAndActivateSDK
 {
     // Make sure, that we will always check isConfigured first. Multiple call of init will cause crash / run time exception.
-    if (![EMCore isConfigured])
-    {
+    if (![EMCore isConfigured]) {
         NSError *error = nil;
         EMCore *core = [EMCore configureWithActivationCode:C_CFG_SDK_ACTIVATION_CODE()
                                             configurations:[self moduleConfigurations]];
@@ -94,8 +94,10 @@ static CMain *sInstance = nil;
     UINavigationController  *navController  = (UINavigationController *)appDelegate.window.rootViewController;
     UITabBarController      *tabController  = (UITabBarController *)navController.topViewController;
     
-    if ([tabController isKindOfClass:[UITabBarController class]] && [tabController.selectedViewController conformsToProtocol:@protocol(MainViewControllerProtocol)])
+    if ([tabController isKindOfClass:[UITabBarController class]] &&
+        [tabController.selectedViewController conformsToProtocol:@protocol(MainViewControllerProtocol)]) {
         retValue = tabController.selectedViewController;
+    }
     
     return retValue;
 }
@@ -109,11 +111,12 @@ static CMain *sInstance = nil;
     UIViewController        *newVC          = tabController.viewControllers[newIndex];
     
     // Switch to proper tab.
-    if (animated)
+    if (animated) {
         [self animateTabChange:tabController toViewController:newVC];
-    else // Hide navigation bar on provisioning VC.
+    } else {
+        // Hide navigation bar on provisioning VC.
         [self updateNavigationController:navController hide:newIndex == 0 animated:NO];
-    
+    }
     
     [tabController setSelectedViewController:newVC];
 }
@@ -125,8 +128,7 @@ static CMain *sInstance = nil;
     UIView  *toView     = viewController.view;
     
     retValue = fromView != toView;
-    if (retValue)
-    {
+    if (retValue) {
         NSUInteger  fromIndex   = [tabBarController.viewControllers indexOfObject:tabBarController.selectedViewController];
         NSUInteger  toIndex     = [tabBarController.viewControllers indexOfObject:viewController];
         
@@ -154,8 +156,7 @@ static CMain *sInstance = nil;
     _faceIdState = GemaloFaceIdStateUndefined;
     
     NSError *error = nil;
-    if (![faceIdService isSupported:&error])
-    {
+    if (![faceIdService isSupported:&error]) {
         self.faceIdState = GemaloFaceIdStateNotSupported;
         NSLog(@"%@", error);
         return;
@@ -173,8 +174,7 @@ static CMain *sInstance = nil;
         builder.serverUrl   = C_CFG_FACE_ID_SERVER_URL();
     } completion:^(BOOL success, NSError *error) {
         // Print out reason and exit.
-        if (!success)
-        {
+        if (!success) {
             self.faceIdState = GemaloFaceIdStateUnlicensed;
             NSLog(@"%@", error);
             return;
@@ -182,15 +182,13 @@ static CMain *sInstance = nil;
         self.faceIdState = GemaloFaceIdStateLicensed;
         
         // Already inited.
-        if ([faceIdService isInitialized])
+        if ([faceIdService isInitialized]) {
             [self updateGemaltoFaceIdStatusConfigured:faceIdService];
-        else
-        {
+        } else {
             // With license we can activate face id service.
             [[EMFaceManager sharedInstance] initialize:^(BOOL success, NSError *error) {
                 // Print out reason and exit.
-                if (!success)
-                {
+                if (!success) {
                     self.faceIdState = GemaloFaceIdStateInitFailed;
                     NSLog(@"%@", error);
                     return;
@@ -205,21 +203,24 @@ static CMain *sInstance = nil;
 
 - (void)updateNavigationController:(UINavigationController *)controller hide:(BOOL)hide animated:(BOOL)animated
 {
-    if ([controller isNavigationBarHidden] != hide)
+    if ([controller isNavigationBarHidden] != hide) {
         [controller setNavigationBarHidden:hide animated:animated];
+    }
 }
     
 - (void)updateGemaltoFaceIdStatusConfigured:(EMFaceAuthService *)authService
 {
     // Configured at this point mean, that there is at least one user enrolled.
     NSError *error = nil;
-    if ([authService isConfigured:&error])
+    if ([authService isConfigured:&error]) {
         self.faceIdState = GemaloFaceIdStateReadyToUse;
-    else
+    } else {
         self.faceIdState = GemaloFaceIdStateInited;
+    }
     
-    if (error)
+    if (error) {
         NSLog(@"%@", error);
+    }
 }
 
 - (NSSet *)moduleConfigurations
@@ -255,8 +256,9 @@ static CMain *sInstance = nil;
     
     // Notify about first change
     id listener = [[CMain sharedInstance] getCurrentListener];
-    if (listener)
+    if (listener) {
         [listener updateFaceIdSupport];
+    }
 }
 
 @end

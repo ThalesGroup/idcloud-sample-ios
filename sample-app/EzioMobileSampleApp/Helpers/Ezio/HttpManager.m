@@ -53,11 +53,11 @@ typedef void (^HTTPResponse)(NSData * _Nullable data, NSURLResponse * _Nullable 
 {
     UIViewController<MainViewControllerProtocol> *listener = [[CMain sharedInstance] getCurrentListener];
     
-    if (otp && !error)
-    {
+    if (otp && !error) {
         // Display loading indicator if UI is still valid.
-        if (listener)
+        if (listener) {
             [listener loadingIndicatorShowWithCaption:NSLocalizedString(@"LOADING_MESSAGE_SENDING", nil)];
+        }
         
         // Demo app use user name for token name since it's unique.
         TokenDevice *device = [CMain sharedInstance].managerToken.tokenDevice;
@@ -74,8 +74,9 @@ typedef void (^HTTPResponse)(NSData * _Nullable data, NSURLResponse * _Nullable 
            returnInUIThread:YES
           completionHandler:proccessResponse];
     }
-    else if (listener)
+    else if (listener) {
         [listener showNSErrorIfExists:error];
+    }
     
     // Wipe all possible data.
     [serverChallenge    wipe];
@@ -91,11 +92,11 @@ typedef void (^HTTPResponse)(NSData * _Nullable data, NSURLResponse * _Nullable 
 {
     UIViewController<MainViewControllerProtocol> *listener = [[CMain sharedInstance] getCurrentListener];
     
-    if (otp && !error)
-    {
+    if (otp && !error) {
         // Display loading indicator if UI is still valid.
-        if (listener)
+        if (listener) {
             [listener loadingIndicatorShowWithCaption:NSLocalizedString(@"LOADING_MESSAGE_SENDING", nil)];
+        }
         
         // Demo app use user name for token name since it's unique.
         TokenDevice *device = [CMain sharedInstance].managerToken.tokenDevice;
@@ -112,8 +113,9 @@ typedef void (^HTTPResponse)(NSData * _Nullable data, NSURLResponse * _Nullable 
            returnInUIThread:YES
           completionHandler:proccessResponse];
     }
-    else if (listener)
+    else if (listener) {
         [listener showNSErrorIfExists:error];
+    }
     
     // Wipe all possible data.
     [serverChallenge    wipe];
@@ -127,16 +129,18 @@ static HTTPResponse const proccessResponse = ^void(NSData * _Nullable data, NSUR
     UIViewController<MainViewControllerProtocol> *listener = [[CMain sharedInstance] getCurrentListener];
     
     // View is gone. We can exit.
-    if (!listener)
+    if (!listener) {
         return;
+    }
     
     // Hide loading
     [listener loadingIndicatorHide];
     
-    if ([response isKindOfClass:[NSHTTPURLResponse class]] && ((NSHTTPURLResponse *)response).statusCode == 200 && data)
+    if ([response isKindOfClass:[NSHTTPURLResponse class]] && ((NSHTTPURLResponse *)response).statusCode == 200 && data) {
         [listener showMessageWithCaption:nil description:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
-    else
+    } else {
         [listener showNSErrorIfExists:error];
+    }
 };
 
 // WARNING: Basic authentication is used for connecting to tutorial website.
@@ -168,8 +172,7 @@ static HTTPResponse const proccessResponse = ^void(NSData * _Nullable data, NSUR
     [request setHTTPBody:postData];
     
     // Make response return in UI thread if needed.
-    HTTPResponse handler = returnInUIThread && completionHandler ? ^void(NSData *data, NSURLResponse *response, NSError *error)
-    {
+    HTTPResponse handler = returnInUIThread && completionHandler ? ^void(NSData *data, NSURLResponse *response, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             completionHandler(data, response, error);
         });

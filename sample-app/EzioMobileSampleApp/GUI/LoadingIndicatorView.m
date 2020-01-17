@@ -40,8 +40,9 @@
 
 - (nullable instancetype)initWithCoder:(NSCoder *)decoder
 {
-    if (self = [super initWithCoder:decoder])
+    if (self = [super initWithCoder:decoder]) {
         [self initFromXib];
+    }
     
     return self;
 }
@@ -71,23 +72,25 @@
 - (void)loadingBarShow:(BOOL)show animated:(BOOL)animated
 {
     // Avoid multiple call with same result.
-    if (_isPresent == show)
+    if (_isPresent == show) {
         return;
+    }
     
     // Start / Stop iOS loading indicator animation.
-    if (show)
+    if (show) {
         [_indicator startAnimating];
-    else
+    } else {
         [_indicator stopAnimating];
+    }
     
     // Stop any possible previous animations since we are not waiting for result.
     [self.layer removeAllAnimations];
     
     // Animate transition.
-    if (animated)
-    {
-        if (show)
+    if (animated) {
+        if (show) {
             self.hidden = NO;
+        }
         
         [UIView animateWithDuration:.5
                               delay:.0
@@ -95,12 +98,11 @@
                          animations:^{
                              self.alpha = show ? kVisibleAlpha : .0;
                          } completion:^(BOOL finished) {
-                             if (finished && !show)
+                             if (finished && !show) {
                                  self.hidden = YES;
+                             }
                          }];
-    }
-    else
-    {
+    } else {
         self.alpha  = show ? kVisibleAlpha : .0;
         self.hidden = !show;
     }
@@ -108,8 +110,9 @@
     _isPresent = show;
     
     // Remove last label after hide.
-    if (!show)
+    if (!show) {
         [_labelCaption setText:nil];
+    }
 }
 
 - (void)setCaption:(NSString *)caption

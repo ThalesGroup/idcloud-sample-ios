@@ -37,6 +37,8 @@ extern NSURL                            *C_CFG_OTP_PROVISION_URL();
 extern NSString                         *C_CFG_OTP_RSA_KEY_ID();
 extern EMDeviceFingerprintTokenPolicy   *C_CFG_OTP_DEVICE_FINGERPRINT_SOURCE();
 extern id<EMSecureString>               C_CFG_OTP_OCRA_SUITE();
+extern NSString                         *C_DOMAIN();
+extern NSData                           *C_CUSTOM_FINGERPRINT_DATA();
 
 // OOB
 extern EMOobJailbreakPolicy             C_CFG_OOB_JAILBREAK_POLICY();

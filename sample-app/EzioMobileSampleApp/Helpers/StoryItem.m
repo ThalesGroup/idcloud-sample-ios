@@ -60,48 +60,54 @@
 + (instancetype)itemQrReader
 {
     static StoryItem *retValue = nil;
-    if (!retValue)
+    if (!retValue) {
         retValue = [StoryItem itemWithStoryboradName:kStoryName storyboardItemId:kStoryID_QRCodeReaderVC];
+    }
     return retValue;
 }
 
 + (instancetype)itemProvision
 {
     static StoryItem *retValue = nil;
-    if (!retValue)
+    if (!retValue) {
         retValue = [StoryItem itemWithStoryboradName:kStoryName storyboardItemId:kStoryID_Tab_ProvisionVC];
+    }
     return retValue;
 }
 
 + (instancetype)itemAuthentication
 {
     static StoryItem *retValue = nil;
-    if (!retValue)
+    if (!retValue) {
         retValue = [StoryItem itemWithStoryboradName:kStoryName storyboardItemId:kStoryID_Tab_TokenDetail_AuthenticationVC];
+    }
     return retValue;
 }
 
 + (instancetype)itemTransactionSign
 {
     static StoryItem *retValue = nil;
-    if (!retValue)
+    if (!retValue) {
         retValue = [StoryItem itemWithStoryboradName:kStoryName storyboardItemId:kStoryID_Tab_TokenDetail_TransactionVC];
+    }
     return retValue;
 }
 
 + (instancetype)itemSettings
 {
     static StoryItem *retValue = nil;
-    if (!retValue)
+    if (!retValue) {
         retValue = [StoryItem itemWithStoryboradName:kStoryName storyboardItemId:kStoryID_Tab_TokenDetail_SettingsVC];
+    }
     return retValue;
 }
 
 + (instancetype)itemGemaltoFaceId
 {
     static StoryItem *retValue = nil;
-    if (!retValue)
+    if (!retValue) {
         retValue = [StoryItem itemWithStoryboradName:kStoryName storyboardItemId:kStoryID_Tab_GemaltoFaceIdVC];
+    }
     return retValue;
 }
 @end

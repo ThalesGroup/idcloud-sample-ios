@@ -46,7 +46,8 @@
 
 - (void)showNSErrorIfExists:(NSError *)error
 {
-    if (error)
+    if (error) {
         [self showError:error.localizedDescription];
+    }
 }
 @end

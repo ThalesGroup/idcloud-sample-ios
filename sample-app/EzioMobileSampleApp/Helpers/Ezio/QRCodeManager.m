@@ -32,8 +32,9 @@
 {
     // Handler is mandatory parameter.
     assert(completionHandler);
-    if (!completionHandler)
+    if (!completionHandler) {
         return;
+    }
     
     BOOL                retValue    = NO;
     NSError             *error      = nil;
@@ -44,10 +45,11 @@
         // Two components in frame are user id and reg code.
         NSString            *plainData = [[NSString alloc] initWithData:qrCodeData.dataValue encoding:NSUTF8StringEncoding];
         NSArray<NSString *> *components = [plainData componentsSeparatedByString:@","];
-        if (components.count != 2)
+        if (components.count != 2) {
             error = [NSError errorWithDomain:[NSString stringWithFormat:@"%s", object_getClassName(self)]
                                         code:-1
                                     userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"COMMON_MSG_WRONG_COMPONENTS", nil)}];
+        }
         BREAK_IF_NOT_NULL(error);
         
         // Get actual values.

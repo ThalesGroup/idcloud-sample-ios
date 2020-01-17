@@ -44,20 +44,19 @@
     NSString *tokenName = oathManager ? [[oathManager tokenNames:&error] anyObject] : nil;
     
     // If there is no token saved, we can skip rest.
-    if (tokenName)
-    {
+    if (tokenName) {
         // Try to get instance of saved token.
         token = [oathManager tokenWithName:tokenName
-                     fingerprintCustomData:C_CFG_SDK_DEVICE_FINGERPRINT_SOURCE().customData
+                     fingerprintCustomData:C_CUSTOM_FINGERPRINT_DATA()
                                      error:&error];
     }
     
     // Create self only if everything is correct so far.
-    if (!error && (self = [super init]))
-    {
+    if (!error && (self = [super init])) {
         // Token might not be enrolled yet.
-        if (token)
+        if (token) {
             _tokenDevice = [TokenDevice tokenDeviceWithToken:token];
+        }
         self.oathManager = oathManager;
     }
     
@@ -79,16 +78,19 @@
         BOOL removed = NO;
         
         // In case of successful unregistering, we can try to delete token it self.
-        if (success)
+        if (success) {
             removed = [self.oathManager removeToken:self.tokenDevice.token error:&error];
+        }
         
         // Remove stored reference
-        if (removed)
+        if (removed) {
             self->_tokenDevice = nil;
+        }
         
         // Notify listener.
-        if (completionHandler)
+        if (completionHandler) {
             completionHandler(removed, error);
+        }
     }];
 }
 
@@ -101,20 +103,19 @@
     // First try to register Client Id on OOB server.
     [[CMain sharedInstance].managerPush registerOOBWithUserId:userId
                                              registrationCode:regCode
-                                            completionHandler:^(id<EMOobRegistrationResponse> aResponse, NSError *anError)
-     {
-         // If OOB registration was successful we can provision token.
-         if (aResponse && aResponse.resultCode == EMOobResultCodeSuccess)
-         {
-             [self doProvisioningWithUserId:userId
-                           registrationCode:regCode
-                                   clientId:aResponse.clientId
-                          completionHandler:completionHandler];
-             
-         } // Notify about failure.
-         else if (completionHandler)
-             completionHandler(nil, anError);
-     }];
+                                            completionHandler:^(id<EMOobRegistrationResponse> aResponse, NSError *anError) {
+        // If OOB registration was successful we can provision token.
+        if (aResponse && aResponse.resultCode == EMOobResultCodeSuccess) {
+            [self doProvisioningWithUserId:userId
+                          registrationCode:regCode
+                                  clientId:aResponse.clientId
+                         completionHandler:completionHandler];
+            
+        } else if (completionHandler) {
+            // Notify about failure.
+            completionHandler(nil, anError);
+        }
+    }];
 }
 
 // MARK: - Private Helpers
@@ -122,64 +123,55 @@
 - (void)doProvisioningWithUserId:(NSString *)userId
                 registrationCode:(id<EMSecureString>)regCode
                         clientId:(NSString *)clientId
-               completionHandler:(void (^)(id<EMOathToken> token, NSError *error))completionHandler
-{
+               completionHandler:(void (^)(id<EMOathToken> token, NSError *error))completionHandler {
     // Prepare provisioning configuration based on app data.
     EMProvisioningConfiguration *config = [EMProvisioningConfiguration
                                            epsConfigurationWithURL:C_CFG_OTP_PROVISION_URL()
+                                           domain:C_DOMAIN()
                                            rsaKeyId:C_CFG_OTP_RSA_KEY_ID()
                                            rsaExponent:C_CFG_OTP_RSA_KEY_EXPONENT()
                                            rsaModulus:C_CFG_OTP_RSA_KEY_MODULUS()
                                            registrationCode:regCode
-                                           provisioningProtocol:EMMobileProvisioningProtocolVersion3
+                                           provisioningProtocol:EMMobileProvisioningProtocolVersion5
                                            optionalParameters:^(EMEpsConfigurationBuilder *builder) {
-                                               builder.tlsConfiguration = C_CFG_SDK_TLS_CONFIGURATION();
-                                           }];
+        builder.tlsConfiguration = C_CFG_SDK_TLS_CONFIGURATION();
+    }];
     
     // Try to get manager.
     NSError *error = nil;
     
     // Check if we did get token manager correctly.
-    if (error && completionHandler)
-    {
+    if (error && completionHandler) {
         completionHandler(nil, error);
         return;
     }
     
-    @try
-    {
+    @try {
         // Provision token with given config.
         [_oathManager createTokenWithName:userId
                 provisioningConfiguration:config
              deviceFingerprintTokenPolicy:C_CFG_OTP_DEVICE_FINGERPRINT_SOURCE()
                                capability:EMTokenCapabilityOTP
-                        completionHandler:^(id<EMOathToken> token, NSError *error)
-         {
-             // Save client id only in case of successful registration.
-             if (token && !error)
-             {
-                 CMain *main = [CMain sharedInstance];
-                 [main.managerPush registerClientId:clientId completionHandler:nil];
-                 
-                 // Store current token.
-                 self->_tokenDevice = [TokenDevice tokenDeviceWithToken:token];
-             }
-             
-             // Notify in UI thread.
-             if (completionHandler)
-             {
-                 dispatch_async(dispatch_get_main_queue(), ^{
-                     completionHandler(token, error);
-                 });
-             }
-         }];
+                extendedCompletionHandler:^(id<EMOathToken> token, NSDictionary *extensions, NSError *error) {
+            // Save client id only in case of successful registration.
+            if (token && !error) {
+                [CMain.sharedInstance.managerPush registerClientId:clientId completionHandler:nil];
+                
+                // Store current token.
+                self->_tokenDevice = [TokenDevice tokenDeviceWithToken:token];
+            }
+            
+            if (completionHandler) {
+                completionHandler(token, error);
+            }
+        }];
     }
-    @catch (EMException *exception)
-    {
-        if (completionHandler)
+    @catch (EMException *exception) {
+        if (completionHandler) {
             completionHandler(nil, [NSError errorWithDomain:[NSString stringWithFormat:@"%s", object_getClassName(self)]
                                                        code:-1
                                                    userInfo:@{NSLocalizedDescriptionKey: exception.description}]);
+        }
     }
 }
 

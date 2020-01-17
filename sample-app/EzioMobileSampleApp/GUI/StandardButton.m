@@ -39,8 +39,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    if (self = [super initWithCoder:aDecoder])
-    {
+    if (self = [super initWithCoder:aDecoder]) {
         _internalHighlighted = NO;
         
         self.layer.cornerRadius = 5.f;
@@ -66,16 +65,13 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 - (void)updateColor
 {
-    if ([self isEnabled])
-    {
+    if ([self isEnabled]) {
         if ([self isHighlighted]) {
             self.backgroundColor = UIColorFromRGB(0xa60017);
         } else {
             self.backgroundColor = UIColorFromRGB(0xE00F3D);
         }
-    }
-    else
-    {
+    } else {
         self.backgroundColor = UIColorFromRGB(0x969696);
     }
     

@@ -33,8 +33,7 @@
 
 - (id)initWithKey:(NSString *)key value:(NSString *)value
 {
-    if (self = [super init])
-    {
+    if (self = [super init]) {
         _key    = [key copy];
         _value  = [value copy];
     }

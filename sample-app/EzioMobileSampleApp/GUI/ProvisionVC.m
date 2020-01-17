@@ -46,7 +46,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
+    
     // Add return button functionality for both textfields.
     [_textUserId    setDelegate:self];
     [_textRegCode   setDelegate:self];
@@ -60,10 +60,9 @@
 {
     [super reloadGUI];
     
-    if (self.loadingIndicator.isPresent)
+    if (self.loadingIndicator.isPresent) {
         [self disableGUI];
-    else
-    {
+    } else {
         // Enable provision button only when both user id and registration code are provided.
         [_buttonEnrollManually  setEnabled:_textUserId.text.length && _textRegCode.text.length];
         [_buttonEnrollQr        setEnabled:YES];
@@ -104,26 +103,26 @@
                           registrationCode:regCode
                          completionHandler:^(id<EMOathToken> token, NSError *error)
      {
-         // From this point we don't need regCode.
-         [regCode wipe];
-         
-         // View is gone. We can exit.
-         if (!weakSelf)
-             return;
-         
-         // Hide loading indicator and reload gui.
-         [weakSelf loadingIndicatorHide];
-         
-         // Token was created. Switch tabs.
-         if (token)
-         {
-             [weakSelf.textUserId setText:nil];
-             [weakSelf.textRegCode setText:nil];
-             [main switchTabToCurrentState:YES];
-         }
-         else // Token was not created? Display error.
-             [weakSelf showNSErrorIfExists:error];
-     }];
+        // From this point we don't need regCode.
+        [regCode wipe];
+        
+        // View is gone. We can exit.
+        if (!weakSelf) {
+            return;
+        }
+        
+        // Hide loading indicator and reload gui.
+        [weakSelf loadingIndicatorHide];
+        
+        // Token was created. Switch tabs.
+        if (token) {
+            [weakSelf.textUserId setText:nil];
+            [weakSelf.textRegCode setText:nil];
+            [main switchTabToCurrentState:YES];
+        }
+        else // Token was not created? Display error.
+            [weakSelf showNSErrorIfExists:error];
+    }];
 }
 
 // MARK: - User interface
@@ -159,8 +158,9 @@
     [textField resignFirstResponder];
     
     // Jump to next one.
-    if ([textField isEqual:_textUserId])
+    if ([textField isEqual:_textUserId]) {
         [_textRegCode becomeFirstResponder];
+    }
     
     // All actions are allowed
     return YES;
@@ -175,15 +175,15 @@
     [[CMain sharedInstance].managerQRCode parseQRCode:qrCode
                                     completionHandler:^(BOOL successful, NSString *userId, id<EMSecureString> regCode, NSError *error)
      {
-         // Parsing was successful.
-         if (successful)
-             [self enrollWithUserId:userId andRegistrationCode:regCode];
-         else // Update states and check for errors.
-         {
-             [self showNSErrorIfExists:error];
-             [self reloadGUI];
-         }
-     }];
+        // Parsing was successful.
+        if (successful) {
+            [self enrollWithUserId:userId andRegistrationCode:regCode];
+        } else {
+            // Update states and check for errors.
+            [self showNSErrorIfExists:error];
+            [self reloadGUI];
+        }
+    }];
 }
 
 @end

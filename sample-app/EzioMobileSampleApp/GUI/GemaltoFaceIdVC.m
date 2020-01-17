@@ -84,10 +84,11 @@
     // Button is only enabled if face id is inited or ready to use.
     [_buttonEnrollNewFaceId setEnabled:enabled && !self.loadingIndicator.isPresent];
     
-    if (state == GemaloFaceIdStateInited)
+    if (state == GemaloFaceIdStateInited) {
         [_buttonEnrollNewFaceId setTitle:NSLocalizedString(@"GEMALTO_FACE_ID_ENROLL", nil) forState:UIControlStateNormal];
-    else
+    } else {
         [_buttonEnrollNewFaceId setTitle:NSLocalizedString(@"GEMALTO_FACE_ID_UNENROLL", nil) forState:UIControlStateNormal];
+    }
 }
 
 // MARK: - User interface
@@ -95,10 +96,11 @@
 - (IBAction)onButtonPressedEnrollNewFaceId:(UIButton *)sender
 {
     // Do proper action based on current state.
-    if ([CMain sharedInstance].faceIdState == GemaloFaceIdStateInited)
+    if ([CMain sharedInstance].faceIdState == GemaloFaceIdStateInited) {
         [self enroll];
-    else
+    } else {
         [self unenroll];
+    }
 }
 
 // MARK: - Private Helpers
@@ -108,12 +110,14 @@
     __weak __typeof(self) weakSelf = self;
     [EMFaceManager enrollWithPresentingViewController:self timeout:60 completion:^(EMFaceManagerProcessStatus code) {
         // View is gone. We can exit.
-        if (!weakSelf)
+        if (!weakSelf) {
             return;
+        }
         
         // Display possible errors.
-        if (code == EMFaceManagerProcessStatusFail)
+        if (code == EMFaceManagerProcessStatusFail) {
             [weakSelf showError:[[EMFaceManager sharedInstance] faceStatusError]];
+        }
         
         // Notify others.
         [[CMain sharedInstance] updateGemaltoFaceIdStatus];
@@ -126,12 +130,14 @@
     __weak __typeof(self) weakSelf = self;
     [EMFaceManager unenrollWithCompletion:^(EMFaceManagerProcessStatus code) {
         // View is gone. We can exit.
-        if (!weakSelf)
+        if (!weakSelf) {
             return;
+        }
         
         // Display possible errors.
-        if (code == EMFaceManagerProcessStatusFail)
+        if (code == EMFaceManagerProcessStatusFail) {
             [weakSelf showError:[[EMFaceManager sharedInstance] faceStatusError]];
+        }
         
         // Notify others.
         [[CMain sharedInstance] updateGemaltoFaceIdStatus];

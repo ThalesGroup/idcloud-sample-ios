@@ -61,8 +61,7 @@ typedef enum : NSInteger {
 {
     NSError *error = nil;
     
-    if (self = [super init])
-    {
+    if (self = [super init]) {
         // Try to read previous push token already registered by app.
         _currentPushToken   = [[[CMain sharedInstance] storageFast] readStringForKey:kStorageLastProvidedTokenId];
         self.oobManager     = [[EMOobModule oobModule] createOobManagerWithURL:C_CFG_OOB_URL()
@@ -75,14 +74,13 @@ typedef enum : NSInteger {
     
     // Something went wrong during init phase.
     // Probably wrong configuration, license etc..
-    if (error)
-    {
+    if (error) {
         NSLog(@"%@", error);
         assert(false);
         return nil;
-    }
-    else
+    } else {
         return self;
+    }
 }
 
 // MARK: - Public API
@@ -95,8 +93,7 @@ typedef enum : NSInteger {
 - (void)registerToken:(NSString *)token completionHandler:(GenericCompletion)completionHandler
 {
     // Store provided token.
-    if (!_currentPushToken || ![_currentPushToken isEqualToString:token])
-    {
+    if (!_currentPushToken || ![_currentPushToken isEqualToString:token]) {
         [[[CMain sharedInstance] storageFast] writeString:token forKey:kStorageLastProvidedTokenId];
         _currentPushToken = token;
     }
@@ -134,10 +131,11 @@ typedef enum : NSInteger {
         BREAK_IF_NOT_NULL(error);
         [regManager registerWithRequest:request completionHandler:completionHandler];
     } while (NO);
-
+    
     // Notify about possible failure.
-    if (completionHandler && error)
+    if (completionHandler && error) {
         completionHandler(nil, error);
+    }
 }
 
 - (void)unregisterOOBWithCompletionHandler:(GenericCompletion)completionHandler
@@ -145,37 +143,36 @@ typedef enum : NSInteger {
     CMain *main = [CMain sharedInstance];
     
     // Push token is registered
-    if ([self isPushTokenRegistered])
-    {
+    if ([self isPushTokenRegistered]) {
         // Call unregister
         [self unRegisterOOBClientId:[main.storageSecure readStringForKey:kStorageKeyClientId]
-                  completionHandler:^(BOOL success, NSError *error)
-         {
-             if (success)
-             {
-                 // Remove all stored values.
-                 [main.storageFast removeValueForKey:kStorageLastRegistredTokenId];
-                 [main.storageFast removeValueForKey:kStorageKeyClientIdStat];
-                 [main.storageSecure removeValueForKey:kStorageKeyClientId];
-                 
-                 [self notifyAboutStatusChange];
-             }
-             if (completionHandler)
-                 completionHandler(success, error);
-         }];
-    }
-    else
+                  completionHandler:^(BOOL success, NSError *error) {
+            if (success) {
+                // Remove all stored values.
+                [main.storageFast removeValueForKey:kStorageLastRegistredTokenId];
+                [main.storageFast removeValueForKey:kStorageKeyClientIdStat];
+                [main.storageSecure removeValueForKey:kStorageKeyClientId];
+                
+                [self notifyAboutStatusChange];
+            }
+            if (completionHandler) {
+                completionHandler(success, error);
+            }
+        }];
+    } else {
         [self returnSuccessToHandler:completionHandler];
+    }
 }
 
 - (void)processIncomingPush:(NSDictionary *)notification
 {
     UIViewController<MainViewControllerProtocol> *listener = [[CMain sharedInstance] getCurrentListener];
-
+    
     // React on message type com.gemalto.msm with supported view controller on screen.
     // This is just to simplify sample app scenario. Real application should handle all notification all the time.
-    if (!listener || !notification || !(notification = notification[kPushMessageType]))
+    if (!listener || !notification || !(notification = notification[kPushMessageType])) {
         return;
+    }
     
     // Get client and message id out of it.
     NSString *msgClientId   = notification[kPushMessageClientId];
@@ -183,8 +180,9 @@ typedef enum : NSInteger {
     NSString *locClientId   = [[[CMain sharedInstance] storageSecure] readStringForKey:kStorageKeyClientId];
     
     // Find related token / client id on local. React only on current one.
-    if (![msgClientId isEqualToString:locClientId])
+    if (![msgClientId isEqualToString:locClientId]) {
         return;
+    }
     
     // Prepare manager with current client and provider id.
     id<EMOobMessageManager> oobMessageManager = [_oobManager oobMessageManagerWithClientId:locClientId
@@ -196,24 +194,21 @@ typedef enum : NSInteger {
     // Download message content.
     // Some messages might already be prefetched so we don't have to download them.
     // For simplicity we will download all of them.
-    [oobMessageManager fetchWithMessageId:msgMessageId completionHandler:^(id<EMOobFetchMessageResponse> response, NSError *error)
-     {
-         // Notify about possible error
-         if (response.resultCode != EMOobResultCodeSuccess || !response.oobIncomingMessage || error)
-         {
-             [listener loadingIndicatorHide];
-             [listener showNSErrorIfExists:error];
-             return;
-         }
-         
-         // Since we might support multiple message type, it's cleaner to have separate method for that.
-         if (![self processIncomingMessage:response.oobIncomingMessage oobMessageManager:oobMessageManager handler:listener])
-         {
-             // Hide indicator in case that message was not processed.
-             // Otherwise indicator will be hidden by specific method.
-             [listener loadingIndicatorHide];
-         }
-     }];
+    [oobMessageManager fetchWithMessageId:msgMessageId completionHandler:^(id<EMOobFetchMessageResponse> response, NSError *error) {
+        // Notify about possible error
+        if (response.resultCode != EMOobResultCodeSuccess || !response.oobIncomingMessage || error) {
+            [listener loadingIndicatorHide];
+            [listener showNSErrorIfExists:error];
+            return;
+        }
+        
+        // Since we might support multiple message type, it's cleaner to have separate method for that.
+        if (![self processIncomingMessage:response.oobIncomingMessage oobMessageManager:oobMessageManager handler:listener]) {
+            // Hide indicator in case that message was not processed.
+            // Otherwise indicator will be hidden by specific method.
+            [listener loadingIndicatorHide];
+        }
+    }];
 }
 
 // MARK: - Message handlers
@@ -224,16 +219,17 @@ typedef enum : NSInteger {
 {
     BOOL retValue = NO;
     
-    // Sign request.
-    if ([message.messageType isEqualToString:EMOobIncomingMessageTypeTransactionSigning])
+    if ([message.messageType isEqualToString:EMOobIncomingMessageTypeTransactionSigning]) {
+        // Sign request.
         retValue = [self processTransactionSigningRequest:(id <EMOobTransactionSigningRequest>)message
                                         oobMessageManager:oobMessageManager
                                                   handler:handler];
-    // Verify request
-    else if ([message.messageType isEqualToString:EMOobIncomingMessageTypeTransactionVerify])
+    } else if ([message.messageType isEqualToString:EMOobIncomingMessageTypeTransactionVerify]) {
+        // Verify request
         retValue = [self processTransactionVerifyRequest:(id <EMOobTransactionVerifyRequest>)message
                                        oobMessageManager:oobMessageManager
                                                  handler:handler];
+    }
     
     return retValue;
 }
@@ -247,8 +243,7 @@ typedef enum : NSInteger {
     
     // Get message subject key and fill in all values.
     NSString *subject = NSLocalizedString(request.subject.stringValue, nil);
-    for (NSString *key in request.meta.allKeys)
-    {
+    for (NSString *key in request.meta.allKeys) {
         NSString *placeholder = [NSString stringWithFormat:@"%%%@", key];
         subject = [subject stringByReplacingOccurrencesOfString:placeholder withString:request.meta[key]];
     }
@@ -274,22 +269,21 @@ typedef enum : NSInteger {
             
             // Send message and wait display result.
             [oobMessageManager sendWithMessage:responseToSend
-                             completionHandler:^(id<EMOobMessageResponse> response, NSError *error)
-             {
-                 // Hide loading indicator in all cases, because sending is done.
-                 [handler loadingIndicatorHide];
-                 
-                 if (response && !error)
-                     [handler showMessageWithCaption:NSLocalizedString(@"COMMON_MESSAGE_SUCCESS", nil)
-                                          description:NSLocalizedString(@"PUSH_SENT", nil)];
-                 [handler showNSErrorIfExists:error];
-             }];
+                             completionHandler:^(id<EMOobMessageResponse> response, NSError *error) {
+                // Hide loading indicator in all cases, because sending is done.
+                [handler loadingIndicatorHide];
+                
+                if (response && !error) {
+                    [handler showMessageWithCaption:NSLocalizedString(@"COMMON_MESSAGE_SUCCESS", nil)
+                                        description:NSLocalizedString(@"PUSH_SENT", nil)];
+                }
+                [handler showNSErrorIfExists:error];
+            }];
         }];
     } while (NO);
-
+    
     // Display possible parsing issue.
-    if (handler && internalError)
-    {
+    if (handler && internalError) {
         [handler loadingIndicatorHide];
         [handler showNSErrorIfExists:internalError];
     }
@@ -310,8 +304,7 @@ typedef enum : NSInteger {
 - (void)registerCurrent:(NSString *)clientId completionHandler:(GenericCompletion)completionHandler
 {
     // We don't have token from app? Nothing to do without it.
-    if (!_currentPushToken)
-    {
+    if (!_currentPushToken) {
         // In full app this would not be an error, but in sample app we want to force registration OOB before token.
         [self returnErrorToHandler:completionHandler error:NSLocalizedString(@"COMMON_MSG_NO_PUSH_TOKEN", nil)];
         return;
@@ -320,28 +313,26 @@ typedef enum : NSInteger {
     CMain *main = [CMain sharedInstance];
     
     // We don't have any client id at all.
-    if ([main.storageFast readIntegerForKey:kStorageKeyClientIdStat] == kUnregistered)
-    {
+    if ([main.storageFast readIntegerForKey:kStorageKeyClientIdStat] == kUnregistered) {
         // This will probably happen when app will get push token without any enrolled token / client id.
         [self returnSuccessToHandler:completionHandler];
         return;
     }
     
     // Last registered token is same as current one.
-    if ([[main.storageFast readStringForKey:kStorageLastRegistredTokenId] isEqualToString:_currentPushToken])
-    {
+    if ([[main.storageFast readStringForKey:kStorageLastRegistredTokenId] isEqualToString:_currentPushToken]) {
         [self returnSuccessToHandler:completionHandler];
         return;
     }
     
     // Get current Client Id or use one provided from API to safe some time.
-    if (!clientId)
+    if (!clientId) {
         clientId = [main.storageSecure readStringForKey:kStorageKeyClientId];
+    }
     
     // This should not happen. If client Id is registered, we should have it.
     assert(clientId);
-    if (!clientId)
-    {
+    if (!clientId) {
         [self returnErrorToHandler:completionHandler error:NSLocalizedString(@"COMMON_MSG_MISSING_CLIENT_ID", nil)];
         return;
     }
@@ -352,32 +343,33 @@ typedef enum : NSInteger {
     // Now we have everything to register token to OOB it self.
     [self registerOOBClientId:clientId
                     pushToken:currentPushToken
-            completionHandler:^(BOOL success, NSError *error)
-     {
-         if (success)
-         {
-             [main.storageFast writeString:currentPushToken forKey:kStorageLastRegistredTokenId];
-             [self notifyAboutStatusChange];
-         }
-         if (completionHandler)
-             completionHandler(success, error);
-     }];
-
+            completionHandler:^(BOOL success, NSError *error) {
+        if (success) {
+            [main.storageFast writeString:currentPushToken forKey:kStorageLastRegistredTokenId];
+            [self notifyAboutStatusChange];
+        }
+        if (completionHandler) {
+            completionHandler(success, error);
+        }
+    }];
+    
 }
 
 - (void)returnSuccessToHandler:(GenericCompletion)completionHandler
 {
-    if (completionHandler)
+    if (completionHandler) {
         completionHandler(YES, nil);
+    }
 }
 
 
 - (void)returnErrorToHandler:(GenericCompletion)completionHandler error:(NSString *)error
 {
-    if (completionHandler)
+    if (completionHandler) {
         completionHandler(NO, [NSError errorWithDomain:[NSString stringWithFormat:@"%s", object_getClassName(self)]
                                                   code:-1
                                               userInfo:@{NSLocalizedDescriptionKey: error}]);
+    }
 }
 
 - (void)registerOOBClientId:(NSString *)clientId
@@ -386,9 +378,9 @@ typedef enum : NSInteger {
 
 {
     assert(clientId && token && completionHandler);
-
+    
     id<EMOobNotificationManager> notifyManager = [_oobManager oobNotificationManagerWithClientId:clientId];
-
+    
     NSArray <EMOobNotificationProfile *> *arrProfiles = @[[[EMOobNotificationProfile alloc] initWithChannel:C_CFG_OOB_CHANNEL() endPoint:token]];
     [notifyManager setNotificationProfiles:arrProfiles completionHandler:^(id<EMOobResponse> response, NSError *error) {
         BOOL success = !error && response && [response resultCode] == EMOobResultCodeSuccess;
@@ -405,14 +397,14 @@ typedef enum : NSInteger {
     [notifyManager clearNotificationProfilesWithCompletionHandler:^(id<EMOobResponse> response, NSError *error) {
         BOOL success = !error && response && [response resultCode] == EMOobResultCodeSuccess;
         completionHandler(success, error);
-            
     }];
 }
 
 - (void)notifyAboutStatusChange
 {
     id listener = [[CMain sharedInstance] getCurrentListener];
-    if (listener)
+    if (listener) {
         [listener updatePushRegistrationStatus];
+    }
 }
 @end

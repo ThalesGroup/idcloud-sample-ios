@@ -45,8 +45,9 @@ static uint8_t nibbleFromChar(unichar c) {
 
 - (instancetype)initWithHexString:(NSString *)hexString
 {
-    if (!hexString)
+    if (!hexString) {
         return nil;
+    }
 
     const NSUInteger charLength = hexString.length;
     const NSUInteger maxByteLength = charLength / 2;
@@ -58,8 +59,7 @@ static uint8_t nibbleFromChar(unichar c) {
 
     // Each byte is made up of two hex characters; store the outstanding half-byte until we read the second
     uint8_t hiNibble = invalidNibble;
-    for (CFIndex i = 0; i < charLength; ++i)
-    {
+    for (CFIndex i = 0; i < charLength; ++i) {
         uint8_t nextNibble = nibbleFromChar(CFStringGetCharacterFromInlineBuffer(&inlineBuffer, i));
 
         if (hiNibble == invalidNibble) {

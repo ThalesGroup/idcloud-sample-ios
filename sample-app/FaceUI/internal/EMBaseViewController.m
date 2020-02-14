@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
 #import "EMBaseViewController.h"
 #import "EMFaceMessageHelper.h"
@@ -52,6 +53,10 @@
     self.navItem.titleView = [[UIImageView alloc] initWithImage:image];
 
     [self initialStep];
+}
+
+- (BOOL)shouldAutorotate {
+    return NO;
 }
 
 - (void) initialStep {

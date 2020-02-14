@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,17 +20,18 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
 #import <Foundation/Foundation.h>
 
 /**
- * @discussion Static class to handle the names of the resources used by the FaceUI SDK.
+ * @discussion Static class to handle the names of the ressources used by the FaceUI SDK.
  */
 @interface EMFaceConstant : NSObject
 
 /**
- * Navigation Bar logo resource name
+ * Navigation Bar logo ressource name
  */
 extern NSString* const navigationBarLogoRessourceName;
 
@@ -43,7 +44,7 @@ extern NSString* const faceUIBundleName;
 @end
 
 /**
- * NSBundle category to be able to load resources from FaceUI SDK bundle.
+ * NSBundle category to be able to load ressources from FaceUI SDK bundle.
  */
 @interface NSBundle (FaceUISDKBundle)
 /**
@@ -53,15 +54,3 @@ extern NSString* const faceUIBundleName;
 + (NSBundle*)faceUIBundle;
 @end
 
-@implementation NSBundle (FaceUISDKBundle)
-
-+ (NSBundle*)faceUIBundle {
-    static dispatch_once_t onceToken;
-    static NSBundle *faceUIBundle = nil;
-    dispatch_once(&onceToken, ^{
-        faceUIBundle = [NSBundle mainBundle];
-    });
-    return faceUIBundle;
-}
-
-@end

@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
 #import "UserDefaults.h"
 
@@ -34,8 +35,7 @@
 
 // MARK: - Life Cycle
 
-- (id)init
-{
+- (id)init {
     if (self = [super init]) {
         self.manager = [NSUserDefaults standardUserDefaults];
     }
@@ -45,30 +45,25 @@
 
 // MARK: - StorageProtocol
 
-- (BOOL)writeString:(NSString *)value forKey:(NSString *)key
-{
+- (BOOL)writeString:(NSString *)value forKey:(NSString *)key {
     [_manager setObject:value forKey:key];
     return [_manager synchronize];
 }
 
-- (BOOL)writeInteger:(NSInteger)value forKey:(NSString *)key
-{
+- (BOOL)writeInteger:(NSInteger)value forKey:(NSString *)key {
     [_manager setInteger:value forKey:key];
     return [_manager synchronize];
 }
 
-- (NSString *)readStringForKey:(NSString *)key
-{
+- (NSString *)readStringForKey:(NSString *)key {
     return [_manager objectForKey:key];
 }
 
-- (NSInteger)readIntegerForKey:(NSString *)key
-{
+- (NSInteger)readIntegerForKey:(NSString *)key {
     return [_manager integerForKey:key];
 }
 
-- (BOOL)removeValueForKey:(NSString *)key
-{
+- (BOOL)removeValueForKey:(NSString *)key {
     [_manager removeObjectForKey:key];
     return YES;
 }

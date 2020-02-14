@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D2C857922F4567500204377 /* NotifyAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C857822F4567500204377 /* NotifyAction.m */; };
 		6D352DEF21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEA21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf */; };
 		6D352DF021C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEB21C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf */; };
 		6D352DF121C8F01300465802 /* FacesCreateTemplateMediumLite.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEC21C8F01300465802 /* FacesCreateTemplateMediumLite.ndf */; };
@@ -26,12 +27,11 @@
 		6D352E1E21C8F0FF00465802 /* EMFaceMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0F21C8F0FF00465802 /* EMFaceMessageHelper.m */; };
 		6D352E2421C8F5BF00465802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D352E2221C8F5BE00465802 /* Assets.xcassets */; };
 		6D352E2521C8F5BF00465802 /* FaceUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D352E2321C8F5BE00465802 /* FaceUI.storyboard */; };
-		6D40D9442109DB47003E6F48 /* TokenDetail_AuthenticationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D9432109DB47003E6F48 /* TokenDetail_AuthenticationVC.m */; };
-		6D40D9472109DBAC003E6F48 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D9462109DBAC003E6F48 /* MainViewController.m */; };
-		6D40D94D2109DE81003E6F48 /* TokenDetail_SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D94C2109DE81003E6F48 /* TokenDetail_SettingsVC.m */; };
+		6D3EAB1322E1E376000C0E22 /* IdCloudSecureKeypadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EAB1222E1E376000C0E22 /* IdCloudSecureKeypadViewController.m */; };
+		6D3EAB1522E1E50C000C0E22 /* IdCloudSecureKeypadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D3EAB1422E1E50C000C0E22 /* IdCloudSecureKeypadViewController.xib */; };
+		6D40D9472109DBAC003E6F48 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D9462109DBAC003E6F48 /* BaseViewController.m */; };
 		6D40D9502109F350003E6F48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D40D9522109F350003E6F48 /* Localizable.strings */; };
 		6D40D979210B2FFB003E6F48 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D978210B2FFB003E6F48 /* Accelerate.framework */; };
-		6D40D97C210B4483003E6F48 /* GemaltoFaceIdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D97B210B4483003E6F48 /* GemaltoFaceIdVC.m */; };
 		6D40D98C210B5142003E6F48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98B210B5142003E6F48 /* Foundation.framework */; };
 		6D40D98E210B514C003E6F48 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */; };
 		6D40D990210B5151003E6F48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98F210B5151003E6F48 /* UIKit.framework */; };
@@ -41,35 +41,82 @@
 		6D40D998210B5165003E6F48 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D997210B5165003E6F48 /* CoreMedia.framework */; };
 		6D40D99A210B5173003E6F48 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D999210B5173003E6F48 /* libc++.tbd */; };
 		6D40D99C210B517A003E6F48 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */; };
-		6D5312C122132D06002463D2 /* StandardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5312C022132D06002463D2 /* StandardButton.m */; };
+		6D5FC8EC22D357AF00A99FD5 /* ProvisionerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5FC8EB22D357AF00A99FD5 /* ProvisionerViewController.m */; };
+		6D5FC8F722D483F800A99FD5 /* IdCloudQrCodeReader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D5FC8F622D483F800A99FD5 /* IdCloudQrCodeReader.xib */; };
+		6D68F38E2328F8380076E51F /* stdafx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D68F38C2328F8330076E51F /* stdafx.m */; };
 		6D9FF91921F73A8D00C4C0F0 /* KeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FF91821F73A8D00C4C0F0 /* KeyValue.m */; };
 		6DA0F4B921C7E183008282F5 /* EzioMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE0DA7420EB640C005A045F /* EzioMobile.framework */; };
 		6DA5760920F383E500CCF413 /* TokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5760820F383E500CCF413 /* TokenManager.m */; };
 		6DA5760E20F3AC1200CCF413 /* TokenDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5760D20F3AC1200CCF413 /* TokenDevice.m */; };
-		6DB6B2A321412779004F27FA /* TokenDetail_TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B2A221412779004F27FA /* TokenDetail_TransactionVC.m */; };
-		6DB6B2A521412787004F27FA /* QRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B2A421412787004F27FA /* QRCodeManager.m */; };
+		6DB1F98322E4837C0031B4F3 /* IdCloudPinEntryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1F98222E4837C0031B4F3 /* IdCloudPinEntryView.m */; };
+		6DB1F98522E483880031B4F3 /* IdCloudPinEntryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1F98422E483880031B4F3 /* IdCloudPinEntryView.xib */; };
+		6DB1F98822E4839B0031B4F3 /* IdCloudChangePinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1F98722E4839B0031B4F3 /* IdCloudChangePinView.m */; };
+		6DB1F98A22E483A20031B4F3 /* IdCloudChangePinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1F98922E483A20031B4F3 /* IdCloudChangePinView.xib */; };
+		6DB1FAC722E7460D0031B4F3 /* IdCloudDesignable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB1FAB022E73E6E0031B4F3 /* IdCloudDesignable.framework */; };
+		6DB1FAC822E7460D0031B4F3 /* IdCloudDesignable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB1FAB022E73E6E0031B4F3 /* IdCloudDesignable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6DB6B2A72141279E004F27FA /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B2A62141279E004F27FA /* Configuration.m */; };
-		6DB6B2B0214157B5004F27FA /* StoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B2AF214157B5004F27FA /* StoryItem.m */; };
 		6DC2587D21C7A52400DD531E /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2587C21C7A52400DD531E /* HttpManager.m */; };
+		6DCA4BFA22CCC4D40082F969 /* IdCloudNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCA4BF922CCC4D40082F969 /* IdCloudNotification.m */; };
+		6DCFC72022E1C4BC00B1FD4E /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCFC71F22E1C4BC00B1FD4E /* SideMenuViewController.m */; };
 		6DE0DA5820EB61E8005A045F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA5720EB61E8005A045F /* AppDelegate.m */; };
-		6DE0DA6120EB61E8005A045F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA5F20EB61E8005A045F /* Main.storyboard */; };
+		6DE0DA6120EB61E8005A045F /* Protector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA5F20EB61E8005A045F /* Protector.storyboard */; };
 		6DE0DA6320EB61EA005A045F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA6220EB61EA005A045F /* Assets.xcassets */; };
 		6DE0DA6620EB61EA005A045F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA6420EB61EA005A045F /* LaunchScreen.storyboard */; };
 		6DE0DA6920EB61EA005A045F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA6820EB61EA005A045F /* main.m */; };
-		6DE0DA7C20EB66B0005A045F /* ProvisionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA7A20EB66B0005A045F /* ProvisionVC.m */; };
-		6DE0DA8F20EB86EB005A045F /* QRCodeReaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA8E20EB86EB005A045F /* QRCodeReaderVC.m */; };
-		6DE0DA9A20EBC579005A045F /* LoadingIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA9820EBC579005A045F /* LoadingIndicatorView.xib */; };
-		6DE0DA9D20ECD234005A045F /* LoadingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA9C20ECD234005A045F /* LoadingIndicatorView.m */; };
-		6DE0DAC220F213F0005A045F /* UIViewController+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DAB420F213F0005A045F /* UIViewController+Error.m */; };
-		6DE0DAC620F213F0005A045F /* NSData+Ezio.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DABD20F213F0005A045F /* NSData+Ezio.m */; };
-		6DE0DAC720F213F0005A045F /* NSString+Ezio.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DABE20F213F0005A045F /* NSString+Ezio.m */; };
+		6DE0DA8F20EB86EB005A045F /* IdCloudQrCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA8E20EB86EB005A045F /* IdCloudQrCodeReader.m */; };
+		6DE0DA9A20EBC579005A045F /* IdCloudLoadingIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA9820EBC579005A045F /* IdCloudLoadingIndicator.xib */; };
+		6DE0DA9D20ECD234005A045F /* IdCloudLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA9C20ECD234005A045F /* IdCloudLoadingIndicator.m */; };
+		6DE0DAC620F213F0005A045F /* NSData+Protector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DABD20F213F0005A045F /* NSData+Protector.m */; };
+		6DE0DAC720F213F0005A045F /* NSString+Protector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DABE20F213F0005A045F /* NSString+Protector.m */; };
 		6DE0DACA20F21523005A045F /* CMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DAC920F21523005A045F /* CMain.m */; };
 		6DE0DAD020F22261005A045F /* SecureStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DACE20F22261005A045F /* SecureStorage.m */; };
 		6DE0DAD420F22274005A045F /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DAD220F22274005A045F /* UserDefaults.m */; };
 		6DE0DAD820F23B52005A045F /* PushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DAD720F23B52005A045F /* PushManager.m */; };
+		F4846EB8230D3E340034D115 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4846EB7230D3E340034D115 /* Root.storyboard */; };
+		F4846EBC230D3EB10034D115 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4846EBB230D3EB10034D115 /* RootViewController.m */; };
+		F491783C22D4CA7C00E6E3F7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F491783B22D4CA7C00E6E3F7 /* HomeViewController.m */; };
+		F491783F22D4CC6F00E6E3F7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F491783E22D4CC6F00E6E3F7 /* SettingsViewController.m */; };
+		F491784222D4D08100E6E3F7 /* SignTransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F491784122D4D08100E6E3F7 /* SignTransactionViewController.m */; };
+		F491784522D4D17900E6E3F7 /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F491784422D4D17900E6E3F7 /* OTPViewController.m */; };
+		F4AB30FB23152509002CE4E8 /* IdCloudIncomingMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AB30F923152503002CE4E8 /* IdCloudIncomingMessage.m */; };
+		F4AB30FD23152533002CE4E8 /* IdCloudIncomingMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4AB30FC23152533002CE4E8 /* IdCloudIncomingMessage.xib */; };
+		F4E23B1B22DDBE48005CD976 /* QRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E23B1A22DDBE48005CD976 /* QRCodeManager.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6DB1FAAF22E73E6E0031B4F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6DB1FA6722E73C720031B4F3;
+			remoteInfo = IdCloudDesignable;
+		};
+		6DB1FAC922E7460D0031B4F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DB1FA6622E73C720031B4F3;
+			remoteInfo = IdCloudDesignable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6DB1FACB22E7460E0031B4F3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6DB1FAC822E7460D0031B4F3 /* IdCloudDesignable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6D2C857722F4567500204377 /* NotifyAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifyAction.h; sourceTree = "<group>"; };
+		6D2C857822F4567500204377 /* NotifyAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifyAction.m; sourceTree = "<group>"; };
 		6D352DEA21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsLiveness.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesDetectSegmentsLiveness.ndf; sourceTree = "<group>"; };
 		6D352DEB21C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsFeaturePointsTrack.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesDetectSegmentsFeaturePointsTrack.ndf; sourceTree = "<group>"; };
 		6D352DEC21C8F01300465802 /* FacesCreateTemplateMediumLite.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesCreateTemplateMediumLite.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesCreateTemplateMediumLite.ndf; sourceTree = "<group>"; };
@@ -101,16 +148,13 @@
 		6D352E1021C8F0FF00465802 /* EMFaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceManager.h; sourceTree = "<group>"; };
 		6D352E2221C8F5BE00465802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D352E2321C8F5BE00465802 /* FaceUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FaceUI.storyboard; sourceTree = "<group>"; };
-		6D40D9422109DB47003E6F48 /* TokenDetail_AuthenticationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenDetail_AuthenticationVC.h; sourceTree = "<group>"; };
-		6D40D9432109DB47003E6F48 /* TokenDetail_AuthenticationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenDetail_AuthenticationVC.m; sourceTree = "<group>"; };
-		6D40D9452109DBAC003E6F48 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		6D40D9462109DBAC003E6F48 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		6D40D94B2109DE81003E6F48 /* TokenDetail_SettingsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenDetail_SettingsVC.h; sourceTree = "<group>"; };
-		6D40D94C2109DE81003E6F48 /* TokenDetail_SettingsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenDetail_SettingsVC.m; sourceTree = "<group>"; };
+		6D3EAB1122E1E376000C0E22 /* IdCloudSecureKeypadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudSecureKeypadViewController.h; sourceTree = "<group>"; };
+		6D3EAB1222E1E376000C0E22 /* IdCloudSecureKeypadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudSecureKeypadViewController.m; sourceTree = "<group>"; };
+		6D3EAB1422E1E50C000C0E22 /* IdCloudSecureKeypadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudSecureKeypadViewController.xib; sourceTree = "<group>"; };
+		6D40D9452109DBAC003E6F48 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		6D40D9462109DBAC003E6F48 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		6D40D9542109F433003E6F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D40D978210B2FFB003E6F48 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		6D40D97A210B4483003E6F48 /* GemaltoFaceIdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GemaltoFaceIdVC.h; sourceTree = "<group>"; };
-		6D40D97B210B4483003E6F48 /* GemaltoFaceIdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GemaltoFaceIdVC.m; sourceTree = "<group>"; };
 		6D40D98B210B5142003E6F48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6D40D98F210B5151003E6F48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -120,8 +164,10 @@
 		6D40D997210B5165003E6F48 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		6D40D999210B5173003E6F48 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		6D5312BF22132D06002463D2 /* StandardButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StandardButton.h; sourceTree = "<group>"; };
-		6D5312C022132D06002463D2 /* StandardButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StandardButton.m; sourceTree = "<group>"; };
+		6D5FC8EA22D357AF00A99FD5 /* ProvisionerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvisionerViewController.h; sourceTree = "<group>"; };
+		6D5FC8EB22D357AF00A99FD5 /* ProvisionerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProvisionerViewController.m; sourceTree = "<group>"; };
+		6D5FC8F622D483F800A99FD5 /* IdCloudQrCodeReader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudQrCodeReader.xib; sourceTree = "<group>"; };
+		6D68F38C2328F8330076E51F /* stdafx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stdafx.m; sourceTree = "<group>"; };
 		6D9FF91721F73A8D00C4C0F0 /* KeyValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyValue.h; sourceTree = "<group>"; };
 		6D9FF91821F73A8D00C4C0F0 /* KeyValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyValue.m; sourceTree = "<group>"; };
 		6DA5760720F383E500CCF413 /* TokenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenManager.h; sourceTree = "<group>"; };
@@ -129,37 +175,41 @@
 		6DA5760C20F3AC1200CCF413 /* TokenDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenDevice.h; sourceTree = "<group>"; };
 		6DA5760D20F3AC1200CCF413 /* TokenDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenDevice.m; sourceTree = "<group>"; };
 		6DA5760F20F4ACC100CCF413 /* QRCodeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeManager.h; sourceTree = "<group>"; };
-		6DB6B2A121412779004F27FA /* TokenDetail_TransactionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TokenDetail_TransactionVC.h; path = EzioMobileSampleApp/GUI/TokenDetail_TransactionVC.h; sourceTree = SOURCE_ROOT; };
-		6DB6B2A221412779004F27FA /* TokenDetail_TransactionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TokenDetail_TransactionVC.m; path = EzioMobileSampleApp/GUI/TokenDetail_TransactionVC.m; sourceTree = SOURCE_ROOT; };
-		6DB6B2A421412787004F27FA /* QRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QRCodeManager.m; path = EzioMobileSampleApp/Helpers/Ezio/QRCodeManager.m; sourceTree = SOURCE_ROOT; };
+		6DB1F98122E4837C0031B4F3 /* IdCloudPinEntryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudPinEntryView.h; sourceTree = "<group>"; };
+		6DB1F98222E4837C0031B4F3 /* IdCloudPinEntryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudPinEntryView.m; sourceTree = "<group>"; };
+		6DB1F98422E483880031B4F3 /* IdCloudPinEntryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudPinEntryView.xib; sourceTree = "<group>"; };
+		6DB1F98622E4839B0031B4F3 /* IdCloudChangePinView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudChangePinView.h; sourceTree = "<group>"; };
+		6DB1F98722E4839B0031B4F3 /* IdCloudChangePinView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudChangePinView.m; sourceTree = "<group>"; };
+		6DB1F98922E483A20031B4F3 /* IdCloudChangePinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudChangePinView.xib; sourceTree = "<group>"; };
+		6DB1F98B22E488F90031B4F3 /* IdCloudTopViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudTopViewProtocol.h; sourceTree = "<group>"; };
+		6DB1FA4A22E6F9FE0031B4F3 /* ProtectorSample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ProtectorSample.plist; sourceTree = "<group>"; };
+		6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IdCloudDesignable.xcodeproj; path = IdCloudDesignable/IdCloudDesignable.xcodeproj; sourceTree = "<group>"; };
 		6DB6B2A62141279E004F27FA /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Configuration.m; path = EzioMobileSampleApp/Helpers/Configuration.m; sourceTree = SOURCE_ROOT; };
-		6DB6B2AA214127AB004F27FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = EzioMobileSampleApp/Info.plist; sourceTree = SOURCE_ROOT; };
-		6DB6B2AE214157B5004F27FA /* StoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryItem.h; path = EzioMobileSampleApp/Helpers/StoryItem.h; sourceTree = SOURCE_ROOT; };
-		6DB6B2AF214157B5004F27FA /* StoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryItem.m; path = EzioMobileSampleApp/Helpers/StoryItem.m; sourceTree = SOURCE_ROOT; };
 		6DC2587B21C7A52400DD531E /* HttpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
 		6DC2587C21C7A52400DD531E /* HttpManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
-		6DE0DA5320EB61E8005A045F /* EzioMobileSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EzioMobileSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DCA4BF822CCC4D40082F969 /* IdCloudNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudNotification.h; sourceTree = "<group>"; };
+		6DCA4BF922CCC4D40082F969 /* IdCloudNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudNotification.m; sourceTree = "<group>"; };
+		6DCFC71E22E1C4BC00B1FD4E /* SideMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
+		6DCFC71F22E1C4BC00B1FD4E /* SideMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
+		6DDBADD422F099A8009079C6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6DE0DA5320EB61E8005A045F /* ProtectorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtectorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE0DA5620EB61E8005A045F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6DE0DA5720EB61E8005A045F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6DE0DA6020EB61E8005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6DE0DA6020EB61E8005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Protector.storyboard; sourceTree = "<group>"; };
 		6DE0DA6220EB61EA005A045F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DE0DA6520EB61EA005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DE0DA6820EB61EA005A045F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6DE0DA6F20EB629D005A045F /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
 		6DE0DA7420EB640C005A045F /* EzioMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EzioMobile.framework; path = Frameworks/Debug/EzioMobile.framework; sourceTree = "<group>"; };
-		6DE0DA7820EB66B0005A045F /* ProvisionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvisionVC.h; sourceTree = "<group>"; };
-		6DE0DA7A20EB66B0005A045F /* ProvisionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvisionVC.m; sourceTree = "<group>"; };
-		6DE0DA8D20EB86EB005A045F /* QRCodeReaderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderVC.h; sourceTree = "<group>"; };
-		6DE0DA8E20EB86EB005A045F /* QRCodeReaderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderVC.m; sourceTree = "<group>"; };
-		6DE0DA9920EBC579005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoadingIndicatorView.xib; sourceTree = "<group>"; };
-		6DE0DA9B20ECD234005A045F /* LoadingIndicatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingIndicatorView.h; sourceTree = "<group>"; };
-		6DE0DA9C20ECD234005A045F /* LoadingIndicatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingIndicatorView.m; sourceTree = "<group>"; };
-		6DE0DAB320F213F0005A045F /* UIViewController+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Error.h"; sourceTree = "<group>"; };
-		6DE0DAB420F213F0005A045F /* UIViewController+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Error.m"; sourceTree = "<group>"; };
-		6DE0DABD20F213F0005A045F /* NSData+Ezio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Ezio.m"; sourceTree = "<group>"; };
-		6DE0DABE20F213F0005A045F /* NSString+Ezio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ezio.m"; sourceTree = "<group>"; };
-		6DE0DABF20F213F0005A045F /* NSData+Ezio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Ezio.h"; sourceTree = "<group>"; };
-		6DE0DAC020F213F0005A045F /* NSString+Ezio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Ezio.h"; sourceTree = "<group>"; };
+		6DE0DA8D20EB86EB005A045F /* IdCloudQrCodeReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudQrCodeReader.h; sourceTree = "<group>"; };
+		6DE0DA8E20EB86EB005A045F /* IdCloudQrCodeReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudQrCodeReader.m; sourceTree = "<group>"; };
+		6DE0DA9920EBC579005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/IdCloudLoadingIndicator.xib; sourceTree = "<group>"; };
+		6DE0DA9B20ECD234005A045F /* IdCloudLoadingIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudLoadingIndicator.h; sourceTree = "<group>"; };
+		6DE0DA9C20ECD234005A045F /* IdCloudLoadingIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudLoadingIndicator.m; sourceTree = "<group>"; };
+		6DE0DABD20F213F0005A045F /* NSData+Protector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Protector.m"; sourceTree = "<group>"; };
+		6DE0DABE20F213F0005A045F /* NSString+Protector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Protector.m"; sourceTree = "<group>"; };
+		6DE0DABF20F213F0005A045F /* NSData+Protector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Protector.h"; sourceTree = "<group>"; };
+		6DE0DAC020F213F0005A045F /* NSString+Protector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Protector.h"; sourceTree = "<group>"; };
 		6DE0DAC820F21523005A045F /* CMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMain.h; sourceTree = "<group>"; };
 		6DE0DAC920F21523005A045F /* CMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMain.m; sourceTree = "<group>"; };
 		6DE0DACC20F2168E005A045F /* Configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
@@ -171,6 +221,22 @@
 		6DE0DAD620F23B52005A045F /* PushManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushManager.h; sourceTree = "<group>"; };
 		6DE0DAD720F23B52005A045F /* PushManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushManager.m; sourceTree = "<group>"; };
 		6DE0DADC20F246C4005A045F /* EzioMobileSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EzioMobileSampleApp.entitlements; sourceTree = "<group>"; };
+		F4846EB7230D3E340034D115 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		F4846EBA230D3EB10034D115 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F4846EBB230D3EB10034D115 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F491783A22D4CA7C00E6E3F7 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		F491783B22D4CA7C00E6E3F7 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		F491783D22D4CC6F00E6E3F7 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		F491783E22D4CC6F00E6E3F7 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		F491784022D4D08100E6E3F7 /* SignTransactionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignTransactionViewController.h; sourceTree = "<group>"; };
+		F491784122D4D08100E6E3F7 /* SignTransactionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignTransactionViewController.m; sourceTree = "<group>"; };
+		F491784322D4D17900E6E3F7 /* OTPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTPViewController.h; sourceTree = "<group>"; };
+		F491784422D4D17900E6E3F7 /* OTPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTPViewController.m; sourceTree = "<group>"; };
+		F4AB30F823152503002CE4E8 /* IdCloudIncomingMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudIncomingMessage.h; sourceTree = "<group>"; };
+		F4AB30F923152503002CE4E8 /* IdCloudIncomingMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudIncomingMessage.m; sourceTree = "<group>"; };
+		F4AB30FC23152533002CE4E8 /* IdCloudIncomingMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudIncomingMessage.xib; sourceTree = "<group>"; };
+		F4E23B1A22DDBE48005CD976 /* QRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeManager.m; sourceTree = "<group>"; };
+		F4EE07B0230AC72300344DEE /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +253,7 @@
 				6D40D992210B5157003E6F48 /* LocalAuthentication.framework in Frameworks */,
 				6DA0F4B921C7E183008282F5 /* EzioMobile.framework in Frameworks */,
 				6D40D990210B5151003E6F48 /* UIKit.framework in Frameworks */,
+				6DB1FAC722E7460D0031B4F3 /* IdCloudDesignable.framework in Frameworks */,
 				6D40D98E210B514C003E6F48 /* SystemConfiguration.framework in Frameworks */,
 				6D40D98C210B5142003E6F48 /* Foundation.framework in Frameworks */,
 			);
@@ -218,6 +285,7 @@
 				6D352E0021C8F0FF00465802 /* EMFaceMessageHelper.h */,
 				6D352E0121C8F0FF00465802 /* EMCircularProgressView.m */,
 				6D352E0221C8F0FF00465802 /* EMFaceConstant.h */,
+				6D352E0E21C8F0FF00465802 /* EMFaceConstant.m */,
 				6D352E0321C8F0FF00465802 /* EMVerifyViewController.m */,
 				6D352E0421C8F0FF00465802 /* EMFaceEnrollManager.m */,
 				6D352E0521C8F0FF00465802 /* EMFaceBaseManager.h */,
@@ -229,7 +297,6 @@
 				6D352E0B21C8F0FF00465802 /* EMVerifyViewController.h */,
 				6D352E0C21C8F0FF00465802 /* EMFaceManager.m */,
 				6D352E0D21C8F0FF00465802 /* EMCircularProgressView.h */,
-				6D352E0E21C8F0FF00465802 /* EMFaceConstant.m */,
 				6D352E0F21C8F0FF00465802 /* EMFaceMessageHelper.m */,
 			);
 			path = internal;
@@ -242,6 +309,115 @@
 				6D352E2321C8F5BE00465802 /* FaceUI.storyboard */,
 			);
 			path = BundleAssets;
+			sourceTree = "<group>";
+		};
+		6D3EAB1022E1E35B000C0E22 /* IdCloudSecureKeypad */ = {
+			isa = PBXGroup;
+			children = (
+				6DB1F98022E483600031B4F3 /* Top View */,
+				6D3EAB1122E1E376000C0E22 /* IdCloudSecureKeypadViewController.h */,
+				6D3EAB1222E1E376000C0E22 /* IdCloudSecureKeypadViewController.m */,
+				6D3EAB1422E1E50C000C0E22 /* IdCloudSecureKeypadViewController.xib */,
+			);
+			path = IdCloudSecureKeypad;
+			sourceTree = "<group>";
+		};
+		6D5FC8E922D3571600A99FD5 /* Protector */ = {
+			isa = PBXGroup;
+			children = (
+				6D5FC8EA22D357AF00A99FD5 /* ProvisionerViewController.h */,
+				6D5FC8EB22D357AF00A99FD5 /* ProvisionerViewController.m */,
+				F491783A22D4CA7C00E6E3F7 /* HomeViewController.h */,
+				F491783B22D4CA7C00E6E3F7 /* HomeViewController.m */,
+				F491783D22D4CC6F00E6E3F7 /* SettingsViewController.h */,
+				F491783E22D4CC6F00E6E3F7 /* SettingsViewController.m */,
+				F491784022D4D08100E6E3F7 /* SignTransactionViewController.h */,
+				F491784122D4D08100E6E3F7 /* SignTransactionViewController.m */,
+				F491784322D4D17900E6E3F7 /* OTPViewController.h */,
+				F491784422D4D17900E6E3F7 /* OTPViewController.m */,
+			);
+			path = Protector;
+			sourceTree = "<group>";
+		};
+		6D5FC8ED22D38E4B00A99FD5 /* IdCloudQRCodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DA8D20EB86EB005A045F /* IdCloudQrCodeReader.h */,
+				6DE0DA8E20EB86EB005A045F /* IdCloudQrCodeReader.m */,
+				6D5FC8F622D483F800A99FD5 /* IdCloudQrCodeReader.xib */,
+			);
+			path = IdCloudQRCodeReader;
+			sourceTree = "<group>";
+		};
+		6DB1F98022E483600031B4F3 /* Top View */ = {
+			isa = PBXGroup;
+			children = (
+				6DB1F98B22E488F90031B4F3 /* IdCloudTopViewProtocol.h */,
+				6DB1F98122E4837C0031B4F3 /* IdCloudPinEntryView.h */,
+				6DB1F98222E4837C0031B4F3 /* IdCloudPinEntryView.m */,
+				6DB1F98422E483880031B4F3 /* IdCloudPinEntryView.xib */,
+				6DB1F98622E4839B0031B4F3 /* IdCloudChangePinView.h */,
+				6DB1F98722E4839B0031B4F3 /* IdCloudChangePinView.m */,
+				6DB1F98922E483A20031B4F3 /* IdCloudChangePinView.xib */,
+			);
+			path = "Top View";
+			sourceTree = "<group>";
+		};
+		6DB1FA4E22E7005B0031B4F3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DA6220EB61EA005A045F /* Assets.xcassets */,
+				6DE0DADC20F246C4005A045F /* EzioMobileSampleApp.entitlements */,
+				6DE0DA6420EB61EA005A045F /* LaunchScreen.storyboard */,
+				6D40D9522109F350003E6F48 /* Localizable.strings */,
+				6DE0DA6820EB61EA005A045F /* main.m */,
+				6DB1FA4A22E6F9FE0031B4F3 /* ProtectorSample.plist */,
+				6DE0DA6F20EB629D005A045F /* stdafx.h */,
+				6D68F38C2328F8330076E51F /* stdafx.m */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		6DB1FAAC22E73E6E0031B4F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DB1FAB022E73E6E0031B4F3 /* IdCloudDesignable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DCA4BF522CCC49F0082F969 /* IdCloudNotification */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C857722F4567500204377 /* NotifyAction.h */,
+				6D2C857822F4567500204377 /* NotifyAction.m */,
+				6DCA4BF822CCC4D40082F969 /* IdCloudNotification.h */,
+				6DCA4BF922CCC4D40082F969 /* IdCloudNotification.m */,
+			);
+			path = IdCloudNotification;
+			sourceTree = "<group>";
+		};
+		6DCA4BFF22CCF4180082F969 /* IdCloudLoadingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DA9B20ECD234005A045F /* IdCloudLoadingIndicator.h */,
+				6DE0DA9C20ECD234005A045F /* IdCloudLoadingIndicator.m */,
+				6DE0DA9820EBC579005A045F /* IdCloudLoadingIndicator.xib */,
+			);
+			path = IdCloudLoadingIndicator;
+			sourceTree = "<group>";
+		};
+		6DCA4C0422CDF3C60082F969 /* IdCloudStyle */ = {
+			isa = PBXGroup;
+			children = (
+				6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */,
+				6D3EAB1022E1E35B000C0E22 /* IdCloudSecureKeypad */,
+				6DCA4BFF22CCF4180082F969 /* IdCloudLoadingIndicator */,
+				6DCA4BF522CCC49F0082F969 /* IdCloudNotification */,
+				F4AB30F7231524D3002CE4E8 /* IdCloudIncomingMessage */,
+				6D5FC8ED22D38E4B00A99FD5 /* IdCloudQRCodeReader */,
+			);
+			path = IdCloudStyle;
 			sourceTree = "<group>";
 		};
 		6DE0DA4A20EB61E8005A045F = {
@@ -257,7 +433,7 @@
 		6DE0DA5420EB61E8005A045F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DE0DA5320EB61E8005A045F /* EzioMobileSampleApp.app */,
+				6DE0DA5320EB61E8005A045F /* ProtectorSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,17 +443,11 @@
 			children = (
 				6DE0DA7720EB66B0005A045F /* GUI */,
 				6DE0DAAE20F213F0005A045F /* Helpers */,
-				6DE0DADC20F246C4005A045F /* EzioMobileSampleApp.entitlements */,
+				6DB1FA4E22E7005B0031B4F3 /* Support Files */,
 				6DE0DA5620EB61E8005A045F /* AppDelegate.h */,
 				6DE0DA5720EB61E8005A045F /* AppDelegate.m */,
-				6DE0DA5F20EB61E8005A045F /* Main.storyboard */,
-				6DE0DA9820EBC579005A045F /* LoadingIndicatorView.xib */,
-				6DE0DA6220EB61EA005A045F /* Assets.xcassets */,
-				6DE0DA6420EB61EA005A045F /* LaunchScreen.storyboard */,
-				6D40D9522109F350003E6F48 /* Localizable.strings */,
-				6DB6B2AA214127AB004F27FA /* Info.plist */,
-				6DE0DA6820EB61EA005A045F /* main.m */,
-				6DE0DA6F20EB629D005A045F /* stdafx.h */,
+				6DE0DA5F20EB61E8005A045F /* Protector.storyboard */,
+				F4846EB7230D3E340034D115 /* Root.storyboard */,
 			);
 			path = EzioMobileSampleApp;
 			sourceTree = "<group>";
@@ -285,6 +455,8 @@
 		6DE0DA7320EB640B005A045F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4EE07B0230AC72300344DEE /* CoreNFC.framework */,
+				6DDBADD422F099A8009079C6 /* AudioToolbox.framework */,
 				6D352DEC21C8F01300465802 /* FacesCreateTemplateMediumLite.ndf */,
 				6D352DED21C8F01300465802 /* FacesCreateTemplateSmall.ndf */,
 				6D352DEB21C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf */,
@@ -308,24 +480,14 @@
 		6DE0DA7720EB66B0005A045F /* GUI */ = {
 			isa = PBXGroup;
 			children = (
-				6DE0DA7820EB66B0005A045F /* ProvisionVC.h */,
-				6DE0DA7A20EB66B0005A045F /* ProvisionVC.m */,
-				6D40D9452109DBAC003E6F48 /* MainViewController.h */,
-				6D40D9462109DBAC003E6F48 /* MainViewController.m */,
-				6D40D9422109DB47003E6F48 /* TokenDetail_AuthenticationVC.h */,
-				6D40D9432109DB47003E6F48 /* TokenDetail_AuthenticationVC.m */,
-				6D40D94B2109DE81003E6F48 /* TokenDetail_SettingsVC.h */,
-				6D40D94C2109DE81003E6F48 /* TokenDetail_SettingsVC.m */,
-				6DB6B2A121412779004F27FA /* TokenDetail_TransactionVC.h */,
-				6DB6B2A221412779004F27FA /* TokenDetail_TransactionVC.m */,
-				6D40D97A210B4483003E6F48 /* GemaltoFaceIdVC.h */,
-				6D40D97B210B4483003E6F48 /* GemaltoFaceIdVC.m */,
-				6DE0DA8D20EB86EB005A045F /* QRCodeReaderVC.h */,
-				6DE0DA8E20EB86EB005A045F /* QRCodeReaderVC.m */,
-				6DE0DA9B20ECD234005A045F /* LoadingIndicatorView.h */,
-				6DE0DA9C20ECD234005A045F /* LoadingIndicatorView.m */,
-				6D5312BF22132D06002463D2 /* StandardButton.h */,
-				6D5312C022132D06002463D2 /* StandardButton.m */,
+				6DCA4C0422CDF3C60082F969 /* IdCloudStyle */,
+				6D5FC8E922D3571600A99FD5 /* Protector */,
+				6D40D9452109DBAC003E6F48 /* BaseViewController.h */,
+				6D40D9462109DBAC003E6F48 /* BaseViewController.m */,
+				F4846EBA230D3EB10034D115 /* RootViewController.h */,
+				F4846EBB230D3EB10034D115 /* RootViewController.m */,
+				6DCFC71E22E1C4BC00B1FD4E /* SideMenuViewController.h */,
+				6DCFC71F22E1C4BC00B1FD4E /* SideMenuViewController.m */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -334,7 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				6DE0DAAF20F213F0005A045F /* App */,
-				6DE0DAB520F213F0005A045F /* Ezio */,
+				6DE0DAB520F213F0005A045F /* Protector */,
 				6DE0DAC820F21523005A045F /* CMain.h */,
 				6DE0DAC920F21523005A045F /* CMain.m */,
 				6DE0DACC20F2168E005A045F /* Configuration.h */,
@@ -347,22 +509,12 @@
 		6DE0DAAF20F213F0005A045F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				6DE0DAB220F213F0005A045F /* Categories */,
 				6DE0DAD120F22274005A045F /* Storage */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		6DE0DAB220F213F0005A045F /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				6DE0DAB320F213F0005A045F /* UIViewController+Error.h */,
-				6DE0DAB420F213F0005A045F /* UIViewController+Error.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		6DE0DAB520F213F0005A045F /* Ezio */ = {
+		6DE0DAB520F213F0005A045F /* Protector */ = {
 			isa = PBXGroup;
 			children = (
 				6DE0DABC20F213F0005A045F /* Categories */,
@@ -374,24 +526,22 @@
 				6DA5760720F383E500CCF413 /* TokenManager.h */,
 				6DA5760820F383E500CCF413 /* TokenManager.m */,
 				6DA5760F20F4ACC100CCF413 /* QRCodeManager.h */,
-				6DB6B2A421412787004F27FA /* QRCodeManager.m */,
+				F4E23B1A22DDBE48005CD976 /* QRCodeManager.m */,
 				6DA5760C20F3AC1200CCF413 /* TokenDevice.h */,
 				6DA5760D20F3AC1200CCF413 /* TokenDevice.m */,
-				6DB6B2AE214157B5004F27FA /* StoryItem.h */,
-				6DB6B2AF214157B5004F27FA /* StoryItem.m */,
 				6D9FF91721F73A8D00C4C0F0 /* KeyValue.h */,
 				6D9FF91821F73A8D00C4C0F0 /* KeyValue.m */,
 			);
-			path = Ezio;
+			path = Protector;
 			sourceTree = "<group>";
 		};
 		6DE0DABC20F213F0005A045F /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				6DE0DABF20F213F0005A045F /* NSData+Ezio.h */,
-				6DE0DABD20F213F0005A045F /* NSData+Ezio.m */,
-				6DE0DAC020F213F0005A045F /* NSString+Ezio.h */,
-				6DE0DABE20F213F0005A045F /* NSString+Ezio.m */,
+				6DE0DABF20F213F0005A045F /* NSData+Protector.h */,
+				6DE0DABD20F213F0005A045F /* NSData+Protector.m */,
+				6DE0DAC020F213F0005A045F /* NSString+Protector.h */,
+				6DE0DABE20F213F0005A045F /* NSString+Protector.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -414,25 +564,37 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		F4AB30F7231524D3002CE4E8 /* IdCloudIncomingMessage */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB30F823152503002CE4E8 /* IdCloudIncomingMessage.h */,
+				F4AB30F923152503002CE4E8 /* IdCloudIncomingMessage.m */,
+				F4AB30FC23152533002CE4E8 /* IdCloudIncomingMessage.xib */,
+			);
+			path = IdCloudIncomingMessage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DE0DA5220EB61E8005A045F /* EzioMobileSampleApp */ = {
+		6DE0DA5220EB61E8005A045F /* ProtectorSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DE0DA6C20EB61EA005A045F /* Build configuration list for PBXNativeTarget "EzioMobileSampleApp" */;
+			buildConfigurationList = 6DE0DA6C20EB61EA005A045F /* Build configuration list for PBXNativeTarget "ProtectorSample" */;
 			buildPhases = (
 				6DE0DA4F20EB61E8005A045F /* Sources */,
 				6DE0DA5020EB61E8005A045F /* Frameworks */,
 				6DE0DA5120EB61E8005A045F /* Resources */,
 				6D53E6A42146AC4F0052465D /* Mark interesting parts of code */,
+				6DB1FACB22E7460E0031B4F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6DB1FACA22E7460D0031B4F3 /* PBXTargetDependency */,
 			);
-			name = EzioMobileSampleApp;
+			name = ProtectorSample;
 			productName = EzioMobileSampleApp;
-			productReference = 6DE0DA5320EB61E8005A045F /* EzioMobileSampleApp.app */;
+			productReference = 6DE0DA5320EB61E8005A045F /* ProtectorSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -441,7 +603,7 @@
 		6DE0DA4B20EB61E8005A045F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Gemalto;
 				TargetAttributes = {
 					6DE0DA5220EB61E8005A045F = {
@@ -465,29 +627,51 @@
 			mainGroup = 6DE0DA4A20EB61E8005A045F;
 			productRefGroup = 6DE0DA5420EB61E8005A045F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6DB1FAAC22E73E6E0031B4F3 /* Products */;
+					ProjectRef = 6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				6DE0DA5220EB61E8005A045F /* EzioMobileSampleApp */,
+				6DE0DA5220EB61E8005A045F /* ProtectorSample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6DB1FAB022E73E6E0031B4F3 /* IdCloudDesignable.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = IdCloudDesignable.framework;
+			remoteRef = 6DB1FAAF22E73E6E0031B4F3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6DE0DA5120EB61E8005A045F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4AB30FD23152533002CE4E8 /* IdCloudIncomingMessage.xib in Resources */,
 				6D352DF221C8F01300465802 /* FacesCreateTemplateSmall.ndf in Resources */,
 				6D352DF121C8F01300465802 /* FacesCreateTemplateMediumLite.ndf in Resources */,
 				6D352E2421C8F5BF00465802 /* Assets.xcassets in Resources */,
 				6D40D9502109F350003E6F48 /* Localizable.strings in Resources */,
 				6D352DEF21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf in Resources */,
+				6DB1F98A22E483A20031B4F3 /* IdCloudChangePinView.xib in Resources */,
+				6D5FC8F722D483F800A99FD5 /* IdCloudQrCodeReader.xib in Resources */,
 				6D352E2521C8F5BF00465802 /* FaceUI.storyboard in Resources */,
 				6DE0DA6620EB61EA005A045F /* LaunchScreen.storyboard in Resources */,
+				F4846EB8230D3E340034D115 /* Root.storyboard in Resources */,
 				6DE0DA6320EB61EA005A045F /* Assets.xcassets in Resources */,
-				6DE0DA6120EB61E8005A045F /* Main.storyboard in Resources */,
+				6DE0DA6120EB61E8005A045F /* Protector.storyboard in Resources */,
+				6DB1F98522E483880031B4F3 /* IdCloudPinEntryView.xib in Resources */,
+				6D3EAB1522E1E50C000C0E22 /* IdCloudSecureKeypadViewController.xib in Resources */,
 				6D352DF021C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf in Resources */,
-				6DE0DA9A20EBC579005A045F /* LoadingIndicatorView.xib in Resources */,
+				6DE0DA9A20EBC579005A045F /* IdCloudLoadingIndicator.xib in Resources */,
 				6D352DF321C8F01300465802 /* FacesDetectSegmentsOrientation.ndf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,7 +691,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "TAGS=\"SAMPLE:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.m\" -o -name \"*.h\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+			shellScript = "TAGS=\"SAMPLE:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.m\" -o -name \"*.h\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -516,47 +700,61 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D40D94D2109DE81003E6F48 /* TokenDetail_SettingsVC.m in Sources */,
 				6DA5760920F383E500CCF413 /* TokenManager.m in Sources */,
 				6D352E1A21C8F0FF00465802 /* EMBaseViewController.m in Sources */,
 				6D9FF91921F73A8D00C4C0F0 /* KeyValue.m in Sources */,
 				6D352E1B21C8F0FF00465802 /* EMFaceView.m in Sources */,
-				6D5312C122132D06002463D2 /* StandardButton.m in Sources */,
 				6D352E1421C8F0FF00465802 /* EMCircularProgressView.m in Sources */,
 				6D352E1921C8F0FF00465802 /* EMFaceSettings.m in Sources */,
 				6D352E1521C8F0FF00465802 /* EMVerifyViewController.m in Sources */,
-				6DE0DAC620F213F0005A045F /* NSData+Ezio.m in Sources */,
-				6DE0DA9D20ECD234005A045F /* LoadingIndicatorView.m in Sources */,
-				6DB6B2B0214157B5004F27FA /* StoryItem.m in Sources */,
+				6DE0DAC620F213F0005A045F /* NSData+Protector.m in Sources */,
+				F4846EBC230D3EB10034D115 /* RootViewController.m in Sources */,
+				6DE0DA9D20ECD234005A045F /* IdCloudLoadingIndicator.m in Sources */,
 				6D352E1321C8F0FF00465802 /* EMFaceBaseManager.m in Sources */,
 				6DA5760E20F3AC1200CCF413 /* TokenDevice.m in Sources */,
 				6DE0DAD020F22261005A045F /* SecureStorage.m in Sources */,
+				F491783C22D4CA7C00E6E3F7 /* HomeViewController.m in Sources */,
 				6DE0DA5820EB61E8005A045F /* AppDelegate.m in Sources */,
 				6DE0DAD420F22274005A045F /* UserDefaults.m in Sources */,
-				6D40D9442109DB47003E6F48 /* TokenDetail_AuthenticationVC.m in Sources */,
 				6D352E1621C8F0FF00465802 /* EMFaceEnrollManager.m in Sources */,
+				6DB1F98822E4839B0031B4F3 /* IdCloudChangePinView.m in Sources */,
+				F491784222D4D08100E6E3F7 /* SignTransactionViewController.m in Sources */,
+				6DCA4BFA22CCC4D40082F969 /* IdCloudNotification.m in Sources */,
 				6D352E1821C8F0FF00465802 /* EMEnrollViewController.m in Sources */,
 				6DE0DAD820F23B52005A045F /* PushManager.m in Sources */,
-				6DE0DA7C20EB66B0005A045F /* ProvisionVC.m in Sources */,
 				6D352E1C21C8F0FF00465802 /* EMFaceManager.m in Sources */,
+				6D5FC8EC22D357AF00A99FD5 /* ProvisionerViewController.m in Sources */,
+				F491783F22D4CC6F00E6E3F7 /* SettingsViewController.m in Sources */,
 				6DE0DA6920EB61EA005A045F /* main.m in Sources */,
+				6DCFC72022E1C4BC00B1FD4E /* SideMenuViewController.m in Sources */,
+				F4E23B1B22DDBE48005CD976 /* QRCodeManager.m in Sources */,
+				6D68F38E2328F8380076E51F /* stdafx.m in Sources */,
+				6DB1F98322E4837C0031B4F3 /* IdCloudPinEntryView.m in Sources */,
 				6D352E1721C8F0FF00465802 /* EMFaceVerifyManager.m in Sources */,
-				6D40D9472109DBAC003E6F48 /* MainViewController.m in Sources */,
+				6D40D9472109DBAC003E6F48 /* BaseViewController.m in Sources */,
+				6D3EAB1322E1E376000C0E22 /* IdCloudSecureKeypadViewController.m in Sources */,
+				F4AB30FB23152509002CE4E8 /* IdCloudIncomingMessage.m in Sources */,
 				6D352E1D21C8F0FF00465802 /* EMFaceConstant.m in Sources */,
+				6D2C857922F4567500204377 /* NotifyAction.m in Sources */,
 				6D352E1E21C8F0FF00465802 /* EMFaceMessageHelper.m in Sources */,
-				6DE0DAC220F213F0005A045F /* UIViewController+Error.m in Sources */,
-				6DE0DAC720F213F0005A045F /* NSString+Ezio.m in Sources */,
+				6DE0DAC720F213F0005A045F /* NSString+Protector.m in Sources */,
 				6DC2587D21C7A52400DD531E /* HttpManager.m in Sources */,
-				6DE0DA8F20EB86EB005A045F /* QRCodeReaderVC.m in Sources */,
-				6DB6B2A321412779004F27FA /* TokenDetail_TransactionVC.m in Sources */,
-				6D40D97C210B4483003E6F48 /* GemaltoFaceIdVC.m in Sources */,
-				6DB6B2A521412787004F27FA /* QRCodeManager.m in Sources */,
+				6DE0DA8F20EB86EB005A045F /* IdCloudQrCodeReader.m in Sources */,
+				F491784522D4D17900E6E3F7 /* OTPViewController.m in Sources */,
 				6DE0DACA20F21523005A045F /* CMain.m in Sources */,
 				6DB6B2A72141279E004F27FA /* Configuration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DB1FACA22E7460D0031B4F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IdCloudDesignable;
+			targetProxy = 6DB1FAC922E7460D0031B4F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6D40D9522109F350003E6F48 /* Localizable.strings */ = {
@@ -567,12 +765,12 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		6DE0DA5F20EB61E8005A045F /* Main.storyboard */ = {
+		6DE0DA5F20EB61E8005A045F /* Protector.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6DE0DA6020EB61E8005A045F /* Base */,
 			);
-			name = Main.storyboard;
+			name = Protector.storyboard;
 			sourceTree = "<group>";
 		};
 		6DE0DA6420EB61EA005A045F /* LaunchScreen.storyboard */ = {
@@ -583,12 +781,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		6DE0DA9820EBC579005A045F /* LoadingIndicatorView.xib */ = {
+		6DE0DA9820EBC579005A045F /* IdCloudLoadingIndicator.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6DE0DA9920EBC579005A045F /* Base */,
 			);
-			name = LoadingIndicatorView.xib;
+			name = IdCloudLoadingIndicator.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -598,7 +796,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
@@ -630,9 +827,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -640,7 +836,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/EzioMobileSampleApp/stdafx.h";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EzioMobileSampleApp/Support Files/stdafx.h";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -668,7 +864,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
@@ -700,7 +895,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -711,7 +905,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/EzioMobileSampleApp/stdafx.h";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EzioMobileSampleApp/Support Files/stdafx.h";
 				GCC_UNROLL_LOOPS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -735,17 +929,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = EzioMobileSampleApp/EzioMobileSampleApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "EzioMobileSampleApp/Support Files/EzioMobileSampleApp.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 26;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/Debug",
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
-				INFOPLIST_FILE = EzioMobileSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = "EzioMobileSampleApp/Support Files/ProtectorSample.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -757,6 +952,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gemalto.EzioMobileSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -765,18 +961,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = EzioMobileSampleApp/EzioMobileSampleApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "EzioMobileSampleApp/Support Files/EzioMobileSampleApp.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 26;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/Release",
-					"$(PROJECT_DIR)/Frameworks/Debug",
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
-				INFOPLIST_FILE = EzioMobileSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = "EzioMobileSampleApp/Support Files/ProtectorSample.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -788,6 +984,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gemalto.EzioMobileSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -804,7 +1001,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DE0DA6C20EB61EA005A045F /* Build configuration list for PBXNativeTarget "EzioMobileSampleApp" */ = {
+		6DE0DA6C20EB61EA005A045F /* Build configuration list for PBXNativeTarget "ProtectorSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DE0DA6D20EB61EA005A045F /* Debug */,

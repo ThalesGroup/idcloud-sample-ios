@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
 #import <Foundation/Foundation.h>
 #import <EzioMobile/EzioMobile.h>
@@ -48,7 +49,7 @@ typedef NS_ENUM(NSUInteger, EMFaceManagerProcessStatus){
 
 
 /**
- * The Facial UI public manager used to configure, start verify or enrol operations
+ * The Facial UI public manager used to configure, start verify or enroll operations
  */
 @interface EMFaceManager : NSObject
 
@@ -64,15 +65,15 @@ typedef NS_ENUM(NSUInteger, EMFaceManagerProcessStatus){
 @property (readonly) BOOL isSupported;
 
 /**
- * Whether the Service is currently initialising
- * If true, do not invoke API and wait until initialisation if finished
- * See initialise:
+ * Whether the Service is currently initializing
+ * If true, do not invoke API and wait until initialization if finished 
+ * See initialize:
  */
 @property (readonly) BOOL isInitializing;
 
 /**
- * Whether the service is initialised
- * If false, do not invoke API and call first initialise: method
+ * Whether the service is initialized
+ * If false, do not invoke API and call first initialize: method
  */
 @property (readonly) BOOL isInitialized;
 
@@ -89,7 +90,7 @@ typedef NS_ENUM(NSUInteger, EMFaceManagerProcessStatus){
 @property (readonly) EMFaceAuthFactory *factory;
 
 /**
- * If any error occurred, get the error status upon the last face operation completion, nil otherwise.
+ * If any error occured, get the error status upon the last face operation completion, nil otherwise.
  * @return NSString
  */
 @property (nonatomic, strong) NSString *faceStatusError;
@@ -99,9 +100,9 @@ typedef NS_ENUM(NSUInteger, EMFaceManagerProcessStatus){
 #pragma mark - Tasks
 
 /**
- * Initialises and loads the internal face service and resources.
+ * Initializes and loads the internal face service and resources. 
  * Could be called multiple times.
- *
+ * 
  * @warning Must be called in the main thread
  */
 - (void)initialize:(void(^)(BOOL success, NSError *error))completion;
@@ -138,7 +139,7 @@ typedef NS_ENUM(NSUInteger, EMFaceManagerProcessStatus){
 
 
 /**
- * Start the un-enroll operation.
+ * Start the Unenroll operation.
  * The method call a completion block when over: EMFaceManagerProcessStatusSuccess and EMFaceManagerProcessStatusFail.
  * If EMFaceManagerProcessStatusFail is end, the error description is available in EMFaceManager faceStatusError property.
  *

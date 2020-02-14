@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
 /**
  Used for any generic function where we are interested of result.
@@ -31,9 +32,18 @@
 typedef void (^GenericCompletion)(BOOL success, NSError *error);
 
 /**
+Used for getting pin where operation might not be succesfull.
+
+@param pin User entered pin auth input.
+@param error Description when operation did failed.
+*/
+typedef void (^PinAuthInputCompletion)(id<EMPinAuthInput> pin, NSString *error);
+
+
+/**
  OTP Helper handler
 
- @param OTP OTP value
+ @param otp OTP value
  @param input AuthInput used for last OTP calculation
  @param serverChallenge ServerChallenge used for last OTP calculation
  @param error Description when operation did failed.
@@ -91,72 +101,4 @@ typedef void (^OTPCompletion)(id<EMSecureString> otp, id<EMAuthInput> input, id<
 
 @end
 
-/**
- Common interface for all application tabs.
- */
-@protocol MainViewControllerProtocol
 
-/**
- Reaload all GUI information as well as enable/disable elements.
- */
-- (void)reloadGUI;
-
-/**
- Disable all user interaction elements on GUI.
- */
-- (void)disableGUI;
-
-/**
- Triggered when tab should hide keyboard.
- */
-- (void)hideKeyboard;
-
-/**
- Display overlay loading indicator.
-
- @param caption Message displayed inside indicator
- */
-- (void)loadingIndicatorShowWithCaption:(NSString *)caption;
-
-/**
- Hide loading indicator.
- */
-- (void)loadingIndicatorHide;
-
-/**
- Ask for approve or deny option as answer to push request.
- Handler is not triggered when user cancel operation (back button on pin etc).
- 
- @param message Message description displayed to user
- @param serverChallenge Optional server challenge in case of OCRA
- @param handler Callback triggered once operation is finished.
- */
-- (void)approveOTP:(NSString *)message
-withServerChallenge:(id<EMSecureString>)serverChallenge
- completionHandler:(void (^)(id<EMSecureString> otp))handler;
-
-/**
- Display message box with OTP.
- It will automatically regenerate one once it's not valid any more.
-
- @param OTP OTP value
- @param input AuthInput used for last OTP calculation
- @param serverChallenge ServerChallenge used for last OTP calculation
- @param error Description when operation did failed.
- */
-- (void)displayOTPResult:(id<EMSecureString>)otp
-               authInput:(id<EMAuthInput>)input
-         serverChallenge:(id<EMSecureString>)serverChallenge
-                   error:(NSError *)error;
-
-/**
- Display current status of push token registration.
- */
-- (void)updatePushRegistrationStatus;
-
-/**
- Face id must be asynchronously activated. For that reason we want to update GUI based on that.
- */
-- (void)updateFaceIdSupport;
-
-@end

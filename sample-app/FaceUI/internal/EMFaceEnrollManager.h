@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,15 +20,16 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
 #import "EMFaceBaseManager.h"
 
 
 /**
- * @discussion Face UI SDK manager to handle the enrolled operation
+ * @discussion Face UI SDK mananger to handle the enroll operation
  */
-//
+// 
 @interface EMFaceEnrollManager : EMFaceBaseManager <EMFaceAuthEnrollerDelegate>
 
 
@@ -39,14 +40,14 @@
 + (instancetype)sharedInstance;
 
 /**
- * Unenrolled a previously enrolled user
- * @param completion The completion block for unenrolled
+ * Unenroll a previously enrolled user
+ * @param completion The completion block for unenroll
  */
 - (void)unenrollWithCompletionHandler:(void(^)(BOOL success, NSError *error))completion;
 
 /**
- * Method to start an enrolment of a specific user with a maximum timeout.
- * @param sender the delegate which will handles the UI of the enrolled operation
+ * Method to start an enrollment of a specific user with a maximum timeout.
+ * @param sender the delegate which will handles the UI of the enroll operation
  * @param timeout the maximum time (in ms) before canceling the operation, default 60 seconds
  */
 - (void)startEnrollmentWithDelegate:(id)sender

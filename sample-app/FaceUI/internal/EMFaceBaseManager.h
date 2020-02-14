@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
 #import <Foundation/Foundation.h>
 #import <EzioMobile/EzioMobile.h>
@@ -46,7 +47,7 @@ typedef NS_ENUM(NSUInteger, EMFaceUIDelegateStep)
     EMFaceUIDelegateStepVerifyWaitFace,
     
     /**
-     * Got a face in front of the camera (enrolment) and user already starts real enrolment
+     * Got a face in front of the camera (enrolment) and user already starts real enrollment
      */
     EMFaceUIDelegateStepAddFace,
 
@@ -72,7 +73,7 @@ typedef NS_ENUM(NSUInteger, EMFaceUIDelegateStep)
     EMFaceUIDelegateStepKeepStill,
     
     /**
-     * Step to handle the UI of a successfully ended operation
+     * Step to handle the UI of a sucessfully ended operation
      */
     EMFaceUIDelegateStepSuccess,
     
@@ -105,7 +106,7 @@ typedef NS_ENUM(NSUInteger, EMFaceUIDelegateStep)
 
 
 /**
- * Base Manager of the Face UI SDK processes, Enroll and Verify. It handles all the common elements between the two processes
+ * Base Manager of the Face UI SDK processes, Enroll and Verify. It handles all the commun elements between the two processes
  */
 
 @interface EMFaceBaseManager : NSObject
@@ -131,7 +132,7 @@ typedef NS_ENUM(NSUInteger, EMFaceUIDelegateStep)
 - (void)stepDidChange:(EMFaceUIDelegateStep)step;
 
 /**
- * Helper method to display the current face status as a BSString
+ * Helper methode to display the current face status as a BSString
  * @param status the current face status
  * @return the string of the current face status
  */
@@ -146,7 +147,7 @@ typedef NS_ENUM(NSUInteger, EMFaceUIDelegateStep)
 
 /* !
  * Cancel operation handler
- * To be override by children class
+ * To be overrided by children class
  */
 - (void)cancelFaceOperation;
 

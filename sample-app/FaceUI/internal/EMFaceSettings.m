@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
 #import "EMFaceSettings.h"
 
@@ -118,7 +119,7 @@
     self.matchingThreshold = DEFAULT_MATCHING_THRESHOLD;
     self.livenessBlinkTimeout = DEFAULT_LIVENESS_BLINK_TIMEOUT;
     self.numberOfFramesToEnroll = DEFAULT_NUMBER_FRAME_TO_ENROLL;
-    self.verifierFaceCaptureMode = DEFAULT_VERIFIER_FACE_CAPTURE_MODE;;
+    self.verifierFaceCaptureMode = DEFAULT_VERIFIER_FACE_CAPTURE_MODE;
     
 }
 @end

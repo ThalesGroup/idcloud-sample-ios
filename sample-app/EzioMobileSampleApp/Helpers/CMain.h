@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,39 +20,22 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
-#import "Ezio/PushManager.h"
-#import "Ezio/TokenManager.h"
-#import "Ezio/QRCodeManager.h"
-#import "Ezio/HttpManager.h"
-#import "StoryItem.h"
+#import "Protector/PushManager.h"
+#import "Protector/TokenManager.h"
+#import "Protector/QRCodeManager.h"
+#import "Protector/HttpManager.h"
 #import "KeyValue.h"
 
-typedef enum : NSInteger {
-    // Face Id service was not even started.
-    GemaloFaceIdStateUndefined,
-    // Face id is not supported
-    GemaloFaceIdStateNotSupported,
-    // Failed to registered.
-    GemaloFaceIdStateUnlicensed,
-    // Successfully registered.
-    GemaloFaceIdStateLicensed,
-    // Failed to init service.
-    GemaloFaceIdStateInitFailed,
-    // Registered and initialised.
-    GemaloFaceIdStateInited,
-    // Registered, initialised and configured with at least one user enrolled.
-    GemaloFaceIdStateReadyToUse
-} GemaloFaceIdState;
-
 /**
- Main app singleton. It will keep all important class instances.
+ Main app singletone. It will keep all important class instances.
  */
 @interface CMain : NSObject
 
 /**
- Return instance of secure storage. (Ezio SecureStorage)
+ Return instance of secure storage. (Protector SecureStorage)
  */
 @property (nonnull, strong, readonly) id<StorageProtocol>   storageSecure;
 
@@ -82,20 +65,14 @@ typedef enum : NSInteger {
 @property (nonnull, strong, readonly) HttpManager           *managerHttp;
 
 /**
- Gemalto face id does have multiple step async activation.
- Check this value to see current state.
- */
-@property (nonatomic, assign, readonly) GemaloFaceIdState   faceIdState;
-
-/**
- Common method to get CMain singleton.
+ Common method to get CMain singletone.
 
  @return Instance of CMain class.
  */
 + (__nonnull instancetype)sharedInstance;
 
 /**
- Release singleton together with all helper class inside.
+ Release singletone together with all helper class inside.
  */
 + (void)end;
 
@@ -106,40 +83,10 @@ typedef enum : NSInteger {
 - (void)configureAndActivateSDK;
 
 /**
- Return view controller for given item.
+ Switch to proper View Controller based on SDK state.
 
- @param storyItem StoryItem description of VC we want to return.
- @return View controller
  */
-- (__kindof UIViewController *_Nonnull)getViewController:(StoryItem *_Nonnull)storyItem;
+- (void)updateRootViewController;
 
-/**
- Return current view controller in case that token detail is visible. Otherview nil.
- Used instead of notification.
- 
- @return Current listener
- */
-- (__kindof UIViewController *_Nullable)getCurrentListener;
-
-/**
- Switch to proper tab based on SDK state. Enroller without token, authentication with it.
-
- @param animated Whenever we should animate transition.
- */
-- (void)switchTabToCurrentState:(BOOL)animated;
-
-/**
- Perform animation on selected VC.
-
- @param tabBarController Parent tab view controller
- @param viewController Destination view controller.
- @return Return YES if new view controller is different from current one in tab bar.
- */
-- (BOOL)animateTabChange:(UITabBarController *_Nonnull)tabBarController toViewController:(UIViewController *_Nonnull)viewController;
-
-/**
- Force reload gemalto face id status.
- */
-- (void)updateGemaltoFaceIdStatus;
 
 @end

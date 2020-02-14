@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
 #import <UIKit/UIKit.h>
 #import "EMFaceBaseManager.h"
@@ -30,54 +31,54 @@
 
 
 /**
- * @discussion Face UI SDK base UIViewController handling everything common between the verify and the enrolled operation.
+ * @discussion Face UI SDK base UIViewController handling everything common between the verify and the enroll operation.
  */
 @interface EMBaseViewController : UIViewController <EMFaceAuthUIDelegate>
 
 /**
  * Start Button
  */
-@property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (nonatomic, weak) IBOutlet UIButton *startButton;
 
 /**
  * Cancel Button
  */
-@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (nonatomic, weak) IBOutlet UIButton *cancelButton;
 
 /**
  * Navigation Bar IBOutlet
  */
-@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
+@property (nonatomic, weak) IBOutlet UINavigationBar *navBar;
 
 /**
  * Navigation Item IBOutlet
  */
-@property (weak, nonatomic) IBOutlet UINavigationItem *navItem;
+@property (nonatomic, weak) IBOutlet UINavigationItem *navItem;
 
 /**
  * Status label where information like keeping his head in front of the camera is displayed.
  */
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (nonatomic, weak) IBOutlet UILabel *statusLabel;
 
 /**
  * Status label where information like blinking eyes is displayed.
  */
-@property (weak, nonatomic) IBOutlet UILabel *blinkLabel;
+@property (nonatomic, weak) IBOutlet UILabel *blinkLabel;
 
 /**
  * Face View which contains the Face UI SDK output of the camera.
  */
-@property (weak, nonatomic) IBOutlet EMFaceView *faceViewContainer;
+@property (nonatomic, weak) IBOutlet EMFaceView *faceViewContainer;
 
 /**
  * Overview to display circular progress bar. It contains the face view.
  */
-@property (weak, nonatomic) IBOutlet EMCircularProgressView *overContainer;
+@property (nonatomic, weak) IBOutlet EMCircularProgressView *overContainer;
 
 /**
  * Success view where success message and image are displayed when the operation ends successfully.
  */
-@property (weak, nonatomic) IBOutlet UIView *successView;
+@property (nonatomic, weak) IBOutlet UIView *successView;
 
 /**
  * Time out of the operation in seconds.
@@ -85,12 +86,12 @@
 @property NSTimeInterval timeout;
 
 /**
- * Auto dismisses when either enrolled or verification has succeeded. Default is NO.
+ * Auto dismisses when either enroll or verification has succeeded. Default is NO.
  */
 @property BOOL autoDismissWhenComplete;
 
 /**
- * Global coloraturas used in the Face UI SDK.
+ * Global color used in the Face UI SDK.
  * @return UIColor
  */
 +(UIColor *) green;

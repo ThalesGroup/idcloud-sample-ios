@@ -1,6 +1,6 @@
 //  MIT License
 //
-//  Copyright (c) 2019 Thales DIS
+//  Copyright (c) 2020 Thales DIS
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-// IMPORTANT: This source code is intended to serve training information purposes only. Please make sure to review our IdCloud documentation, including security guidelines.
+// IMPORTANT: This source code is intended to serve training information purposes only.
+//            Please make sure to review our IdCloud documentation, including security guidelines.
 
 #import <Foundation/Foundation.h>
 #import <EzioMobile/EzioMobile.h>
@@ -46,18 +47,18 @@ static int DEFAULT_MATCHING_THRESHOLD = 50;
 static int DEFAULT_LIVENESS_BLINK_TIMEOUT = 4000;
 
 /**
- * Default frame used to enrol.
+ * Default frame used to enroll.
  */
 static int DEFAULT_NUMBER_FRAME_TO_ENROLL = 1;
 
 /**
- * Default frame used to enrol.
+ * Default frame used to enroll.
  */
 static int DEFAULT_COUNT_DOWN_TO_CAPTURE = 5;
 
 
 /**
- * Default enrolled face capture mode.
+ * Default enroller face capture mode.
  */
 static EMFaceCaptureMode DEFAULT_VERIFIER_FACE_CAPTURE_MODE = EMFaceCaptureModeLivenessPassive;
 
@@ -88,7 +89,7 @@ static EMFaceCaptureMode DEFAULT_VERIFIER_FACE_CAPTURE_MODE = EMFaceCaptureModeL
 @property  (nonatomic) int livenessBlinkTimeout;
 
 /**
- * Get frame to enrolled
+ * Get frame to enroll
  */
 @property  (nonatomic) int numberOfFramesToEnroll;
 

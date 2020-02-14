@@ -47,7 +47,7 @@
     if (tokenName) {
         // Try to get instance of saved token.
         token = [oathManager tokenWithName:tokenName
-                     fingerprintCustomData:C_CUSTOM_FINGERPRINT_DATA()
+                     fingerprintCustomData:CFG_CUSTOM_FINGERPRINT_DATA()
                                      error:&error];
     }
     
@@ -118,22 +118,22 @@
                 registrationCode:(id<EMSecureString>)regCode
                         clientId:(NSString *)clientId
                completionHandler:(void (^)(id<EMOathToken> token, NSError *error))completionHandler {
-    EMDeviceFingerprintSource *deviceFingerprintSource = [[EMDeviceFingerprintSource alloc] initWithCustomData:C_CUSTOM_FINGERPRINT_DATA()];
+    EMDeviceFingerprintSource *deviceFingerprintSource = [[EMDeviceFingerprintSource alloc] initWithCustomData:CFG_CUSTOM_FINGERPRINT_DATA()];
     EMDeviceFingerprintTokenPolicy *deviceFingerprintTokenPolicy = [[EMDeviceFingerprintTokenPolicy alloc]
                                                                     initWithDeviceFingerprintSource:deviceFingerprintSource
                                                                     failIfInvalid:YES];
     
     // Prepare provisioning configuration based on app data.
     EMProvisioningConfiguration *config = [EMProvisioningConfiguration
-                                           epsConfigurationWithURL:C_CFG_OTP_PROVISION_URL()
-                                           domain:C_DOMAIN()
-                                           rsaKeyId:C_CFG_OTP_RSA_KEY_ID()
-                                           rsaExponent:C_CFG_OTP_RSA_KEY_EXPONENT()
-                                           rsaModulus:C_CFG_OTP_RSA_KEY_MODULUS()
+                                           epsConfigurationWithURL:CFG_OTP_PROVISION_URL()
+                                           domain:CFG_DOMAIN()
+                                           rsaKeyId:CFG_OTP_RSA_KEY_ID()
+                                           rsaExponent:CFG_OTP_RSA_KEY_EXPONENT()
+                                           rsaModulus:CFG_OTP_RSA_KEY_MODULUS()
                                            registrationCode:regCode
                                            provisioningProtocol:EMMobileProvisioningProtocolVersion5
                                            optionalParameters:^(EMEpsConfigurationBuilder *builder) {
-                                               builder.tlsConfiguration = C_CFG_SDK_TLS_CONFIGURATION();
+                                               builder.tlsConfiguration = CFG_SDK_TLS_CONFIGURATION();
                                            }];
     
     // Try to get manager.

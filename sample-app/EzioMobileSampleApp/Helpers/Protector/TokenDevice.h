@@ -29,18 +29,11 @@ typedef struct
     BOOL isTouchSupported;
     // Whever is System Face ID supported by device and SDK
     BOOL isFaceSupported;
-    // Whever is Protector Face ID supported by device and SDK
-    BOOL isProtectorFaceSupported;
     
     // Whever is Sytem Touch ID supported and enabled
     BOOL isTouchEnabled;
     // Whever is System Face ID supported and enabled
     BOOL isFaceEnabled;
-    // Whever is Protector Face ID supported and enabled
-    BOOL isProtectorFaceEnabled;
-    
-    // Whever is Protector Face ID template enrolled
-    BOOL isProtectorFaceTemplateEnrolled;
 }TokenStatus;
 
 /**
@@ -103,17 +96,6 @@ typedef struct
  */
 - (void)totpWithFaceId:(OTPCompletion)completionHandler
    withServerChallenge:(id<EMSecureString>)serverChallenge;
-
-/**
- Generate OTP with Protector Face Id.
- 
- @param completionHandler Triggered once operation is finished
- @param serverChallenge OCRA Server challenge
- @param viewController Parent view controller to display verifier in.
- */
-- (void)totpWithProtectorFaceId:(OTPCompletion)completionHandler
-            withServerChallenge:(id<EMSecureString>)serverChallenge
-       presentingViewController:(UIViewController *)viewController;
 
 /**
  Generate OTP with Touch Id.

@@ -39,7 +39,7 @@
 @property (nonatomic, copy)     NSString                        *captionFirst;
 @property (nonatomic, copy)     NSString                        *captionSecond;
 @property (nonatomic, copy)     EMSecureInputUiOnFinish         handler;
-@property (nonatomic, strong)   id<EMSecureInputBuilderV2>      builder;
+@property (nonatomic, strong)   id<EMSecureInputBuilder>        builder;
 @property (nonatomic, strong)   id<EMSecureInputUi>             secureInput;
 @property (nonatomic, strong)   UIView<IdCloudTopViewProtocol>  *pinAreaContent;
 @end
@@ -126,7 +126,7 @@
 
 - (void)initSecureKeypad {
     // Set keypad design.
-    self.builder = [[EMSecureInputService serviceWithModule:[EMUIModule uiModule]] secureInputBuilderV2];
+    self.builder = [[EMSecureInputService serviceWithModule:[EMUIModule uiModule]] secureInputBuilder];
     
     // Overall Design
     [_builder setKeypadFrameColor:[UIColor clearColor]];
@@ -134,9 +134,6 @@
     [_builder setButtonPressedVisibility:YES];
     [_builder setButtonBackgroundColor:[UIColor clearColor]
                               forState:EMSecureInputUiControlStateNormal];
-    [_builder setKeypadViewRectInPortrait:_secureKeypadArea.bounds];
-    [_builder setKeypadViewRectInLandscape:CGRectMake(_secureKeypadArea.bounds.origin.x, _secureKeypadArea.bounds.origin.x,
-                                                      _secureKeypadArea.bounds.size.height, _secureKeypadArea.bounds.size.width)];
     [_builder setKeypadGridGradientColors:[UIColor clearColor] gridGradientEndColor:[UIColor blackColor]];
     [_builder swapOkAndDeleteButton];
     
@@ -165,13 +162,11 @@
     [_builder setMinimumInputLength:4 andMaximumInputLength:4];
     [_builder setOkButtonBehavior:EMSecureInputUiOkButtonCustom];
     
-    [_builder validateUiConfiguration];
-    
     // Build keypad and add handler.
     self.secureInput =
     [_builder buildWithScrambling:NO
                isDoubleInputField:_changePin
-                         isDialog:NO
+                      displayMode:EMSecureInputUiDisplayModeEmbedded
                     onFinishBlock:^(id<EMPinAuthInput> firstPin, id<EMPinAuthInput> secondPin) {
                         [self.builder wipe];
                         self.builder = nil;
@@ -186,6 +181,9 @@
     _secureInput.customUiDelegate = self;
     [self addChildViewController:_secureInput.viewController];
     [_secureKeypadArea addSubview:_secureInput.keypadView];
+
+    // Build keypad constraints.
+    [_secureInput buildConstraintsForKeypadView];
 }
 
 // MARK: - EMSecureInputCustomUiDelegate

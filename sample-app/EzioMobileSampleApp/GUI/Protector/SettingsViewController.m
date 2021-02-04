@@ -64,10 +64,10 @@
     // Get current token status.
     TokenStatus status = CMain.sharedInstance.managerToken.tokenDevice.tokenStatus;
     
-    // Face id is enabled if system or Protector Face Id is supported.
-    [_buttonFaceId          setEnabled:enabled && (status.isFaceSupported || status.isProtectorFaceSupported)];
+    // Face id is enabled if system Face Id is supported.
+    [_buttonFaceId          setEnabled:enabled && status.isFaceSupported];
     [_switchFaceId          setEnabled:_buttonFaceId.isEnabled];
-    [_switchFaceId          setOn:status.isFaceEnabled || status.isProtectorFaceEnabled];
+    [_switchFaceId          setOn:status.isFaceEnabled];
     
     // Touch must be supported by system.
     [_buttonTouchId         setEnabled:enabled && status.isTouchSupported];
@@ -317,60 +317,7 @@
         } else {
             [self enableAuthMode:mode allowBackButton:YES];
         }
-    } else {
-        // Protector Face Id
-        if (status.isProtectorFaceEnabled) {
-            [self toggleFaceIdProtectorDisable_step1_disableAuthMode];
-        } else {
-            [self toggleFaceIdProtectorEnable_step1_enroll:status];
-        }
     }
-}
-
-// MARK: - Face Id - Protector
-
-- (void)toggleFaceIdProtectorEnable_step1_enroll:(TokenStatus)status {
-    // Template is not enrolled. Do it first.
-    if (!status.isProtectorFaceTemplateEnrolled) {
-        [EMFaceManager enrollWithPresentingViewController:self timeout:60 completion:^(EMFaceManagerProcessStatus code) {
-            if (code == EMFaceManagerProcessStatusSuccess) {
-                // Hide result view controller and continue with enabling auth mode.
-                [self dismissViewControllerAnimated:YES completion:^{
-                    [self toggleFaceIdProtectorEnable_step2_enableAuthMode];
-                }];
-            } else if (code == EMFaceManagerProcessStatusFail) {
-                // Display possible errors.
-                notifyDisplay([[EMFaceManager sharedInstance] faceStatusError], NotifyTypeError);
-            }
-        }];
-    } else {
-        // Template already enrolled. We can continue with enablind auth mode.
-        [self toggleFaceIdProtectorEnable_step2_enableAuthMode];
-    }
-}
-
-- (void)toggleFaceIdProtectorEnable_step2_enableAuthMode {
-    [self enableAuthMode:[[[EMFaceManager sharedInstance] service] authMode] allowBackButton:NO];
-}
-
-- (void)toggleFaceIdProtectorDisable_step1_disableAuthMode {
-    // Try to disable auth mode.
-    if ([self disableAuthMode:[[[EMFaceManager sharedInstance] service] authMode]]) {
-        // Un-enroll face template sice auth mode was succesfully disabled.
-        [self toggleFaceIdProtectorDisable_step2_unenroll];
-    }
-}
-
-- (void)toggleFaceIdProtectorDisable_step2_unenroll {
-    [EMFaceManager unenrollWithCompletion:^(EMFaceManagerProcessStatus code) {
-        // Display possible errors.
-        if (code == EMFaceManagerProcessStatusFail) {
-            notifyDisplay([[EMFaceManager sharedInstance] faceStatusError], NotifyTypeError);
-        }
-        
-        // Display current state.
-        [self reloadGUI];
-    }];
 }
 
 // MARK: - Touch Id

@@ -8,37 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6D2C857922F4567500204377 /* NotifyAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C857822F4567500204377 /* NotifyAction.m */; };
-		6D352DEF21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEA21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf */; };
-		6D352DF021C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEB21C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf */; };
-		6D352DF121C8F01300465802 /* FacesCreateTemplateMediumLite.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEC21C8F01300465802 /* FacesCreateTemplateMediumLite.ndf */; };
-		6D352DF221C8F01300465802 /* FacesCreateTemplateSmall.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DED21C8F01300465802 /* FacesCreateTemplateSmall.ndf */; };
-		6D352DF321C8F01300465802 /* FacesDetectSegmentsOrientation.ndf in Resources */ = {isa = PBXBuildFile; fileRef = 6D352DEE21C8F01300465802 /* FacesDetectSegmentsOrientation.ndf */; };
-		6D352E1321C8F0FF00465802 /* EMFaceBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352DFC21C8F0FF00465802 /* EMFaceBaseManager.m */; };
-		6D352E1421C8F0FF00465802 /* EMCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0121C8F0FF00465802 /* EMCircularProgressView.m */; };
-		6D352E1521C8F0FF00465802 /* EMVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0321C8F0FF00465802 /* EMVerifyViewController.m */; };
-		6D352E1621C8F0FF00465802 /* EMFaceEnrollManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0421C8F0FF00465802 /* EMFaceEnrollManager.m */; };
-		6D352E1721C8F0FF00465802 /* EMFaceVerifyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0621C8F0FF00465802 /* EMFaceVerifyManager.m */; };
-		6D352E1821C8F0FF00465802 /* EMEnrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0721C8F0FF00465802 /* EMEnrollViewController.m */; };
-		6D352E1921C8F0FF00465802 /* EMFaceSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0821C8F0FF00465802 /* EMFaceSettings.m */; };
-		6D352E1A21C8F0FF00465802 /* EMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0921C8F0FF00465802 /* EMBaseViewController.m */; };
-		6D352E1B21C8F0FF00465802 /* EMFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0A21C8F0FF00465802 /* EMFaceView.m */; };
-		6D352E1C21C8F0FF00465802 /* EMFaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0C21C8F0FF00465802 /* EMFaceManager.m */; };
-		6D352E1D21C8F0FF00465802 /* EMFaceConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0E21C8F0FF00465802 /* EMFaceConstant.m */; };
-		6D352E1E21C8F0FF00465802 /* EMFaceMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D352E0F21C8F0FF00465802 /* EMFaceMessageHelper.m */; };
-		6D352E2421C8F5BF00465802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D352E2221C8F5BE00465802 /* Assets.xcassets */; };
-		6D352E2521C8F5BF00465802 /* FaceUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D352E2321C8F5BE00465802 /* FaceUI.storyboard */; };
 		6D3EAB1322E1E376000C0E22 /* IdCloudSecureKeypadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EAB1222E1E376000C0E22 /* IdCloudSecureKeypadViewController.m */; };
 		6D3EAB1522E1E50C000C0E22 /* IdCloudSecureKeypadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D3EAB1422E1E50C000C0E22 /* IdCloudSecureKeypadViewController.xib */; };
 		6D40D9472109DBAC003E6F48 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D9462109DBAC003E6F48 /* BaseViewController.m */; };
 		6D40D9502109F350003E6F48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D40D9522109F350003E6F48 /* Localizable.strings */; };
-		6D40D979210B2FFB003E6F48 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D978210B2FFB003E6F48 /* Accelerate.framework */; };
 		6D40D98C210B5142003E6F48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98B210B5142003E6F48 /* Foundation.framework */; };
-		6D40D98E210B514C003E6F48 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */; };
 		6D40D990210B5151003E6F48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98F210B5151003E6F48 /* UIKit.framework */; };
 		6D40D992210B5157003E6F48 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D991210B5157003E6F48 /* LocalAuthentication.framework */; };
 		6D40D994210B515B003E6F48 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D993210B515B003E6F48 /* Security.framework */; };
 		6D40D996210B5161003E6F48 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D995210B5160003E6F48 /* AVFoundation.framework */; };
-		6D40D998210B5165003E6F48 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D997210B5165003E6F48 /* CoreMedia.framework */; };
 		6D40D99A210B5173003E6F48 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D999210B5173003E6F48 /* libc++.tbd */; };
 		6D40D99C210B517A003E6F48 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */; };
 		6D5FC8EC22D357AF00A99FD5 /* ProvisionerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5FC8EB22D357AF00A99FD5 /* ProvisionerViewController.m */; };
@@ -117,51 +95,17 @@
 /* Begin PBXFileReference section */
 		6D2C857722F4567500204377 /* NotifyAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifyAction.h; sourceTree = "<group>"; };
 		6D2C857822F4567500204377 /* NotifyAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifyAction.m; sourceTree = "<group>"; };
-		6D352DEA21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsLiveness.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesDetectSegmentsLiveness.ndf; sourceTree = "<group>"; };
-		6D352DEB21C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsFeaturePointsTrack.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesDetectSegmentsFeaturePointsTrack.ndf; sourceTree = "<group>"; };
-		6D352DEC21C8F01300465802 /* FacesCreateTemplateMediumLite.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesCreateTemplateMediumLite.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesCreateTemplateMediumLite.ndf; sourceTree = "<group>"; };
-		6D352DED21C8F01300465802 /* FacesCreateTemplateSmall.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesCreateTemplateSmall.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesCreateTemplateSmall.ndf; sourceTree = "<group>"; };
-		6D352DEE21C8F01300465802 /* FacesDetectSegmentsOrientation.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsOrientation.ndf; path = Frameworks/Debug/EzioMobile.framework/Resources/FacesDetectSegmentsOrientation.ndf; sourceTree = "<group>"; };
-		6D352DF521C8F0FF00465802 /* EMFaceSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceSettings.h; sourceTree = "<group>"; };
-		6D352DFA21C8F0FF00465802 /* EMEnrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMEnrollViewController.h; sourceTree = "<group>"; };
-		6D352DFB21C8F0FF00465802 /* EMFaceVerifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceVerifyManager.h; sourceTree = "<group>"; };
-		6D352DFC21C8F0FF00465802 /* EMFaceBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceBaseManager.m; sourceTree = "<group>"; };
-		6D352DFD21C8F0FF00465802 /* EMFaceEnrollManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceEnrollManager.h; sourceTree = "<group>"; };
-		6D352DFE21C8F0FF00465802 /* EMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBaseViewController.h; sourceTree = "<group>"; };
-		6D352DFF21C8F0FF00465802 /* EMFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceView.h; sourceTree = "<group>"; };
-		6D352E0021C8F0FF00465802 /* EMFaceMessageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceMessageHelper.h; sourceTree = "<group>"; };
-		6D352E0121C8F0FF00465802 /* EMCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCircularProgressView.m; sourceTree = "<group>"; };
-		6D352E0221C8F0FF00465802 /* EMFaceConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceConstant.h; sourceTree = "<group>"; };
-		6D352E0321C8F0FF00465802 /* EMVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMVerifyViewController.m; sourceTree = "<group>"; };
-		6D352E0421C8F0FF00465802 /* EMFaceEnrollManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceEnrollManager.m; sourceTree = "<group>"; };
-		6D352E0521C8F0FF00465802 /* EMFaceBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceBaseManager.h; sourceTree = "<group>"; };
-		6D352E0621C8F0FF00465802 /* EMFaceVerifyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceVerifyManager.m; sourceTree = "<group>"; };
-		6D352E0721C8F0FF00465802 /* EMEnrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMEnrollViewController.m; sourceTree = "<group>"; };
-		6D352E0821C8F0FF00465802 /* EMFaceSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceSettings.m; sourceTree = "<group>"; };
-		6D352E0921C8F0FF00465802 /* EMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBaseViewController.m; sourceTree = "<group>"; };
-		6D352E0A21C8F0FF00465802 /* EMFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceView.m; sourceTree = "<group>"; };
-		6D352E0B21C8F0FF00465802 /* EMVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMVerifyViewController.h; sourceTree = "<group>"; };
-		6D352E0C21C8F0FF00465802 /* EMFaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceManager.m; sourceTree = "<group>"; };
-		6D352E0D21C8F0FF00465802 /* EMCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCircularProgressView.h; sourceTree = "<group>"; };
-		6D352E0E21C8F0FF00465802 /* EMFaceConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceConstant.m; sourceTree = "<group>"; };
-		6D352E0F21C8F0FF00465802 /* EMFaceMessageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFaceMessageHelper.m; sourceTree = "<group>"; };
-		6D352E1021C8F0FF00465802 /* EMFaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFaceManager.h; sourceTree = "<group>"; };
-		6D352E2221C8F5BE00465802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6D352E2321C8F5BE00465802 /* FaceUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FaceUI.storyboard; sourceTree = "<group>"; };
 		6D3EAB1122E1E376000C0E22 /* IdCloudSecureKeypadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudSecureKeypadViewController.h; sourceTree = "<group>"; };
 		6D3EAB1222E1E376000C0E22 /* IdCloudSecureKeypadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudSecureKeypadViewController.m; sourceTree = "<group>"; };
 		6D3EAB1422E1E50C000C0E22 /* IdCloudSecureKeypadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudSecureKeypadViewController.xib; sourceTree = "<group>"; };
 		6D40D9452109DBAC003E6F48 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		6D40D9462109DBAC003E6F48 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		6D40D9542109F433003E6F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6D40D978210B2FFB003E6F48 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		6D40D98B210B5142003E6F48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6D40D98F210B5151003E6F48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6D40D991210B5157003E6F48 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		6D40D993210B515B003E6F48 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6D40D995210B5160003E6F48 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		6D40D997210B5165003E6F48 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		6D40D999210B5173003E6F48 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		6D5FC8EA22D357AF00A99FD5 /* ProvisionerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvisionerViewController.h; sourceTree = "<group>"; };
@@ -246,15 +190,12 @@
 			files = (
 				6D40D99C210B517A003E6F48 /* libsqlite3.0.tbd in Frameworks */,
 				6D40D99A210B5173003E6F48 /* libc++.tbd in Frameworks */,
-				6D40D979210B2FFB003E6F48 /* Accelerate.framework in Frameworks */,
-				6D40D998210B5165003E6F48 /* CoreMedia.framework in Frameworks */,
 				6D40D996210B5161003E6F48 /* AVFoundation.framework in Frameworks */,
 				6D40D994210B515B003E6F48 /* Security.framework in Frameworks */,
 				6D40D992210B5157003E6F48 /* LocalAuthentication.framework in Frameworks */,
 				6DA0F4B921C7E183008282F5 /* EzioMobile.framework in Frameworks */,
 				6D40D990210B5151003E6F48 /* UIKit.framework in Frameworks */,
 				6DB1FAC722E7460D0031B4F3 /* IdCloudDesignable.framework in Frameworks */,
-				6D40D98E210B514C003E6F48 /* SystemConfiguration.framework in Frameworks */,
 				6D40D98C210B5142003E6F48 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,55 +203,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6D352DF421C8F0FF00465802 /* FaceUI */ = {
-			isa = PBXGroup;
-			children = (
-				6D352E2121C8F5BE00465802 /* BundleAssets */,
-				6D352DF921C8F0FF00465802 /* internal */,
-				6D352DF521C8F0FF00465802 /* EMFaceSettings.h */,
-				6D352E1021C8F0FF00465802 /* EMFaceManager.h */,
-			);
-			path = FaceUI;
-			sourceTree = "<group>";
-		};
-		6D352DF921C8F0FF00465802 /* internal */ = {
-			isa = PBXGroup;
-			children = (
-				6D352DFA21C8F0FF00465802 /* EMEnrollViewController.h */,
-				6D352DFB21C8F0FF00465802 /* EMFaceVerifyManager.h */,
-				6D352DFC21C8F0FF00465802 /* EMFaceBaseManager.m */,
-				6D352DFD21C8F0FF00465802 /* EMFaceEnrollManager.h */,
-				6D352DFE21C8F0FF00465802 /* EMBaseViewController.h */,
-				6D352DFF21C8F0FF00465802 /* EMFaceView.h */,
-				6D352E0021C8F0FF00465802 /* EMFaceMessageHelper.h */,
-				6D352E0121C8F0FF00465802 /* EMCircularProgressView.m */,
-				6D352E0221C8F0FF00465802 /* EMFaceConstant.h */,
-				6D352E0E21C8F0FF00465802 /* EMFaceConstant.m */,
-				6D352E0321C8F0FF00465802 /* EMVerifyViewController.m */,
-				6D352E0421C8F0FF00465802 /* EMFaceEnrollManager.m */,
-				6D352E0521C8F0FF00465802 /* EMFaceBaseManager.h */,
-				6D352E0621C8F0FF00465802 /* EMFaceVerifyManager.m */,
-				6D352E0721C8F0FF00465802 /* EMEnrollViewController.m */,
-				6D352E0821C8F0FF00465802 /* EMFaceSettings.m */,
-				6D352E0921C8F0FF00465802 /* EMBaseViewController.m */,
-				6D352E0A21C8F0FF00465802 /* EMFaceView.m */,
-				6D352E0B21C8F0FF00465802 /* EMVerifyViewController.h */,
-				6D352E0C21C8F0FF00465802 /* EMFaceManager.m */,
-				6D352E0D21C8F0FF00465802 /* EMCircularProgressView.h */,
-				6D352E0F21C8F0FF00465802 /* EMFaceMessageHelper.m */,
-			);
-			path = internal;
-			sourceTree = "<group>";
-		};
-		6D352E2121C8F5BE00465802 /* BundleAssets */ = {
-			isa = PBXGroup;
-			children = (
-				6D352E2221C8F5BE00465802 /* Assets.xcassets */,
-				6D352E2321C8F5BE00465802 /* FaceUI.storyboard */,
-			);
-			path = BundleAssets;
-			sourceTree = "<group>";
-		};
 		6D3EAB1022E1E35B000C0E22 /* IdCloudSecureKeypad */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,7 +315,6 @@
 		6DE0DA4A20EB61E8005A045F = {
 			isa = PBXGroup;
 			children = (
-				6D352DF421C8F0FF00465802 /* FaceUI */,
 				6DE0DA5520EB61E8005A045F /* EzioMobileSampleApp */,
 				6DE0DA5420EB61E8005A045F /* Products */,
 				6DE0DA7320EB640B005A045F /* Frameworks */,
@@ -457,21 +348,13 @@
 			children = (
 				F4EE07B0230AC72300344DEE /* CoreNFC.framework */,
 				6DDBADD422F099A8009079C6 /* AudioToolbox.framework */,
-				6D352DEC21C8F01300465802 /* FacesCreateTemplateMediumLite.ndf */,
-				6D352DED21C8F01300465802 /* FacesCreateTemplateSmall.ndf */,
-				6D352DEB21C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf */,
-				6D352DEA21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf */,
-				6D352DEE21C8F01300465802 /* FacesDetectSegmentsOrientation.ndf */,
 				6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */,
 				6D40D999210B5173003E6F48 /* libc++.tbd */,
-				6D40D997210B5165003E6F48 /* CoreMedia.framework */,
 				6D40D995210B5160003E6F48 /* AVFoundation.framework */,
 				6D40D993210B515B003E6F48 /* Security.framework */,
 				6D40D991210B5157003E6F48 /* LocalAuthentication.framework */,
 				6D40D98F210B5151003E6F48 /* UIKit.framework */,
-				6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */,
 				6D40D98B210B5142003E6F48 /* Foundation.framework */,
-				6D40D978210B2FFB003E6F48 /* Accelerate.framework */,
 				6DE0DA7420EB640C005A045F /* EzioMobile.framework */,
 			);
 			name = Frameworks;
@@ -656,23 +539,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4AB30FD23152533002CE4E8 /* IdCloudIncomingMessage.xib in Resources */,
-				6D352DF221C8F01300465802 /* FacesCreateTemplateSmall.ndf in Resources */,
-				6D352DF121C8F01300465802 /* FacesCreateTemplateMediumLite.ndf in Resources */,
-				6D352E2421C8F5BF00465802 /* Assets.xcassets in Resources */,
 				6D40D9502109F350003E6F48 /* Localizable.strings in Resources */,
-				6D352DEF21C8F01300465802 /* FacesDetectSegmentsLiveness.ndf in Resources */,
 				6DB1F98A22E483A20031B4F3 /* IdCloudChangePinView.xib in Resources */,
 				6D5FC8F722D483F800A99FD5 /* IdCloudQrCodeReader.xib in Resources */,
-				6D352E2521C8F5BF00465802 /* FaceUI.storyboard in Resources */,
 				6DE0DA6620EB61EA005A045F /* LaunchScreen.storyboard in Resources */,
 				F4846EB8230D3E340034D115 /* Root.storyboard in Resources */,
 				6DE0DA6320EB61EA005A045F /* Assets.xcassets in Resources */,
 				6DE0DA6120EB61E8005A045F /* Protector.storyboard in Resources */,
 				6DB1F98522E483880031B4F3 /* IdCloudPinEntryView.xib in Resources */,
 				6D3EAB1522E1E50C000C0E22 /* IdCloudSecureKeypadViewController.xib in Resources */,
-				6D352DF021C8F01300465802 /* FacesDetectSegmentsFeaturePointsTrack.ndf in Resources */,
 				6DE0DA9A20EBC579005A045F /* IdCloudLoadingIndicator.xib in Resources */,
-				6D352DF321C8F01300465802 /* FacesDetectSegmentsOrientation.ndf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,28 +577,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DA5760920F383E500CCF413 /* TokenManager.m in Sources */,
-				6D352E1A21C8F0FF00465802 /* EMBaseViewController.m in Sources */,
 				6D9FF91921F73A8D00C4C0F0 /* KeyValue.m in Sources */,
-				6D352E1B21C8F0FF00465802 /* EMFaceView.m in Sources */,
-				6D352E1421C8F0FF00465802 /* EMCircularProgressView.m in Sources */,
-				6D352E1921C8F0FF00465802 /* EMFaceSettings.m in Sources */,
-				6D352E1521C8F0FF00465802 /* EMVerifyViewController.m in Sources */,
 				6DE0DAC620F213F0005A045F /* NSData+Protector.m in Sources */,
 				F4846EBC230D3EB10034D115 /* RootViewController.m in Sources */,
 				6DE0DA9D20ECD234005A045F /* IdCloudLoadingIndicator.m in Sources */,
-				6D352E1321C8F0FF00465802 /* EMFaceBaseManager.m in Sources */,
 				6DA5760E20F3AC1200CCF413 /* TokenDevice.m in Sources */,
 				6DE0DAD020F22261005A045F /* SecureStorage.m in Sources */,
 				F491783C22D4CA7C00E6E3F7 /* HomeViewController.m in Sources */,
 				6DE0DA5820EB61E8005A045F /* AppDelegate.m in Sources */,
 				6DE0DAD420F22274005A045F /* UserDefaults.m in Sources */,
-				6D352E1621C8F0FF00465802 /* EMFaceEnrollManager.m in Sources */,
 				6DB1F98822E4839B0031B4F3 /* IdCloudChangePinView.m in Sources */,
 				F491784222D4D08100E6E3F7 /* SignTransactionViewController.m in Sources */,
 				6DCA4BFA22CCC4D40082F969 /* IdCloudNotification.m in Sources */,
-				6D352E1821C8F0FF00465802 /* EMEnrollViewController.m in Sources */,
 				6DE0DAD820F23B52005A045F /* PushManager.m in Sources */,
-				6D352E1C21C8F0FF00465802 /* EMFaceManager.m in Sources */,
 				6D5FC8EC22D357AF00A99FD5 /* ProvisionerViewController.m in Sources */,
 				F491783F22D4CC6F00E6E3F7 /* SettingsViewController.m in Sources */,
 				6DE0DA6920EB61EA005A045F /* main.m in Sources */,
@@ -730,13 +597,10 @@
 				F4E23B1B22DDBE48005CD976 /* QRCodeManager.m in Sources */,
 				6D68F38E2328F8380076E51F /* stdafx.m in Sources */,
 				6DB1F98322E4837C0031B4F3 /* IdCloudPinEntryView.m in Sources */,
-				6D352E1721C8F0FF00465802 /* EMFaceVerifyManager.m in Sources */,
 				6D40D9472109DBAC003E6F48 /* BaseViewController.m in Sources */,
 				6D3EAB1322E1E376000C0E22 /* IdCloudSecureKeypadViewController.m in Sources */,
 				F4AB30FB23152509002CE4E8 /* IdCloudIncomingMessage.m in Sources */,
-				6D352E1D21C8F0FF00465802 /* EMFaceConstant.m in Sources */,
 				6D2C857922F4567500204377 /* NotifyAction.m in Sources */,
-				6D352E1E21C8F0FF00465802 /* EMFaceMessageHelper.m in Sources */,
 				6DE0DAC720F213F0005A045F /* NSString+Protector.m in Sources */,
 				6DC2587D21C7A52400DD531E /* HttpManager.m in Sources */,
 				6DE0DA8F20EB86EB005A045F /* IdCloudQrCodeReader.m in Sources */,
@@ -933,6 +797,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 26;
+				DEVELOPMENT_TEAM = 8F83X2SF75;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -965,6 +830,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 26;
+				DEVELOPMENT_TEAM = 8F83X2SF75;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

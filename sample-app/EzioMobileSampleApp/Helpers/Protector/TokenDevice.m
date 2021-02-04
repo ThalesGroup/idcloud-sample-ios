@@ -64,15 +64,11 @@
     EMAuthModule                        *authMoule          = [EMAuthModule authModule];
     EMSystemBioFingerprintAuthService   *touchService       = [EMSystemBioFingerprintAuthService serviceWithModule:authMoule];
     EMSystemFaceAuthService             *faceService        = [EMSystemFaceAuthService serviceWithModule:authMoule];
-    EMFaceAuthService                   *gemFaceService     = [[EMFaceManager sharedInstance] service];
     
     retValue.isTouchSupported                   = [touchService isSupported:nil]    && [touchService isConfigured:nil];
     retValue.isFaceSupported                    = [faceService isSupported:nil]     && [faceService isConfigured:nil];
-    retValue.isProtectorFaceSupported           = [gemFaceService isSupported:nil];
-    retValue.isProtectorFaceTemplateEnrolled    = [gemFaceService isSupported:nil] && [gemFaceService isConfigured:nil];
     retValue.isTouchEnabled                     = retValue.isTouchSupported         ? [_token isAuthModeActive:[touchService authMode]]   : NO;
     retValue.isFaceEnabled                      = retValue.isFaceSupported          ? [_token isAuthModeActive:[faceService authMode]]    : NO;
-    retValue.isProtectorFaceEnabled             = retValue.isProtectorFaceSupported ? [_token isAuthModeActive:[gemFaceService authMode]] : NO;
     
     return retValue;
 }
@@ -147,37 +143,6 @@
                       }
                   });
               }];
-}
-
-- (void)totpWithProtectorFaceId:(OTPCompletion)completionHandler
-            withServerChallenge:(id<EMSecureString>)serverChallenge
-       presentingViewController:(UIViewController *)viewController {
-    assert(viewController);
-    
-    [EMFaceManager verifyWithPresentingViewController:viewController authenticatable:_token timeout:30000 completion:^(EMFaceManagerProcessStatus code, id<EMFaceAuthInput> authInput) {
-        // Call in UI thread. New sdk is already doing that, but we want to support all versions.
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Succesfully get auth input. We can continue with OTP calculation.
-            if (authInput) {
-                [self totpWithAuthInput:authInput
-                    withServerChallenge:serverChallenge
-                      completionHandler:completionHandler];
-            }
-            
-            // Adjust FaceUI string error to rest of the sample app handling.
-            NSError *error = nil;
-            if (code == EMFaceManagerProcessStatusFail) {
-                error = [NSError errorWithDomain:@"FaceUI"
-                                            code:-1
-                                        userInfo:@{ NSLocalizedDescriptionKey: [[EMFaceManager sharedInstance] faceStatusError] }];
-            }
-            
-            // Notify handler.
-            if (completionHandler) {
-                completionHandler(nil, nil, nil, error);
-            }
-        });
-    }];
 }
 
 - (void)totpWithTouchId:(OTPCompletion)completionHandler

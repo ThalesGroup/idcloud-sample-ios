@@ -138,14 +138,6 @@
  */
 - (void)totpWithTouchId:(id<EMSecureString>)serverChallenge
                 handler:(OTPCompletion)handler;
-/**
- Generate TOTP using Protector Face ID.
- 
- @param serverChallenge Server OCRA Challenge
- @param handler Triggered once operation is done.
- */
-- (void)totpWithProtectorFaceId:(id<EMSecureString>)serverChallenge
-                        handler:(OTPCompletion)handler;
 
 // MARK: - Incoming messages
 

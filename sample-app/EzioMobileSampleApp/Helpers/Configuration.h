@@ -49,10 +49,6 @@ extern NSString                         *CFG_OOB_APP_ID();
 extern NSString                         *CFG_OOB_CHANNEL();
 extern NSString                         *CFG_OOB_PROVIDER_ID();
 
-// PROTECTOR FACE ID
-extern NSString                         *CFG_FACE_ID_PRODUCT_KEY();
-extern NSString                         *CFG_FACE_ID_SERVER_URL();
-
 // MSP
 extern NSArray                          *CFG_MSP_OBFUSCATION_CODE();
 extern NSArray                          *CFG_MSP_SIGN_KEYS();
@@ -66,3 +62,7 @@ extern NSString                         *CFG_TUTO_BASICAUTH_PASSWORD();
 extern NSString                         *CFG_TUTO_URL_ROOT();
 extern NSString                         *CFG_TUTO_URL_AUTH();
 extern NSString                         *CFG_TUTO_URL_SIGN();
+
+// SECURE LOG
+extern NSData                           *CFG_SECURE_LOG_RSA_KEY_MODULUS();
+extern NSData                           *CFG_SECURE_LOG_RSA_KEY_EXPONENT();

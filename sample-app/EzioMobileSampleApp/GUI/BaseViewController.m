@@ -241,8 +241,6 @@
     
     if (status.isFaceEnabled) {
         [self totpWithFaceId:serverChallenge handler:handler];
-    } else if (status.isProtectorFaceEnabled) {
-        [self totpWithProtectorFaceId:serverChallenge handler:handler];
     } else if (status.isTouchEnabled) {
         [self totpWithTouchId:serverChallenge handler:handler];
     } else {
@@ -285,13 +283,6 @@
             handler(otp, input, newServerChallenge, error);
         }
     } withServerChallenge:serverChallenge];
-}
-
-- (void)totpWithProtectorFaceId:(id<EMSecureString>)serverChallenge
-                        handler:(OTPCompletion)handler {
-    [CMain.sharedInstance.managerToken.tokenDevice totpWithProtectorFaceId:handler
-                                                       withServerChallenge:serverChallenge
-                                                  presentingViewController:self];
 }
 
 // MARK: - Incoming messages

@@ -21,22 +21,3 @@ Please make sure to review our IdCloud documentation, including security guideli
 */
 
 #import "stdafx.h"
-
-
-@implementation NSObject(FixEnroller)
-- (void)enroller:(id<EMFaceAuthEnroller>)enroller o3mwg3um:(id<EMFaceAuthFrameEvent>)frameEvent {
-    [self enroller:enroller didUpdateFaceAuthFrameEvent:frameEvent];
-}
-- (void)enroller:(id<EMFaceAuthEnroller>)enroller didUpdateFaceAuthFrameEvent:(id<EMFaceAuthFrameEvent>)frameEvent {
-    // Override
-}
-@end
-
-@implementation NSObject(FixVerifier)
-- (void)verifier:(id<EMFaceAuthVerifier>)verifier o3mwg3um:(id<EMFaceAuthFrameEvent>)frameEvent; {
-    [self verifier:verifier didUpdateFaceAuthFrameEvent:frameEvent];
-}
-- (void)verifier:(id<EMFaceAuthVerifier>)verifier didUpdateFaceAuthFrameEvent:(id<EMFaceAuthFrameEvent>)frameEvent; {
-    // Override
-}
-@end

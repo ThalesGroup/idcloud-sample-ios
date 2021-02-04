@@ -54,7 +54,15 @@ static CMain *sInstance = nil;
 - (void)configureAndActivateSDK {
     // Make sure, that we will always check isConfigured first. Multiple call of init will cause crash / run time exception.
     if (![EMCore isConfigured]) {
+        // Configure core with secure log.
+        SecureLogConfig *secureLogConfig = [[SecureLogConfig alloc] initWithConfigComponentsBuilder:^(SecureLogConfigComponents * _Nonnull components) {
+            components.publicKeyExponent = CFG_SECURE_LOG_RSA_KEY_EXPONENT();
+            components.publicKeyModulus = CFG_SECURE_LOG_RSA_KEY_MODULUS();
+        }];
+        [EMCore configureSecureLog:secureLogConfig];
+
         NSError *error = nil;
+        // Configure core with given key and set of required modules.
         EMCore *core = [EMCore configureWithActivationCode:CFG_SDK_ACTIVATION_CODE()
                                             configurations:[self moduleConfigurations]];
         
@@ -68,9 +76,6 @@ static CMain *sInstance = nil;
         [EMSystemFaceAuthService setIsSupportedFallback:^BOOL(NSString *machineID) {
             return [machineID isEqualToString:@"iPhone11,3"] || [machineID isEqualToString:@"iPhone11,6"];
         }];
-        
-        // This will also register and activate licence.
-        [self updateProtectorFaceIdStatus];
     }
     
     _storageSecure      = [SecureStorage    new];
@@ -84,30 +89,6 @@ static CMain *sInstance = nil;
 - (void)updateRootViewController {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.rootViewController switchToViewController:[self getNewViewController]];
-}
-
-- (void)updateProtectorFaceIdStatus {
-    EMFaceAuthService *faceIdService = [[EMFaceManager sharedInstance] service];
-    
-    NSError *error = nil;
-    if (![faceIdService isSupported:&error]) {
-        return;
-    }
-    
-    // Allow to use sample app without face id.
-    if (!CFG_FACE_ID_PRODUCT_KEY() || !CFG_FACE_ID_PRODUCT_KEY().length ||
-        !CFG_FACE_ID_SERVER_URL() || !CFG_FACE_ID_SERVER_URL().length) {
-        return;
-    }
-    
-    [faceIdService configureLicense:^(EMFaceAuthLicenseBuilder *builder) {
-        builder.productKey  = CFG_FACE_ID_PRODUCT_KEY();
-        builder.serverUrl   = CFG_FACE_ID_SERVER_URL();
-    } completion:^(BOOL success, NSError *error) {
-        if (success && ![faceIdService isInitialized]) {
-            [[EMFaceManager sharedInstance] initialize:nil];
-        }
-    }];
 }
 
 // MARK: - Private Helpers

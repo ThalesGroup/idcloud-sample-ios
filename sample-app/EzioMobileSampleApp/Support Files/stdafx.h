@@ -53,18 +53,6 @@ instantiateViewControllerWithIdentifier:NSStringFromClass(__SELF__.class)]
 #import "Configuration.h"
 #import "CMain.h"
 
-// FaceID Helpers from FaceUI
-#import "EMFaceManager.h"
-
-// Fix for Protector 4.8.1 obfuscation issue
-@interface NSObject(FixEnroller) <EMFaceAuthEnrollerDelegate>
-- (void)enroller:(id<EMFaceAuthEnroller>)enroller o3mwg3um:(id<EMFaceAuthFrameEvent>)frameEvent;
-@end
-
-@interface NSObject(FixVerifier) <EMFaceAuthVerifierDelegate>
-- (void)verifier:(id<EMFaceAuthVerifier>)verifier o3mwg3um:(id<EMFaceAuthFrameEvent>)frameEvent;
-@end
-
 #endif
 
 #endif /* stdafx_h */

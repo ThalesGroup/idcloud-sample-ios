@@ -27,14 +27,8 @@
 
 typedef void (^HTTPResponse)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error);
 
-#define kAuthSuccess @"Authentication succeeded"
+#define kAuthSuccess @"0"
 #define kSignSuccess @"Signature verification succeeded"
-
-#define kXMLTemplateAuth @"<?xml version=\"1.0\" encoding=\"UTF-8\"?> \
-<AuthenticationRequest> \
-<UserID>%@</UserID> \
-<OTP>%@</OTP> \
-</AuthenticationRequest>"
 
 #define kXMLTemplateSign @"<?xml version=\"1.0\" encoding=\"UTF-8\"?> \
 <SignatureRequest> \
@@ -53,15 +47,21 @@ typedef void (^HTTPResponse)(NSData * _Nullable data, NSURLResponse * _Nullable 
 - (void)sendAuthRequest:(NSString *)otp completionHandler:(HttpManagerCompletion)handler {
     // Demo app use user name for token name since it's unique.
     TokenDevice *device = CMain.sharedInstance.managerToken.tokenDevice;
-    NSString    *body   = [NSString stringWithFormat:kXMLTemplateAuth, device.token.name, otp];
-    
+    NSDictionary    *input = @{
+        @"userId": device.token.name,
+        @"otp":otp
+    };
+    NSDictionary    *body = @{
+        @"name": @"Auth_OTP",
+        @"input":input
+    };
     // Post message and wait for results in proccessResponse.
-    [self doPostMessage:CFG_TUTO_URL_AUTH()
-            contentType:@"text/xml"
+    [self doPostMessage:CFG_TUTO_URL_ROOT()
+            contentType:@"application/json"
                 headers:[self authHeaders]
                    body:body
        returnInUIThread:YES
-      completionHandler:[self proccessResponse:handler]];
+      completionHandler:[self processResponse:handler]];
     
 }
 
@@ -71,26 +71,41 @@ typedef void (^HTTPResponse)(NSData * _Nullable data, NSURLResponse * _Nullable 
       completionHandler:(HttpManagerCompletion)handler {
     // Demo app use user name for token name since it's unique.
     TokenDevice *device = CMain.sharedInstance.managerToken.tokenDevice;
-    NSString    *body   = [NSString stringWithFormat:kXMLTemplateSign, amount, beneficiary, device.token.name, otp];
-    
+    NSDictionary *transactionDict = @{
+        @"amount": amount,
+        @"beneficiary": beneficiary
+    };
+    NSDictionary    *input = @{
+        @"userId": device.token.name,
+        @"otp":otp,
+        @"transactionData":transactionDict
+    };
+    NSDictionary    *body = @{
+        @"name": @"Sign_OTP",
+        @"input":input
+    };
     // Post message and wait for results in proccessResponse.
-    [self doPostMessage:CFG_TUTO_URL_SIGN()
-            contentType:@"text/xml"
+    [self doPostMessage:CFG_TUTO_URL_ROOT()
+            contentType:@"application/json"
                 headers:[self authHeaders]
                    body:body
        returnInUIThread:YES
-      completionHandler:[self proccessResponse:handler]];
-    
+      completionHandler:[self processResponse:handler]];
 }
 
 // MARK: Private Helpers
 
-- (HTTPResponse)proccessResponse:(HttpManagerCompletion)handler {
+- (HTTPResponse)processResponse:(HttpManagerCompletion)handler {
     return ^void(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if ([response isKindOfClass:[NSHTTPURLResponse class]] && ((NSHTTPURLResponse *)response).statusCode == 200 && data) {
-            NSString    *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            BOOL        success         = [responseString isEqual:kAuthSuccess] || [responseString isEqual:kSignSuccess];
-            handler(success, responseString);
+        if ([response isKindOfClass:[NSHTTPURLResponse class]] && ((NSHTTPURLResponse *)response).statusCode == 201 && data) {
+            NSDictionary *dict =
+            [NSJSONSerialization JSONObjectWithData:data
+                                            options:0
+                                              error:nil];
+            NSString *value = (NSString*)[dict valueForKeyPath:@"state.result.code"];
+            NSString *message = (NSString*)[dict valueForKeyPath:@"state.result.message"];
+            BOOL        success         = [value isEqual:kAuthSuccess];
+            handler(success, message);
         } else {
             handler(NO, error.localizedDescription);
         }
@@ -98,20 +113,32 @@ typedef void (^HTTPResponse)(NSData * _Nullable data, NSURLResponse * _Nullable 
 }
 
 - (NSDictionary *)authHeaders {
-    NSString    *toHash = [NSString stringWithFormat:@"%@:%@", CFG_TUTO_BASICAUTH_USERNAME(), CFG_TUTO_BASICAUTH_PASSWORD()];
-    NSString    *hash   = [[toHash dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
-    
-    return @{@"Authorization" : [NSString stringWithFormat:@"Basic %@", hash]};
+    NSDictionary    *headers    = @{
+        @"Authorization" : CFG_TUTO_BASIC_AUTH_JWT(),
+        @"X-API-KEY" : CFG_TUTO_BASIC_AUTH_API_KEY()
+    };
+    return headers;
 }
 
 - (void)doPostMessage:(NSString *)url
           contentType:(NSString *)contentType
               headers:(NSDictionary<NSString *, NSString *> *)headers
-                 body:(NSString *)body
+                 body:(NSDictionary *)body
      returnInUIThread:(BOOL)returnInUIThread
     completionHandler:(HTTPResponse)completionHandler {
     // Prepare HTTP post request.
-    NSData                  *postData   = [body dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:body
+                                                   options:0
+                                                     error:nil];
+    NSString *dataString = [[NSString alloc] initWithData:data
+                                                 encoding:NSUTF8StringEncoding];
+    dataString =  [dataString stringByTrimmingCharactersInSet:
+                   [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    dataString =   [dataString stringByTrimmingCharactersInSet:
+                    [NSCharacterSet newlineCharacterSet]];
+    NSData *postData = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+    
     NSMutableURLRequest     *request    = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     [request setHTTPMethod:@"POST"];
     [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[postData length]] forHTTPHeaderField:@"Content-Length"];

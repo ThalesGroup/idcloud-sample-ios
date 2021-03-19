@@ -57,11 +57,9 @@ extern NSArray                          *CFG_MSP_SIGN_KEYS();
 extern NSURL                            *CFG_PRIVACY_POLICY_URL();
 
 // TUTU PAGE CONFIG
-extern NSString                         *CFG_TUTO_BASICAUTH_USERNAME();
-extern NSString                         *CFG_TUTO_BASICAUTH_PASSWORD();
+extern NSString                         *CFG_TUTO_BASIC_AUTH_JWT();
+extern NSString                         *CFG_TUTO_BASIC_AUTH_API_KEY();
 extern NSString                         *CFG_TUTO_URL_ROOT();
-extern NSString                         *CFG_TUTO_URL_AUTH();
-extern NSString                         *CFG_TUTO_URL_SIGN();
 
 // SECURE LOG
 extern NSData                           *CFG_SECURE_LOG_RSA_KEY_MODULUS();

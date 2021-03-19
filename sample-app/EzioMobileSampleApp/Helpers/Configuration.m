@@ -338,26 +338,6 @@ NSURL *CFG_PRIVACY_POLICY_URL() {
 }
 
 // MARK: - TUTU PAGE CONFIG
-
-
-/**
- Tuto page does require authentication.
- 
- @return User name
- */
-NSString *CFG_TUTO_BASICAUTH_USERNAME() {
-    return @"";
-}
-
-/**
- Tuto page does require authentication.
- 
- @return User password
- */
-NSString *CFG_TUTO_BASICAUTH_PASSWORD() {
-    return @"";
-}
-
 /**
  Base totu page URL. Used for In Band cases.
  
@@ -368,21 +348,21 @@ NSString *CFG_TUTO_URL_ROOT() {
 }
 
 /**
- Auth API url used for In Band cases.
+ Tuto page does require authentication.
  
- @return Url to tuto page auth.
+ @return Authorisation
  */
-NSString *CFG_TUTO_URL_AUTH() {
-    return [NSString stringWithFormat:@"%@", CFG_TUTO_URL_ROOT()];
+NSString *CFG_TUTO_BASIC_AUTH_JWT() {
+    return @"";
 }
 
 /**
- Transaction sign API url used for In Band cases.
+ Tuto page does require authentication.
  
- @return Url to tuto page sign.
+ @return API KEY
  */
-NSString *CFG_TUTO_URL_SIGN() {
-    return [NSString stringWithFormat:@"%@", CFG_TUTO_URL_ROOT()];
+NSString *CFG_TUTO_BASIC_AUTH_API_KEY() {
+    return @"";
 }
 
 // MARK: - SECURE LOG
@@ -425,3 +405,4 @@ NSData *CFG_SECURE_LOG_RSA_KEY_EXPONENT() {
     static const unsigned char raw[] = {0x01, 0x00, 0x01};
     return [NSData dataWithBytes:raw length:sizeof(raw)];
 }
+

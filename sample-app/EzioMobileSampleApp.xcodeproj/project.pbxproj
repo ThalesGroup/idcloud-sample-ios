@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,7 +23,6 @@
 		6D5FC8F722D483F800A99FD5 /* IdCloudQrCodeReader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D5FC8F622D483F800A99FD5 /* IdCloudQrCodeReader.xib */; };
 		6D68F38E2328F8380076E51F /* stdafx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D68F38C2328F8330076E51F /* stdafx.m */; };
 		6D9FF91921F73A8D00C4C0F0 /* KeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FF91821F73A8D00C4C0F0 /* KeyValue.m */; };
-		6DA0F4B921C7E183008282F5 /* EzioMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE0DA7420EB640C005A045F /* EzioMobile.framework */; };
 		6DA5760920F383E500CCF413 /* TokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5760820F383E500CCF413 /* TokenManager.m */; };
 		6DA5760E20F3AC1200CCF413 /* TokenDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA5760D20F3AC1200CCF413 /* TokenDevice.m */; };
 		6DB1F98322E4837C0031B4F3 /* IdCloudPinEntryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1F98222E4837C0031B4F3 /* IdCloudPinEntryView.m */; };
@@ -50,6 +49,8 @@
 		6DE0DAD020F22261005A045F /* SecureStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DACE20F22261005A045F /* SecureStorage.m */; };
 		6DE0DAD420F22274005A045F /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DAD220F22274005A045F /* UserDefaults.m */; };
 		6DE0DAD820F23B52005A045F /* PushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DAD720F23B52005A045F /* PushManager.m */; };
+		E0A7858628F3CC7600C65F80 /* EzioMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0616A0E28EFC53200205220 /* EzioMobile.xcframework */; };
+		E0A7858728F3CC7600C65F80 /* EzioMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0616A0E28EFC53200205220 /* EzioMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4846EB8230D3E340034D115 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4846EB7230D3E340034D115 /* Root.storyboard */; };
 		F4846EBC230D3EB10034D115 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4846EBB230D3EB10034D115 /* RootViewController.m */; };
 		F491783C22D4CA7C00E6E3F7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F491783B22D4CA7C00E6E3F7 /* HomeViewController.m */; };
@@ -85,6 +86,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E0A7858728F3CC7600C65F80 /* EzioMobile.xcframework in Embed Frameworks */,
 				6DB1FAC822E7460D0031B4F3 /* IdCloudDesignable.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -144,7 +146,6 @@
 		6DE0DA6520EB61EA005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DE0DA6820EB61EA005A045F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6DE0DA6F20EB629D005A045F /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
-		6DE0DA7420EB640C005A045F /* EzioMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EzioMobile.framework; path = Frameworks/Debug/EzioMobile.framework; sourceTree = "<group>"; };
 		6DE0DA8D20EB86EB005A045F /* IdCloudQrCodeReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudQrCodeReader.h; sourceTree = "<group>"; };
 		6DE0DA8E20EB86EB005A045F /* IdCloudQrCodeReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudQrCodeReader.m; sourceTree = "<group>"; };
 		6DE0DA9920EBC579005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/IdCloudLoadingIndicator.xib; sourceTree = "<group>"; };
@@ -165,6 +166,7 @@
 		6DE0DAD620F23B52005A045F /* PushManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushManager.h; sourceTree = "<group>"; };
 		6DE0DAD720F23B52005A045F /* PushManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushManager.m; sourceTree = "<group>"; };
 		6DE0DADC20F246C4005A045F /* EzioMobileSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EzioMobileSampleApp.entitlements; sourceTree = "<group>"; };
+		E0616A0E28EFC53200205220 /* EzioMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EzioMobile.xcframework; path = Frameworks/$CONFIGURATION/EzioMobile.xcframework; sourceTree = "<group>"; };
 		F4846EB7230D3E340034D115 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		F4846EBA230D3EB10034D115 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		F4846EBB230D3EB10034D115 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
@@ -190,10 +192,10 @@
 			files = (
 				6D40D99C210B517A003E6F48 /* libsqlite3.0.tbd in Frameworks */,
 				6D40D99A210B5173003E6F48 /* libc++.tbd in Frameworks */,
+				E0A7858628F3CC7600C65F80 /* EzioMobile.xcframework in Frameworks */,
 				6D40D996210B5161003E6F48 /* AVFoundation.framework in Frameworks */,
 				6D40D994210B515B003E6F48 /* Security.framework in Frameworks */,
 				6D40D992210B5157003E6F48 /* LocalAuthentication.framework in Frameworks */,
-				6DA0F4B921C7E183008282F5 /* EzioMobile.framework in Frameworks */,
 				6D40D990210B5151003E6F48 /* UIKit.framework in Frameworks */,
 				6DB1FAC722E7460D0031B4F3 /* IdCloudDesignable.framework in Frameworks */,
 				6D40D98C210B5142003E6F48 /* Foundation.framework in Frameworks */,
@@ -346,6 +348,7 @@
 		6DE0DA7320EB640B005A045F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E0616A0E28EFC53200205220 /* EzioMobile.xcframework */,
 				F4EE07B0230AC72300344DEE /* CoreNFC.framework */,
 				6DDBADD422F099A8009079C6 /* AudioToolbox.framework */,
 				6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */,
@@ -355,7 +358,6 @@
 				6D40D991210B5157003E6F48 /* LocalAuthentication.framework */,
 				6D40D98F210B5151003E6F48 /* UIKit.framework */,
 				6D40D98B210B5142003E6F48 /* Foundation.framework */,
-				6DE0DA7420EB640C005A045F /* EzioMobile.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -799,10 +801,6 @@
 				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = 8F83X2SF75;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks/Debug",
-				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "EzioMobileSampleApp/Support Files/ProtectorSample.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -832,10 +830,6 @@
 				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = 8F83X2SF75;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks/Release",
-				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "EzioMobileSampleApp/Support Files/ProtectorSample.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

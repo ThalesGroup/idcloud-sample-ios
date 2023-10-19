@@ -84,14 +84,6 @@
 
 // MARK: - Auth Solvers
 
-/// Display secure keypad to get pin from user and verify it against server.
-/// @param handler Triggered once operation is finished. It's not called when user cancel this operation.
-/// @param unlockOnCancel Whenever method should hide loading bar at the end.
-/// @param allowBackButton Whenever secure keypad should include back button.
-- (void)getPinInputVerifiedWithCompletionHandler:(PinAuthInputCompletion)handler
-                                unlockUIOnCancel:(BOOL)unlockOnCancel
-                                 allowBackButton:(BOOL)allowBackButton;
-
 /**
  Pin input helper. Display secure keypad to get or change user pin.
  

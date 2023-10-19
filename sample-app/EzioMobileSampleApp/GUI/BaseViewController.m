@@ -160,40 +160,6 @@
 
 // MARK: - Auth Solvers
 
-- (void)getPinInputVerifiedWithCompletionHandler:(PinAuthInputCompletion)handler
-                                unlockUIOnCancel:(BOOL)unlockOnCancel
-                                 allowBackButton:(BOOL)allowBackButton {
-    // First show secure pinpad and get pin from user.
-    [self getPinInputWithCompletionHandler:^(id<EMPinAuthInput> firstPin, id<EMPinAuthInput> secondPin) {
-        // Display loading indicator
-        [self loadingIndicatorShowWithCaption:TRANSLATE(@"STRING_LOADING_VALIDATING")];
-        
-        // Get token device and generate an OTP with the entered PIN
-        TokenDevice *tokenDevice = [[CMain sharedInstance].managerToken tokenDevice];
-        [tokenDevice totpWithAuthInput:firstPin
-                     completionHandler:^(id<EMSecureString> otp, id<EMAuthInput> input, id<EMSecureString> serverChallenge, NSError *error) {
-                        
-            // Verify the OTP on the backend
-            HttpManager *httpManager = [CMain sharedInstance].managerHttp;
-            [httpManager sendAuthRequest:otp.stringValue completionHandler:^(BOOL success, NSString *message) {
-                // Verification finished. We can hide loading.
-                [self loadingIndicatorHide];
-                
-                // OTP is no longer needed.
-                [otp wipe];
-                
-                if (success) {
-                    handler(firstPin, nil);
-                } else {
-                    [firstPin wipe];
-                    
-                    handler(nil, message ? message : TRANSLATE(@"STRING_PIN_VERIFICATION_FAILED"));
-                }
-            }];
-        }];
-    } changePin:NO unlockUIOnCancel:NO allowBackButton:allowBackButton];
-}
-
 - (void)getPinInputWithCompletionHandler:(EMSecureInputUiOnFinish)handler
                                changePin:(BOOL)changePin
                         unlockUIOnCancel:(BOOL)unlockOnCancel

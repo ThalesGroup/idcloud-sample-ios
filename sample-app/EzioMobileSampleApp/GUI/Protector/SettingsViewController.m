@@ -207,21 +207,11 @@
     // multiauth upgrade as well as enabling specific authmodes.
     __weak __typeof(self) weakSelf = self;
     
-    [self getPinInputVerifiedWithCompletionHandler:^(id<EMPinAuthInput> pin, NSString *error) {
-        // View is gone. We can exit.
-        if (!weakSelf) {
-            [pin wipe];
-            return;
-        } else if (error) {
-            // Failed to verify pin. No need to continue.
-            notifyDisplay(error, NotifyTypeError);
-            return;
-        }
-        
+    [self getPinInputWithCompletionHandler:^(id<EMPinAuthInput> firstPin, id<EMPinAuthInput> secondPin) {
         // If multiauth is not enabled and we do have pin, we can try to upgrade it.
         NSError *internalError = nil;
-        if (!isEnabled && pin) {
-            isEnabled = [device.token upgradeToMultiAuthMode:pin error:&internalError];
+        if (!isEnabled && firstPin) {
+            isEnabled = [device.token upgradeToMultiAuthMode:firstPin error:&internalError];
         }
         
         // Display whenever something went wrong and relaod GUI.
@@ -230,24 +220,19 @@
         
         // Notify handler
         if (handler) {
-            handler(pin, nil);
+            handler(firstPin, nil);
         }
         
-        [pin wipe];
-    } unlockUIOnCancel:YES allowBackButton:allowBackButton];
+        [firstPin wipe];
+    } changePin:NO unlockUIOnCancel:YES allowBackButton:allowBackButton];
 }
 
 // MARK: - Change Pin
 
 - (void)changePin_step1_getAndVerifyPin {
-    [self getPinInputVerifiedWithCompletionHandler:^(id<EMPinAuthInput> pin, NSString *error) {
-        if (pin) {
-            [self changePin_step2_changePin:pin];
-        } else {
-            // Failed to verify pin. No need to continue.
-            notifyDisplay(error, NotifyTypeError);
-        }
-    } unlockUIOnCancel:NO allowBackButton:YES];
+    [self getPinInputWithCompletionHandler:^(id<EMPinAuthInput> firstPin, id<EMPinAuthInput> secondPin) {
+        [self changePin_step2_changePin:firstPin];
+    } changePin:NO unlockUIOnCancel:NO allowBackButton:YES];
 }
 
 - (void)changePin_step2_changePin:(id<EMPinAuthInput>)originalPin {

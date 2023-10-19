@@ -83,7 +83,6 @@ static CMain *sInstance = nil;
     _managerPush        = [PushManager      new];
     _managerToken       = [TokenManager     new];
     _managerQRCode      = [QRCodeManager    new];
-    _managerHttp        = [HttpManager      new];
 }
 
 - (void)updateRootViewController {

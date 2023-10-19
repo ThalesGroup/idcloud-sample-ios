@@ -26,7 +26,6 @@
 #import "Protector/PushManager.h"
 #import "Protector/TokenManager.h"
 #import "Protector/QRCodeManager.h"
-#import "Protector/HttpManager.h"
 #import "KeyValue.h"
 
 /**
@@ -58,11 +57,6 @@
  Used for handling QR codes.
  */
 @property (nonnull, strong, readonly) QRCodeManager         *managerQRCode;
-
-/**
- Used for handling http communication.
- */
-@property (nonnull, strong, readonly) HttpManager           *managerHttp;
 
 /**
  Common method to get CMain singletone.

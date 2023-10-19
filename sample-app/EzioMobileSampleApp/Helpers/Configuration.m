@@ -213,6 +213,16 @@ EMOobJailbreakPolicy CFG_OOB_JAILBREAK_POLICY() {
  
  @return RSA Key modulus for OOB module.
  */
+NSString *CFG_OOB_RSA_KEY_MODULUS_STRING() {
+    return @"";
+}
+
+/**
+ Replace this byte array with your own OOB key modulus unless you are using the default key pair.
+ This is specific to the configuration of the bank's system. Therefore other values should be used here.
+ 
+ @return RSA Key modulus for OOB module.
+ */
 NSData *CFG_OOB_RSA_KEY_MODULUS() {
     static const unsigned char raw[] = {
         0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,
@@ -337,33 +347,6 @@ NSURL *CFG_PRIVACY_POLICY_URL() {
     return [NSURL URLWithString:@""];
 }
 
-// MARK: - TUTU PAGE CONFIG
-/**
- Base totu page URL. Used for In Band cases.
- 
- @return Url to tuto page root.
- */
-NSString *CFG_TUTO_URL_ROOT() {
-    return @"";
-}
-
-/**
- Tuto page does require authentication.
- 
- @return Authorisation
- */
-NSString *CFG_TUTO_BASIC_AUTH_JWT() {
-    return @"";
-}
-
-/**
- Tuto page does require authentication.
- 
- @return API KEY
- */
-NSString *CFG_TUTO_BASIC_AUTH_API_KEY() {
-    return @"";
-}
 
 // MARK: - SECURE LOG
 

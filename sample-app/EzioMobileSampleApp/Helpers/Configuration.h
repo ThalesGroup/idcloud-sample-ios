@@ -41,7 +41,7 @@ extern NSData                           *CFG_CUSTOM_FINGERPRINT_DATA();
 
 // OOB
 extern EMOobJailbreakPolicy             CFG_OOB_JAILBREAK_POLICY();
-extern NSData                           *CFG_OOB_RSA_KEY_MODULUS();
+extern NSString                         *CFG_OOB_RSA_KEY_MODULUS_STRING();
 extern NSData                           *CFG_OOB_RSA_KEY_EXPONENT();
 extern NSURL                            *CFG_OOB_URL();
 extern NSString                         *CFG_OOB_DOMAIN();
@@ -55,11 +55,6 @@ extern NSArray                          *CFG_MSP_SIGN_KEYS();
 
 // APP CONFIG
 extern NSURL                            *CFG_PRIVACY_POLICY_URL();
-
-// TUTU PAGE CONFIG
-extern NSString                         *CFG_TUTO_BASIC_AUTH_JWT();
-extern NSString                         *CFG_TUTO_BASIC_AUTH_API_KEY();
-extern NSString                         *CFG_TUTO_URL_ROOT();
 
 // SECURE LOG
 extern NSData                           *CFG_SECURE_LOG_RSA_KEY_MODULUS();

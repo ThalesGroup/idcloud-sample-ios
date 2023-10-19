@@ -52,12 +52,13 @@ typedef enum : NSInteger {
     
     if (self = [super init]) {
         // Try to read previous push token already registered by app.
+        NSData *CFG_OOB_RSA_KEY_MODULUS_DATA = [self dataFromHexString: CFG_OOB_RSA_KEY_MODULUS_STRING()];
         _currentPushToken   = [self lastProvidedTokenRead];
         self.oobManager     = [[EMOobModule oobModule] createOobManagerWithURL:CFG_OOB_URL()
                                                                         domain:CFG_OOB_DOMAIN()
                                                                  applicationId:CFG_OOB_APP_ID()
                                                                    rsaExponent:CFG_OOB_RSA_KEY_EXPONENT()
-                                                                    rsaModulus:CFG_OOB_RSA_KEY_MODULUS()
+                                                                    rsaModulus:CFG_OOB_RSA_KEY_MODULUS_DATA
                                                                          error:&error];
     }
     
@@ -135,8 +136,8 @@ typedef enum : NSInteger {
                 // Remove all stored values.
                 [self lastRegisteredTokenDelete];
                 [self clientIdStateDelete];
-                [self clientIdDelete];
                 [self lastMessageIdDelete];
+                [self clientIdDelete];
             }
             if (completionHandler) {
                 completionHandler(success, error);
@@ -500,6 +501,28 @@ typedef enum : NSInteger {
 
 - (BOOL)clientIdStateDelete {
     return [CMain.sharedInstance.storageFast removeValueForKey:kStorageKeyClientIdStat];
+}
+
+- (NSData *)dataFromHexString:(NSString *) string {
+    if([string length] % 2 == 1){
+        string = [@"0"stringByAppendingString:string];
+    }
+
+    const char *chars = [string UTF8String];
+    int i = 0, len = (int)[string length];
+
+    NSMutableData *data = [NSMutableData dataWithCapacity:len / 2];
+    char byteChars[3] = {'\0','\0','\0'};
+    unsigned long wholeByte;
+
+    while (i < len) {
+        byteChars[0] = chars[i++];
+        byteChars[1] = chars[i++];
+        wholeByte = strtoul(byteChars, NULL, 16);
+        [data appendBytes:&wholeByte length:1];
+    }
+    return data;
+
 }
 
 @end

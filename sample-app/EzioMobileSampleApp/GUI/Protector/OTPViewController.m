@@ -113,34 +113,6 @@
     [super enableGUI:enabled];
     
     [_buttonBack            setEnabled:enabled];
-    [_buttonVerifyOnline    setEnabled:enabled];
-}
-
-// MARK: - User Interface
-
-- (IBAction)onButtonPressedVerifyOnline:(IdCloudButton *)sender {
-    // Display loading indicator
-    [self loadingIndicatorShowWithCaption:TRANSLATE(@"STRING_LOADING_VALIDATING")];
-    
-    TokenDevice *tokenDevice = CMain.sharedInstance.managerToken.tokenDevice;
-    [tokenDevice totpWithAuthInput:_authInput
-               withServerChallenge:_serverChallenge
-                 completionHandler:^(id<EMSecureString> otp, id<EMAuthInput> input, id<EMSecureString> serverChallenge, NSError *error) {
-                     HttpManager *manager = CMain.sharedInstance.managerHttp;
-                     if (serverChallenge) {
-                         [manager sendSignRequest:otp.stringValue
-                                           amount:self.amount
-                                      beneficiary:self.beneficiary
-                                completionHandler:^(BOOL success, NSString *message) {
-                                    [self handleResult:success message:message];
-                                }];
-                     } else {
-                         [manager sendAuthRequest:otp.stringValue
-                                completionHandler:^(BOOL success, NSString *message) {
-                                    [self handleResult:success message:message];
-                                }];
-                     }
-                 }];
 }
 
 // MARK: - Timer tick

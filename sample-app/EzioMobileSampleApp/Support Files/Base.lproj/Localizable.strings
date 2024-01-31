@@ -69,12 +69,12 @@
 "STRING_MESSAGING_BUTTON_OPEN"                  = "Open message";
 
 // MARK: - Biometric Id
-"STRING_BIO_ID_FACE_ID"                         = "Authenticate with Face Id";
-"STRING_BIO_ID_TOUCH_ID"                        = "Authenticate with Touch Id";
+"STRING_BIOMETRICS_VERIFICATION"                = "Authenticate with Biometrics";
 
 // MARK: - Server Messages
-"message_subject_authentication"                = "Please authenticate to login to the tutorial site.";
-"message_subject_transaction"                   = "Please approve the transaction of $%amount to %beneficiary";
+"message_subject_authentication"                = "Please authenticate to login.";
+"message_subject_transaction"                   = "Please authenticate to approve transfer of $%amount to %beneficiary";
+"message_subject_authentication_default"        = "Please authenticate to approve the transaction:";
 
 // MARK: - UI Elements
 "STRING_SETTINGS_VERSION"                       = "App Version: %@\nSDK Version: %@";

@@ -127,7 +127,7 @@
     
     // Trigger system authentication
     [container authenticateUser:_token
-                    withMessage:TRANSLATE(@"STRING_BIO_ID_FACE_ID")
+                    withMessage:TRANSLATE(@"STRING_BIOMETRICS_VERIFICATION")
                   fallbackTitle:nil
               completionHandler:^(id<EMSystemFaceAuthInput> faceAuthInput, NSData *evaluatedPolicyDomainState, NSError *error) {
                   // Call in UI thread.
@@ -152,7 +152,7 @@
     
     // Trigger system authentication
     [container authenticateUser:_token
-                    withMessage:TRANSLATE(@"STRING_BIO_ID_TOUCH_ID")
+                    withMessage:TRANSLATE(@"STRING_BIOMETRICS_VERIFICATION")
                   fallbackTitle:nil
               completionHandler:^(id<EMSystemBioFingerprintAuthInput> bioFpAuthInput, NSData *evaluatedPolicyDomainState, NSError *error) {
                   // Call in UI thread.

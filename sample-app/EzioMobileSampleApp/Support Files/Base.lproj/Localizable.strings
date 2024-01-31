@@ -69,8 +69,7 @@
 "STRING_MESSAGING_BUTTON_OPEN"                  = "Open message";
 
 // MARK: - Biometric Id
-"STRING_BIO_ID_FACE_ID"                         = "Authenticate with Face Id";
-"STRING_BIO_ID_TOUCH_ID"                        = "Authenticate with Touch Id";
+"STRING_BIOMETRICS_VERIFICATION"                = "Authenticate with Biometrics";
 
 // MARK: - Server Messages
 "message_subject_authentication"                = "Please authenticate to login.";

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -301,7 +301,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UzZ-vl-I5g" userLabel="View Logo">
-                                <rect key="frame" x="79" y="112" width="256" height="60"/>
+                                <rect key="frame" x="96" y="112" width="222.5" height="60"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IdCloudLogo" translatesAutoresizingMaskIntoConstraints="NO" id="G7O-aN-gSw" userLabel="Image Logo">
                                         <rect key="frame" x="16" y="0.0" width="60" height="60"/>
@@ -311,7 +311,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IdCloud Sample" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzx-Bm-naI" userLabel="Label Logo">
-                                        <rect key="frame" x="92" y="20.5" width="148" height="19.5"/>
+                                        <rect key="frame" x="92" y="20.5" width="114.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" name="ThalesBlue"/>
                                         <nil key="highlightedColor"/>
@@ -327,7 +327,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1k-0b-dyf">
-                                <rect key="frame" x="0.0" y="236" width="414" height="212"/>
+                                <rect key="frame" x="0.0" y="236" width="414" height="163"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKD-tG-rnu" customClass="IdCloudButton">
                                         <rect key="frame" x="16" y="16" width="317" height="33"/>
@@ -352,31 +352,8 @@
                                             <action selector="onSwitchPressedFaceId:" destination="zUf-R7-AYB" eventType="touchUpInside" id="3fo-zI-9tr"/>
                                         </connections>
                                     </switch>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXf-rb-h6U" customClass="IdCloudButton">
-                                        <rect key="frame" x="16" y="65" width="317" height="33"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Touch ID" image="100px_TouchId"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonTintColor">
-                                                <color key="value" name="ButtonPrimaryTint"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonTintColorHighlighted">
-                                                <color key="value" name="ButtonPrimaryTintPressed"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="onButtonPressedTouchId:" destination="zUf-R7-AYB" eventType="touchUpInside" id="Xj4-j0-Ckk"/>
-                                        </connections>
-                                    </button>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWh-fP-2Zx">
-                                        <rect key="frame" x="349" y="66" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="onSwitchPressedTouchId:" destination="zUf-R7-AYB" eventType="touchUpInside" id="sub-n9-xan"/>
-                                        </connections>
-                                    </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDU-Ld-Z2N" customClass="IdCloudButton">
-                                        <rect key="frame" x="16" y="114" width="382" height="33"/>
+                                        <rect key="frame" x="16" y="65" width="382" height="33"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                         <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Change Pin" image="100px_Repeat"/>
@@ -393,7 +370,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFS-Ds-CbU" customClass="IdCloudButton">
-                                        <rect key="frame" x="16" y="163" width="382" height="33"/>
+                                        <rect key="frame" x="16" y="114" width="382" height="33"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                         <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Delete Token" image="100px_Delete"/>
@@ -411,22 +388,17 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rWh-fP-2Zx" secondAttribute="trailing" constant="16" id="0hk-4F-yGU"/>
-                                    <constraint firstItem="UXf-rb-h6U" firstAttribute="leading" secondItem="I1k-0b-dyf" secondAttribute="leading" constant="16" id="5yj-Nl-At5"/>
                                     <constraint firstItem="DFS-Ds-CbU" firstAttribute="top" secondItem="jDU-Ld-Z2N" secondAttribute="bottom" constant="16" id="9dE-9H-8Hg"/>
                                     <constraint firstItem="bKD-tG-rnu" firstAttribute="top" secondItem="I1k-0b-dyf" secondAttribute="top" constant="16" id="Khx-1G-fnl"/>
                                     <constraint firstAttribute="trailing" secondItem="jDU-Ld-Z2N" secondAttribute="trailing" constant="16" id="OcS-ak-xoB"/>
                                     <constraint firstAttribute="bottom" secondItem="DFS-Ds-CbU" secondAttribute="bottom" constant="16" id="Qab-nF-Gv2"/>
                                     <constraint firstAttribute="trailing" secondItem="ewW-CA-JaN" secondAttribute="trailing" constant="16" id="Rby-Nf-eQc"/>
                                     <constraint firstItem="ewW-CA-JaN" firstAttribute="centerY" secondItem="bKD-tG-rnu" secondAttribute="centerY" id="Vd5-V1-7r4"/>
-                                    <constraint firstItem="UXf-rb-h6U" firstAttribute="top" secondItem="bKD-tG-rnu" secondAttribute="bottom" constant="16" id="WBR-JZ-59q"/>
-                                    <constraint firstItem="UXf-rb-h6U" firstAttribute="centerY" secondItem="rWh-fP-2Zx" secondAttribute="centerY" id="Wpq-wb-2C7"/>
-                                    <constraint firstItem="jDU-Ld-Z2N" firstAttribute="top" secondItem="UXf-rb-h6U" secondAttribute="bottom" constant="16" id="Yvo-i1-5AX"/>
+                                    <constraint firstItem="jDU-Ld-Z2N" firstAttribute="top" secondItem="bKD-tG-rnu" secondAttribute="bottom" constant="16" id="Yvo-i1-5AX"/>
                                     <constraint firstItem="bKD-tG-rnu" firstAttribute="leading" secondItem="I1k-0b-dyf" secondAttribute="leading" constant="16" id="bC8-5v-QXB"/>
                                     <constraint firstItem="jDU-Ld-Z2N" firstAttribute="leading" secondItem="I1k-0b-dyf" secondAttribute="leading" constant="16" id="gxG-KT-g5b"/>
                                     <constraint firstItem="ewW-CA-JaN" firstAttribute="leading" secondItem="bKD-tG-rnu" secondAttribute="trailing" constant="16" id="pk3-4I-P54"/>
                                     <constraint firstAttribute="trailing" secondItem="DFS-Ds-CbU" secondAttribute="trailing" constant="16" id="trl-ro-lRF"/>
-                                    <constraint firstItem="rWh-fP-2Zx" firstAttribute="leading" secondItem="UXf-rb-h6U" secondAttribute="trailing" constant="16" id="tth-Z4-FpL"/>
                                     <constraint firstItem="DFS-Ds-CbU" firstAttribute="leading" secondItem="I1k-0b-dyf" secondAttribute="leading" constant="16" id="vLh-ke-pAZ"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="wgT-yz-bDp"/>
                                 </constraints>
@@ -483,10 +455,8 @@
                         <outlet property="buttonDeleteToken" destination="DFS-Ds-CbU" id="muu-7r-BIc"/>
                         <outlet property="buttonFaceId" destination="bKD-tG-rnu" id="GAZ-6M-5gL"/>
                         <outlet property="buttonPrivacyPolicy" destination="ue1-zO-j4k" id="oRT-Bg-vIK"/>
-                        <outlet property="buttonTouchId" destination="UXf-rb-h6U" id="M9E-ew-aM3"/>
                         <outlet property="labelVersion" destination="pfi-Zm-RKc" id="SY7-em-aSV"/>
                         <outlet property="switchFaceId" destination="ewW-CA-JaN" id="ce9-6V-wGX"/>
-                        <outlet property="switchTouchId" destination="rWh-fP-2Zx" id="ZyN-R3-eWH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nii-cc-NIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1162,9 +1132,6 @@
         <designable name="OdL-Kb-Cvb">
             <size key="intrinsicContentSize" width="106" height="33"/>
         </designable>
-        <designable name="UXf-rb-h6U">
-            <size key="intrinsicContentSize" width="98" height="33"/>
-        </designable>
         <designable name="bKD-tG-rnu">
             <size key="intrinsicContentSize" width="89" height="33"/>
         </designable>
@@ -1191,10 +1158,9 @@
         <image name="100px_Play" width="33" height="33"/>
         <image name="100px_QRCode" width="33" height="33"/>
         <image name="100px_Repeat" width="33" height="33"/>
-        <image name="100px_TouchId" width="33" height="33"/>
         <image name="200px_ArrowLeft" width="66.5" height="66.5"/>
         <image name="200px_Menu" width="66.5" height="66.5"/>
-        <image name="IdCloudLogo" width="70" height="69.5"/>
+        <image name="IdCloudLogo" width="70.5" height="70.5"/>
         <image name="TexboxIconEuro" width="26.5" height="26.5"/>
         <image name="TextboxIconLock" width="26.5" height="26.5"/>
         <image name="TextboxIconPerson" width="26.5" height="26.5"/>
@@ -1214,12 +1180,6 @@
         <namedColor name="ButtonPrimaryTintPressed">
             <color red="0.10599999874830246" green="0.10599999874830246" blue="0.38400000333786011" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="IdCloudRedDark">
-            <color red="0.5490196078431373" green="0.090196078431372548" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ThalesBlue">
-            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="PrimaryGradientEnd">
             <color red="0.96078431372549022" green="0.96470588235294119" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1230,6 +1190,9 @@
             <color red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextPrimary">
+            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ThalesBlue">
             <color red="0.10588235294117647" green="0.10588235294117647" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

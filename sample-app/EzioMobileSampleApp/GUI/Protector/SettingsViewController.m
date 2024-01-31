@@ -29,7 +29,6 @@
 @interface SettingsViewController ()
 
 @property (nonatomic, weak) IBOutlet IdCloudButton  *buttonFaceId;
-@property (nonatomic, weak) IBOutlet IdCloudButton  *buttonTouchId;
 @property (nonatomic, weak) IBOutlet IdCloudButton  *buttonChangePin;
 @property (nonatomic, weak) IBOutlet IdCloudButton  *buttonDeleteToken;
 @property (nonatomic, weak) IBOutlet UIButton       *buttonPrivacyPolicy;
@@ -64,15 +63,10 @@
     // Get current token status.
     TokenStatus status = CMain.sharedInstance.managerToken.tokenDevice.tokenStatus;
     
-    // Face id is enabled if system Face Id is supported.
-    [_buttonFaceId          setEnabled:enabled && status.isFaceSupported];
-    [_switchFaceId          setEnabled:_buttonFaceId.isEnabled];
-    [_switchFaceId          setOn:status.isFaceEnabled];
-    
-    // Touch must be supported by system.
-    [_buttonTouchId         setEnabled:enabled && status.isTouchSupported];
-    [_switchTouchId         setEnabled:enabled && status.isTouchSupported];
-    [_switchTouchId         setOn:status.isTouchEnabled];
+    // Biometric is enabled if system Face Id is supported.
+    [_buttonFaceId         setEnabled:enabled && (status.isTouchSupported || status.isFaceSupported)];
+    [_switchFaceId         setEnabled:enabled && (status.isTouchSupported || status.isFaceSupported)];
+    [_switchFaceId         setOn:status.isTouchEnabled || status.isFaceEnabled];
     
     [_buttonChangePin       setEnabled:enabled];
     [_buttonDeleteToken     setEnabled:enabled];
@@ -95,17 +89,6 @@
     // Switch peration might not be sucessfull. Wait for finish and reload.
     sender.on = !sender.on;
     [self toggleFaceId];
-}
-
-- (IBAction)onButtonPressedTouchId:(UIButton *)sender {
-    [self toggleTouchId];
-}
-
-- (IBAction)onSwitchPressedTouchId:(UISwitch *)sender {
-    // Do not allow to automatically switch value.
-    // Switch peration might not be sucessfull. Wait for finish and reload.
-    sender.on = !sender.on;
-    [self toggleTouchId];
 }
 
 - (IBAction)onButtonPressedChangePin:(UIButton *)sender {
@@ -287,35 +270,27 @@
     return retValue;
 }
 
-// MARK: - Face Id
+// MARK: - Biometrics
 
 - (void)toggleFaceId {
     // Get current token status.
-    TokenStatus status  = CMain.sharedInstance.managerToken.tokenDevice.tokenStatus;
+    TokenStatus     status  = CMain.sharedInstance.managerToken.tokenDevice.tokenStatus;
     
-    // Toggle based on Face Id type and coresponding status.
     if (status.isFaceSupported) {
         // System Face Id
-        id<EMAuthMode> mode = [[EMSystemFaceAuthService serviceWithModule:[EMAuthModule authModule]] authMode];
+        id<EMAuthMode> faceMode = [[EMSystemFaceAuthService serviceWithModule:[EMAuthModule authModule]] authMode];
         if (status.isFaceEnabled) {
+            [self disableAuthMode:faceMode];
+        } else {
+            [self enableAuthMode:faceMode allowBackButton:YES];
+        }
+    } else if (status.isTouchSupported) {
+        id<EMAuthMode>  mode    = [[EMSystemBioFingerprintAuthService serviceWithModule:[EMAuthModule authModule]] authMode];
+        if (status.isTouchEnabled) {
             [self disableAuthMode:mode];
         } else {
             [self enableAuthMode:mode allowBackButton:YES];
         }
-    }
-}
-
-// MARK: - Touch Id
-
-- (void)toggleTouchId {
-    // Get current token status.
-    TokenStatus     status  = CMain.sharedInstance.managerToken.tokenDevice.tokenStatus;
-    id<EMAuthMode>  mode    = [[EMSystemBioFingerprintAuthService serviceWithModule:[EMAuthModule authModule]] authMode];
-    
-    if (status.isTouchEnabled) {
-        [self disableAuthMode:mode];
-    } else {
-        [self enableAuthMode:mode allowBackButton:YES];
     }
 }
 

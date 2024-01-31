@@ -252,9 +252,18 @@ typedef enum : NSInteger {
 
     // Get message subject key and fill in all values.
     NSString *subject = TRANSLATE(request.subject.stringValue);
-    for (NSString *key in request.meta.allKeys) {
-        NSString *placeholder = [NSString stringWithFormat:@"%%%@", key];
-        subject = [subject stringByReplacingOccurrencesOfString:placeholder withString:request.meta[key]];
+    NSString *origSubject = subject;
+    NSString *params = @"";
+    if (request.meta.count > 0) {
+        for (NSString *key in request.meta.allKeys) {
+            NSString *placeholder = [NSString stringWithFormat:@"%%%@", key];
+            subject = [subject stringByReplacingOccurrencesOfString:placeholder withString:request.meta[key]];
+            params = [NSString stringWithFormat:@"%@%@%@%@%@", params, @"\n", key, @":", request.meta[key]];
+            if ([origSubject isEqual:subject]) {
+                // Message string does not contain the request fields, append them to message instead
+                subject = [TRANSLATE(@"message_subject_authentication_default") stringByAppendingString:params];
+            }
+        }
     }
 
     // Try to parse frame.

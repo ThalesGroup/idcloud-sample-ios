@@ -73,8 +73,9 @@
 "STRING_BIO_ID_TOUCH_ID"                        = "Authenticate with Touch Id";
 
 // MARK: - Server Messages
-"message_subject_authentication"                = "Please authenticate to login to the tutorial site.";
-"message_subject_transaction"                   = "Please approve the transaction of $%amount to %beneficiary";
+"message_subject_authentication"                = "Please authenticate to login.";
+"message_subject_transaction"                   = "Please authenticate to approve transfer of $%amount to %beneficiary";
+"message_subject_authentication_default"        = "Please authenticate to approve the transaction:";
 
 // MARK: - UI Elements
 "STRING_SETTINGS_VERSION"                       = "App Version: %@\nSDK Version: %@";

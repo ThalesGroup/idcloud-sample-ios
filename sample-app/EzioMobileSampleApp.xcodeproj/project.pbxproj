@@ -801,12 +801,12 @@
 				ENABLE_BITCODE = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "EzioMobileSampleApp/Support Files/ProtectorSample.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.5.0;
+				MARKETING_VERSION = 6.7.0;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-fprofile-arcs",
@@ -830,12 +830,12 @@
 				ENABLE_BITCODE = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "EzioMobileSampleApp/Support Files/ProtectorSample.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.5.0;
+				MARKETING_VERSION = 6.7.0;
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thalesgroup.EzioMobileSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

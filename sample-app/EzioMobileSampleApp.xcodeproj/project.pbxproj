@@ -806,7 +806,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.5.0;
+				MARKETING_VERSION = 6.7.0;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-fprofile-arcs",
@@ -835,7 +835,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.5.0;
+				MARKETING_VERSION = 6.7.0;
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thalesgroup.EzioMobileSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
